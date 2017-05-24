@@ -5,7 +5,7 @@ library(influence.ME)
 library(tidyr)
 library(car)
 
-sink("2016_election_results.txt")
+# sink("data-files/2016_election_results.txt")
 
 # for pretty regression tables
 # http://stackoverflow.com/questions/30195718/stargazer-save-to-file-dont-show-in-console
@@ -18,7 +18,7 @@ mod_stargazer <- function(title, output.file, append, ...) {
   cat(paste(output, collapse = "\n"), "\n", file=output.file, append=TRUE)
 }
 
-df <- read.csv('weekly_averages_long.csv', header = TRUE, sep = ",", quote = "\"",
+df <- read.csv('data-files/weekly_averages_long.csv', header = TRUE, sep = ",", quote = "\"",
                dec = ".", fill = TRUE, comment.char = "")
 
 summary(df)
@@ -109,7 +109,7 @@ df.cooks <- cooks.distance(estex.lmm5, parameter = 3, sort = TRUE)
 
 # which(df.cooks > 4/444)
 
-df.cooks
+# df.cooks
 
 # leave out outliers
 print(lmm5, cor=FALSE)
@@ -131,6 +131,12 @@ print(lmm.exclude5, cor=FALSE)
 lmm.exclude6 <- exclude.influence(lmm5,
                                   "handle", "DonaldNorcross")
 print(lmm.exclude6, cor=FALSE)
+
+# separate for Dems and Reps to get at interaction term
+lmm_dem <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Democrat"), REML = FALSE)
+summary(lmm_dem)
+lmm_rep <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Republican"), REML = FALSE)
+summary(lmm_rep)
 
 # make pretty tables
 # mod_stargazer("Linear Mixed Models", "mixed_models.html", 
