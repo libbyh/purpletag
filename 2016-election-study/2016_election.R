@@ -5,7 +5,7 @@ library(influence.ME)
 library(tidyr)
 library(car)
 
-# sink("data-files/2016_election_results.txt")
+sink("data-files/2016_election_results.txt")
 
 # for pretty regression tables
 # http://stackoverflow.com/questions/30195718/stargazer-save-to-file-dont-show-in-console
