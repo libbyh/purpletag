@@ -378,6 +378,75 @@ week        -0.819  0.020
 
 > lmm5.res <- resid(lmm5)
 
+> # run again with just weeks 3-9
+> df.last_6_weeks <- df[ which(df$week > 2), ]
+
+> lmm5.last_6_weeks <- lmer(abs ~ party * week + (1+week|handle), data = df.last_6_weeks, REML = FALSE)
+
+> summary(lmm5.last_6_weeks)
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: abs ~ party * week + (1 + week | handle)
+   Data: df.last_6_weeks
+
+     AIC      BIC   logLik deviance df.resid 
+ 18936.8  18983.3  -9460.4  18920.8     2466 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.2337 -0.4149 -0.1485  0.2195  6.7281 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ handle   (Intercept) 85.9241  9.2695        
+          week         0.6254  0.7908   -0.53
+ Residual             91.6841  9.5752        
+Number of obs: 2474, groups:  handle, 428
+
+Fixed effects:
+                     Estimate Std. Error t value
+(Intercept)           15.4883     1.1124  13.923
+partyRepublican      -12.4445     1.5211  -8.181
+week                  -0.1175     0.1537  -0.764
+partyRepublican:week   0.4699     0.2115   2.222
+
+Correlation of Fixed Effects:
+            (Intr) prtyRp week  
+partyRpblcn -0.731              
+week        -0.820  0.600       
+prtyRpblcn:  0.596 -0.822 -0.727
+
+> lmm5.null.last_6_weeks <- lmer(abs ~ party + week + (1+week|handle), data = df.last_6_weeks, REML = FALSE)
+
+> summary(lmm5.null.last_6_weeks)
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: abs ~ party + week + (1 + week | handle)
+   Data: df.last_6_weeks
+
+     AIC      BIC   logLik deviance df.resid 
+ 18939.7  18980.4  -9462.9  18925.7     2467 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.2206 -0.4088 -0.1443  0.2104  6.6649 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ handle   (Intercept) 88.0942  9.3859        
+          week         0.6666  0.8165   -0.55
+ Residual             91.7451  9.5784        
+Number of obs: 2474, groups:  handle, 428
+
+Fixed effects:
+                Estimate Std. Error t value
+(Intercept)      14.0089     0.8962  15.632
+partyRepublican  -9.6579     0.8655 -11.159
+week              0.1312     0.1061   1.237
+
+Correlation of Fixed Effects:
+            (Intr) prtyRp
+partyRpblcn -0.526       
+week        -0.704  0.005
+
 > # NOTE: LH 5/11 - no reason to run these?
 > # lmm4 <- lmer(abs ~ party * week + (week | handle), data = df)
 > # summary(lmm3)
@@ -440,6 +509,18 @@ lmm5       8 27822 27871 -13903    27806 82.894      1  < 2.2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
+> # random slopes but just the last 6 weeks
+> anova(lmm5.null.last_6_weeks, lmm5.last_6_weeks)
+Data: df.last_6_weeks
+Models:
+lmm5.null.last_6_weeks: abs ~ party + week + (1 + week | handle)
+lmm5.last_6_weeks: abs ~ party * week + (1 + week | handle)
+                       Df   AIC   BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+lmm5.null.last_6_weeks  7 18940 18980 -9462.9    18926                           
+lmm5.last_6_weeks       8 18937 18983 -9460.4    18921 4.9135      1    0.02665 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
 > lmmpower(lmm5, pct.change = 0.10, t = seq(0,9,1), power = 0.90)
 
      Power for longitudinal linear model with random slope (Edland, 2009) 
@@ -469,212 +550,3 @@ partyRepublican CI = -30.40834, -22.68758
 
 > # Q-Q plot looked skewed, so do some checking on outliers
 > estex.lmm5 <- influence(lmm5, "handle")
-
-> # dfbetas(estex.lmm5, parameters=c(2,3))
-> 
-> # plot(estex.lmm5,
-> #      which="dfbetas",
-> #      parameters=c(2,3),
-> #      xlab="DFbetaS",
-> #  .... [TRUNCATED] 
-
-> # plot(estex.lmm5, which="cook",
-> #      cutoff=.009, sort=TRUE,
-> #      xlab="Cook´s Distance",
-> #      ylab="handle")
-> 
-> # which(df.cooks > 4 .... [TRUNCATED] 
-Linear mixed model fit by maximum likelihood  ['lmerMod']
-Formula: abs ~ party * week + (1 + week | handle)
-   Data: df
-      AIC       BIC    logLik  deviance  df.resid 
- 27822.17  27870.87 -13903.08  27806.17      3248 
-Random effects:
- Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 16.044        
-          week         1.416   -1.00
- Residual             15.826        
-Number of obs: 3256, groups:  handle, 436
-Fixed Effects:
-         (Intercept)       partyRepublican                  week  partyRepublican:week  
-              30.900               -26.548                -2.255                 2.432  
-
-> lmm.exclude1 <- exclude.influence(lmm5,
-+                                   "handle", "RepThompson")
-
-> print(lmm.exclude1, cor=FALSE)
-Linear mixed model fit by maximum likelihood  ['lmerMod']
-Formula: abs ~ party * week + (1 + week | handle)
-   Data: data.update
-      AIC       BIC    logLik  deviance  df.resid 
- 27728.52  27777.20 -13856.26  27712.52      3239 
-Random effects:
- Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 16.040        
-          week         1.412   -1.00
- Residual             15.778        
-Number of obs: 3247, groups:  handle, 435
-Fixed Effects:
-         (Intercept)       partyRepublican                  week  partyRepublican:week  
-              30.754               -26.402                -2.234                 2.411  
-
-> lmm.exclude2 <- exclude.influence(lmm5,
-+                                   "handle", "RepDennyHeck")
-
-> print(lmm.exclude2, cor=FALSE)
-Linear mixed model fit by maximum likelihood  ['lmerMod']
-Formula: abs ~ party * week + (1 + week | handle)
-   Data: data.update
-      AIC       BIC    logLik  deviance  df.resid 
- 27515.16  27563.85 -13749.58  27499.16      3241 
-Random effects:
- Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 15.244        
-          week         1.299   -1.00
- Residual             15.227        
-Number of obs: 3249, groups:  handle, 435
-Fixed Effects:
-         (Intercept)       partyRepublican                  week  partyRepublican:week  
-              30.280               -25.926                -2.187                 2.363  
-
-> lmm.exclude3 <- exclude.influence(lmm5,
-+                                   "handle", "RepLawrence")
-
-> print(lmm.exclude3, cor=FALSE)
-Linear mixed model fit by maximum likelihood  ['lmerMod']
-Formula: abs ~ party * week + (1 + week | handle)
-   Data: data.update
-      AIC       BIC    logLik  deviance  df.resid 
- 27489.51  27538.20 -13736.76  27473.51      3241 
-Random effects:
- Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 15.561        
-          week         1.325   -1.00
- Residual             15.127        
-Number of obs: 3249, groups:  handle, 435
-Fixed Effects:
-         (Intercept)       partyRepublican                  week  partyRepublican:week  
-              30.341               -25.990                -2.186                 2.362  
-
-> lmm.exclude4 <- exclude.influence(lmm5,
-+                                   "handle", "RepPaulTonko")
-
-> print(lmm.exclude4, cor=FALSE)
-Linear mixed model fit by maximum likelihood  ['lmerMod']
-Formula: abs ~ party * week + (1 + week | handle)
-   Data: data.update
-      AIC       BIC    logLik  deviance  df.resid 
- 27724.04  27772.72 -13854.02  27708.04      3239 
-Random effects:
- Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 15.962        
-          week         1.395   -1.00
- Residual             15.768        
-Number of obs: 3247, groups:  handle, 435
-Fixed Effects:
-         (Intercept)       partyRepublican                  week  partyRepublican:week  
-              30.639               -26.287                -2.210                 2.387  
-
-> lmm.exclude5 <- exclude.influence(lmm5,
-+                                   "handle", "repdonbeyer")
-
-> print(lmm.exclude5, cor=FALSE)
-Linear mixed model fit by maximum likelihood  ['lmerMod']
-Formula: abs ~ party * week + (1 + week | handle)
-   Data: data.update
-      AIC       BIC    logLik  deviance  df.resid 
- 27745.76  27794.45 -13864.88  27729.76      3239 
-Random effects:
- Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 16.072        
-          week         1.419   -1.00
- Residual             15.824        
-Number of obs: 3247, groups:  handle, 435
-Fixed Effects:
-         (Intercept)       partyRepublican                  week  partyRepublican:week  
-              30.886               -26.534                -2.259                 2.436  
-
-> lmm.exclude6 <- exclude.influence(lmm5,
-+                                   "handle", "DonaldNorcross")
-
-> print(lmm.exclude6, cor=FALSE)
-Linear mixed model fit by maximum likelihood  ['lmerMod']
-Formula: abs ~ party * week + (1 + week | handle)
-   Data: data.update
-      AIC       BIC    logLik  deviance  df.resid 
- 27738.41  27787.10 -13861.21  27722.41      3239 
-Random effects:
- Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 15.865        
-          week         1.401   -1.00
- Residual             15.826        
-Number of obs: 3247, groups:  handle, 435
-Fixed Effects:
-         (Intercept)       partyRepublican                  week  partyRepublican:week  
-              30.632               -26.278                -2.232                 2.409  
-
-> # separate for Dems and Reps to get at interaction term
-> lmm_dem <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Democrat"), REML .... [TRUNCATED] 
-
-> summary(lmm_dem)
-Linear mixed model fit by maximum likelihood  ['lmerMod']
-Formula: abs ~ week + (1 + week | handle)
-   Data: subset(df, party == "Democrat")
-
-     AIC      BIC   logLik deviance df.resid 
- 13990.2  14022.2  -6989.1  13978.2     1507 
-
-Scaled residuals: 
-    Min      1Q  Median      3Q     Max 
--3.1775 -0.4520 -0.2242  0.2665 10.3541 
-
-Random effects:
- Groups   Name        Variance Std.Dev. Corr 
- handle   (Intercept) 590.987  24.310        
-          week          4.977   2.231   -1.00
- Residual             500.897  22.381        
-Number of obs: 1513, groups:  handle, 195
-
-Fixed effects:
-            Estimate Std. Error t value
-(Intercept)  30.8766     2.1579  14.309
-week         -2.2508     0.2768  -8.131
-
-Correlation of Fixed Effects:
-     (Intr)
-week -0.891
-
-> lmm_rep <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Republican"), REML = FALSE)
-
-> summary(lmm_rep)
-Linear mixed model fit by maximum likelihood  ['lmerMod']
-Formula: abs ~ week + (1 + week | handle)
-   Data: subset(df, party == "Republican")
-
-     AIC      BIC   logLik deviance df.resid 
- 10979.2  11012.0  -5483.6  10967.2     1737 
-
-Scaled residuals: 
-    Min      1Q  Median      3Q     Max 
--2.3477 -0.5286 -0.2546  0.2543  9.5367 
-
-Random effects:
- Groups   Name        Variance Std.Dev. Corr
- handle   (Intercept)  0.9072  0.9524       
-          week         0.1069  0.3269   1.00
- Residual             27.5031  5.2443       
-Number of obs: 1743, groups:  handle, 241
-
-Fixed effects:
-            Estimate Std. Error t value
-(Intercept)  4.51642    0.27481  16.435
-week         0.14165    0.05436   2.606
-
-Correlation of Fixed Effects:
-     (Intr)
-week -0.693
-
-> # make pretty tables
-> # mod_stargazer("Linear Mixed Models", "mixed_models.html", 
-> #               lmm.null, lmm1a, lmm1b, lmm3, lmm4, lmm5,
-> #  .... [TRUNCATED] 

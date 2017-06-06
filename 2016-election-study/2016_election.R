@@ -61,6 +61,13 @@ lmm5.null <- lmer(abs ~ party + week + (1+week|handle), data = df, REML = FALSE)
 summary(lmm5.null)
 lmm5.res <- resid(lmm5)
 
+# run again with just weeks 3-9
+df.last_6_weeks <- df[ which(df$week > 2), ]
+lmm5.last_6_weeks <- lmer(abs ~ party * week + (1+week|handle), data = df.last_6_weeks, REML = FALSE)
+summary(lmm5.last_6_weeks)
+lmm5.null.last_6_weeks <- lmer(abs ~ party + week + (1+week|handle), data = df.last_6_weeks, REML = FALSE)
+summary(lmm5.null.last_6_weeks)
+
 # NOTE: LH 5/11 - no reason to run these?
 # lmm4 <- lmer(abs ~ party * week + (week | handle), data = df)
 # summary(lmm3)
@@ -83,6 +90,9 @@ anova(lmm3, lmm4, refit=FALSE)
 
 # random slopes
 anova(lmm5.null, lmm5, refit=FALSE)
+
+# random slopes but just the last 6 weeks
+anova(lmm5.null.last_6_weeks, lmm5.last_6_weeks)
 
 lmmpower(lmm5, pct.change = 0.10, t = seq(0,9,1), power = 0.90)
 
