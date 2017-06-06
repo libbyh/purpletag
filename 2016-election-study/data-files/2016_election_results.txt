@@ -15,14 +15,14 @@
  3rd Qu.:2996.2   3rd Qu.:412533   BobLatta       :   9   Al Franken    :   9           
  Max.   :3995.0   Max.   :412674   BradSherman    :   9   Al Green      :   9           
                                    (Other)        :3942   (Other)       :3942           
-        party      chamber         week     avg_score               abs           
- Democrat  :1764   rep:3636   Min.   :1   Min.   :-16142.399   Min.   :    0.001  
- Republican:2232   sen: 360   1st Qu.:3   1st Qu.:   -13.651   1st Qu.:    2.320  
-                              Median :5   Median :     0.800   Median :    8.170  
-                              Mean   :5   Mean   :   -22.728   Mean   :   38.693  
-                              3rd Qu.:7   3rd Qu.:     5.811   3rd Qu.:   26.984  
-                              Max.   :9   Max.   :  1146.555   Max.   :16142.399  
-                                          NA's   :740          NA's   :740        
+        party      chamber         week     avg_score             abs         
+ Democrat  :1764   rep:3636   Min.   :1   Min.   :-308.088   Min.   :  0.000  
+ Republican:2232   sen: 360   1st Qu.:3   1st Qu.:  -8.635   1st Qu.:  1.802  
+                              Median :5   Median :   0.693   Median :  4.568  
+                              Mean   :5   Mean   :  -6.578   Mean   : 12.211  
+                              3rd Qu.:7   3rd Qu.:   3.517   3rd Qu.: 13.800  
+                              Max.   :9   Max.   :  62.863   Max.   :308.088  
+                                          NA's   :740        NA's   :740      
 
 > # summary by handle
 > df.handlemeans <- spread(df, key = week, value = abs)
@@ -36,30 +36,30 @@
  3rd Qu.:2996.2   3rd Qu.:412533   BobLatta       :   9   Al Franken    :   9           
  Max.   :3995.0   Max.   :412674   BradSherman    :   9   Al Green      :   9           
                                    (Other)        :3942   (Other)       :3942           
-        party      chamber      avg_score                1                 2            
- Democrat  :1764   rep:3636   Min.   :-16142.399   Min.   :  0.012   Min.   :    0.001  
- Republican:2232   sen: 360   1st Qu.:   -13.651   1st Qu.:  2.309   1st Qu.:    4.932  
-                              Median :     0.800   Median :  7.482   Median :   15.045  
-                              Mean   :   -22.728   Mean   : 32.349   Mean   :  158.009  
-                              3rd Qu.:     5.811   3rd Qu.: 39.271   3rd Qu.:   99.948  
-                              Max.   :  1146.555   Max.   :480.299   Max.   :16142.399  
-                              NA's   :740          NA's   :3607      NA's   :3603       
-       3                 4                 5                  6          
- Min.   :  0.002   Min.   :  0.025   Min.   :   0.014   Min.   :  0.171  
- 1st Qu.:  2.897   1st Qu.:  3.089   1st Qu.:   1.651   1st Qu.:  2.188  
- Median :  8.502   Median : 10.386   Median :   4.588   Median :  6.186  
- Mean   : 28.345   Mean   : 23.257   Mean   :  14.577   Mean   : 15.915  
- 3rd Qu.: 27.084   3rd Qu.: 28.249   3rd Qu.:  14.239   3rd Qu.: 20.212  
- Max.   :496.911   Max.   :380.479   Max.   :1146.555   Max.   :272.947  
- NA's   :3622      NA's   :3612      NA's   :3637       NA's   :3650     
-       7                 8                 9          
- Min.   :  0.001   Min.   :  0.010   Min.   :  0.011  
- 1st Qu.:  1.746   1st Qu.:  2.292   1st Qu.:  2.063  
- Median :  5.107   Median :  7.580   Median :  9.078  
- Mean   : 16.250   Mean   : 18.727   Mean   : 27.616  
- 3rd Qu.: 17.127   3rd Qu.: 25.832   3rd Qu.: 33.239  
- Max.   :313.630   Max.   :672.678   Max.   :873.640  
- NA's   :3662      NA's   :3648      NA's   :3667     
+        party      chamber      avg_score              1                2          
+ Democrat  :1764   rep:3636   Min.   :-308.088   Min.   : 0.004   Min.   :  0.001  
+ Republican:2232   sen: 360   1st Qu.:  -8.635   1st Qu.: 1.442   1st Qu.:  3.148  
+                              Median :   0.693   Median : 3.788   Median :  8.224  
+                              Mean   :  -6.578   Mean   :12.470   Mean   : 26.040  
+                              3rd Qu.:   3.517   3rd Qu.:15.494   3rd Qu.: 31.300  
+                              Max.   :  62.863   Max.   :75.524   Max.   :308.088  
+                              NA's   :740        NA's   :3607     NA's   :3603     
+       3                4                5                6                7         
+ Min.   : 0.001   Min.   : 0.001   Min.   : 0.000   Min.   : 0.004   Min.   : 0.001  
+ 1st Qu.: 2.063   1st Qu.: 2.268   1st Qu.: 1.306   1st Qu.: 1.823   1st Qu.: 1.474  
+ Median : 4.396   Median : 6.169   Median : 2.593   Median : 4.523   Median : 2.759  
+ Mean   :10.718   Mean   :11.610   Mean   : 6.100   Mean   :10.209   Mean   : 8.107  
+ 3rd Qu.:10.226   3rd Qu.:15.583   3rd Qu.: 7.383   3rd Qu.:11.606   3rd Qu.: 9.580  
+ Max.   :92.247   Max.   :74.549   Max.   :37.968   Max.   :71.851   Max.   :59.532  
+ NA's   :3622     NA's   :3612     NA's   :3637     NA's   :3650     NA's   :3662    
+       8                9          
+ Min.   : 0.010   Min.   :  0.005  
+ 1st Qu.: 1.795   1st Qu.:  1.807  
+ Median : 4.681   Median :  5.509  
+ Mean   : 9.950   Mean   : 13.116  
+ 3rd Qu.:14.945   3rd Qu.: 17.863  
+ Max.   :62.863   Max.   :107.640  
+ NA's   :3648     NA's   :3667     
 
 > # summary by party
 > by_party <- table(df$week,df$party)
@@ -77,28 +77,30 @@
   8      196        248
   9      196        248
 
-> by_party_week <- aggregate(df$abs, list(df$week, df$party), FUN = function(x) c(mn = mean(x), md = median(x), sd = sd(x) ) )
+> by_party_week <- ddply(df, .(week, party), summarize, 
++                        mean = round(mean(abs, na.rm=TRUE), 4),
++                        sd  .... [TRUNCATED] 
 
 > by_party_week
-   Group.1    Group.2 x.mn x.md x.sd
-1        1   Democrat   NA   NA   NA
-2        2   Democrat   NA   NA   NA
-3        3   Democrat   NA   NA   NA
-4        4   Democrat   NA   NA   NA
-5        5   Democrat   NA   NA   NA
-6        6   Democrat   NA   NA   NA
-7        7   Democrat   NA   NA   NA
-8        8   Democrat   NA   NA   NA
-9        9   Democrat   NA   NA   NA
-10       1 Republican   NA   NA   NA
-11       2 Republican   NA   NA   NA
-12       3 Republican   NA   NA   NA
-13       4 Republican   NA   NA   NA
-14       5 Republican   NA   NA   NA
-15       6 Republican   NA   NA   NA
-16       7 Republican   NA   NA   NA
-17       8 Republican   NA   NA   NA
-18       9 Republican   NA   NA   NA
+   week      party    mean    sd median
+1     1   Democrat 22.7191 21.66  16.65
+2     1 Republican  4.0012  4.03   2.81
+3     2   Democrat 48.6764 53.89  35.43
+4     2 Republican  6.9106  6.14   4.93
+5     3   Democrat 17.9052 20.47   9.06
+6     3 Republican  4.3299  3.90   3.16
+7     4   Democrat 17.7856 16.97  13.38
+8     4 Republican  6.3845  6.41   4.67
+9     5   Democrat  9.2380  9.92   4.99
+10    5 Republican  3.3712  3.30   2.14
+11    6   Democrat 16.6588 18.48   9.24
+12    6 Republican  4.4641  3.75   3.15
+13    7   Democrat 13.4567 14.48   8.96
+14    7 Republican  3.2466  3.01   2.30
+15    8   Democrat 11.6225 13.55   4.70
+16    8 Republican  8.6064  9.47   4.67
+17    9   Democrat 20.2146 21.12  11.62
+18    9 Republican  6.3124  7.47   3.42
 
 > # linear mixed-effects models
 > # REML vs ML 
@@ -110,21 +112,21 @@ Formula: abs ~ 1 + (1 | handle)
    Data: df
 
      AIC      BIC   logLik deviance df.resid 
- 46448.1  46466.4 -23221.1  46442.1     3253 
+ 28291.7  28309.9 -14142.8  28285.7     3253 
 
 Scaled residuals: 
-   Min     1Q Median     3Q    Max 
--0.602 -0.114 -0.097 -0.040 52.968 
+    Min      1Q  Median      3Q     Max 
+-2.8928 -0.3120 -0.1659  0.0831 15.2692 
 
 Random effects:
  Groups   Name        Variance Std.Dev.
- handle   (Intercept)   895.6   29.93  
- Residual             90778.8  301.30  
+ handle   (Intercept) 128.3    11.33   
+ Residual             286.5    16.92   
 Number of obs: 3256, groups:  handle, 436
 
 Fixed effects:
             Estimate Std. Error t value
-(Intercept)   38.578      5.487   7.031
+(Intercept)  11.7907     0.6274   18.79
 
 > lmm1a <- lmer(abs ~ week + ( 1 | handle ), data = df, REML = FALSE)
 
@@ -134,26 +136,26 @@ Formula: abs ~ week + (1 | handle)
    Data: df
 
      AIC      BIC   logLik deviance df.resid 
- 46434.3  46458.7 -23213.2  46426.3     3252 
+ 28220.2  28244.6 -14106.1  28212.2     3252 
 
 Scaled residuals: 
-   Min     1Q Median     3Q    Max 
--0.636 -0.135 -0.069 -0.002 52.999 
+    Min      1Q  Median      3Q     Max 
+-2.9205 -0.3631 -0.1514  0.1216 15.3102 
 
 Random effects:
  Groups   Name        Variance Std.Dev.
- handle   (Intercept)   979.9   31.3   
- Residual             90256.6  300.4   
+ handle   (Intercept) 130.6    11.43   
+ Residual             278.8    16.70   
 Number of obs: 3256, groups:  handle, 436
 
 Fixed effects:
             Estimate Std. Error t value
-(Intercept)   77.993     11.323   6.888
-week          -8.138      2.044  -3.982
+(Intercept)  16.5321     0.8360  19.775
+week         -0.9920     0.1149  -8.633
 
 Correlation of Fixed Effects:
      (Intr)
-week -0.875
+week -0.658
 
 > lmm1b <- lmer(abs ~ party + (1|handle), data = df, REML = FALSE)
 
@@ -163,26 +165,26 @@ Formula: abs ~ week + (1 | handle)
    Data: df
 
      AIC      BIC   logLik deviance df.resid 
- 46434.3  46458.7 -23213.2  46426.3     3252 
+ 28220.2  28244.6 -14106.1  28212.2     3252 
 
 Scaled residuals: 
-   Min     1Q Median     3Q    Max 
--0.636 -0.135 -0.069 -0.002 52.999 
+    Min      1Q  Median      3Q     Max 
+-2.9205 -0.3631 -0.1514  0.1216 15.3102 
 
 Random effects:
  Groups   Name        Variance Std.Dev.
- handle   (Intercept)   979.9   31.3   
- Residual             90256.6  300.4   
+ handle   (Intercept) 130.6    11.43   
+ Residual             278.8    16.70   
 Number of obs: 3256, groups:  handle, 436
 
 Fixed effects:
             Estimate Std. Error t value
-(Intercept)   77.993     11.323   6.888
-week          -8.138      2.044  -3.982
+(Intercept)  16.5321     0.8360  19.775
+week         -0.9920     0.1149  -8.633
 
 Correlation of Fixed Effects:
      (Intr)
-week -0.875
+week -0.658
 
 > lmm2a <- lmer(abs ~ week + (week | handle), data = df, REML = FALSE)
 
@@ -192,27 +194,27 @@ Formula: abs ~ week + (week | handle)
    Data: df
 
      AIC      BIC   logLik deviance df.resid 
- 46233.3  46269.8 -23110.7  46221.3     3250 
+ 27985.7  28022.3 -13986.9  27973.7     3250 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--11.199  -0.084  -0.060  -0.009  48.904 
+-4.7116 -0.3142 -0.1628  0.1152 14.5500 
 
 Random effects:
  Groups   Name        Variance Std.Dev. Corr 
- handle   (Intercept) 60687    246.35        
-          week         1138     33.74   -1.00
- Residual             76273    276.18        
+ handle   (Intercept) 435.889  20.878        
+          week          3.522   1.877   -1.00
+ Residual             250.195  15.818        
 Number of obs: 3256, groups:  handle, 436
 
 Fixed effects:
             Estimate Std. Error t value
-(Intercept)   76.272     15.877   4.804
-week          -7.856      2.503  -3.139
+(Intercept)  16.1918     1.1734  13.799
+week         -0.9048     0.1413  -6.402
 
 Correlation of Fixed Effects:
      (Intr)
-week -0.933
+week -0.897
 
 > lmm2b <- lmer(abs ~ party + (week | handle), data = df, REML = FALSE)
 
@@ -222,27 +224,27 @@ Formula: abs ~ party + (week | handle)
    Data: df
 
      AIC      BIC   logLik deviance df.resid 
- 46235.5  46272.1 -23111.8  46223.5     3250 
+ 27943.9  27980.4 -13965.9  27931.9     3250 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--11.122  -0.094  -0.038  -0.001  48.927 
+-4.5071 -0.3159 -0.1185  0.1466 14.4888 
 
 Random effects:
  Groups   Name        Variance Std.Dev. Corr 
- handle   (Intercept) 60551    246.07        
-          week         1166     34.15   -1.00
- Residual             76411    276.43        
+ handle   (Intercept) 370.768  19.255        
+          week          3.949   1.987   -0.99
+ Residual             254.365  15.949        
 Number of obs: 3256, groups:  handle, 436
 
 Fixed effects:
                 Estimate Std. Error t value
-(Intercept)       47.009      8.316   5.653
-partyRepublican  -31.698     11.373  -2.787
+(Intercept)      15.1278     0.6722    22.5
+partyRepublican  -9.5435     0.9177   -10.4
 
 Correlation of Fixed Effects:
             (Intr)
-partyRpblcn -0.731
+partyRpblcn -0.733
 
 > lmm3 <- lmer(abs ~ party + week + (1|handle), data = df, REML = FALSE)
 
@@ -252,28 +254,28 @@ Formula: abs ~ party + week + (1 | handle)
    Data: df
 
      AIC      BIC   logLik deviance df.resid 
- 46414.0  46444.4 -23202.0  46404.0     3251 
+ 28058.6  28089.0 -14024.3  28048.6     3251 
 
 Scaled residuals: 
-   Min     1Q Median     3Q    Max 
--0.439 -0.137 -0.062  0.023 53.225 
+    Min      1Q  Median      3Q     Max 
+-2.7699 -0.3755 -0.1210  0.1583 15.4632 
 
 Random effects:
  Groups   Name        Variance Std.Dev.
- handle   (Intercept)   423.3   20.57  
- Residual             90160.3  300.27  
+ handle   (Intercept)  77.02    8.776  
+ Residual             278.71   16.694  
 Number of obs: 3256, groups:  handle, 436
 
 Fixed effects:
                 Estimate Std. Error t value
-(Intercept)      106.089     12.694   8.357
-partyRepublican  -51.451     10.751  -4.786
-week              -8.230      2.042  -4.031
+(Intercept)      24.7000     0.9506  25.984
+partyRepublican -14.7691     1.0447 -14.138
+week             -0.9988     0.1146  -8.713
 
 Correlation of Fixed Effects:
             (Intr) prtyRp
-partyRpblcn -0.462       
-week        -0.785  0.011
+partyRpblcn -0.605       
+week        -0.586  0.011
 
 > lmm4 <- lmer(abs ~ party * week + (1|handle), data = df, REML = FALSE)
 
@@ -283,30 +285,30 @@ Formula: abs ~ party * week + (1 | handle)
    Data: df
 
      AIC      BIC   logLik deviance df.resid 
- 46395.3  46431.9 -23191.7  46383.3     3250 
+ 27942.3  27978.8 -13965.1  27930.3     3250 
 
 Scaled residuals: 
-   Min     1Q Median     3Q    Max 
--0.616 -0.082 -0.037  0.006 53.277 
+    Min      1Q  Median      3Q     Max 
+-2.8520 -0.3112 -0.1037  0.1526 15.5559 
 
 Random effects:
  Groups   Name        Variance Std.Dev.
- handle   (Intercept)   507.5   22.53  
- Residual             89507.4  299.18  
+ handle   (Intercept)  78.71    8.872  
+ Residual             267.25   16.348  
 Number of obs: 3256, groups:  handle, 436
 
 Fixed effects:
                      Estimate Std. Error t value
-(Intercept)           154.513     16.546   9.338
-partyRepublican      -141.464     22.520  -6.282
-week                  -18.159      2.983  -6.087
-partyRepublican:week   18.557      4.079   4.549
+(Intercept)           31.0978     1.1097   28.02
+partyRepublican      -26.6556     1.5043  -17.72
+week                  -2.3185     0.1643  -14.11
+partyRepublican:week   2.4739     0.2251   10.99
 
 Correlation of Fixed Effects:
             (Intr) prtyRp week  
-partyRpblcn -0.735              
-week        -0.880  0.646       
-prtyRpblcn:  0.643 -0.879 -0.731
+partyRpblcn -0.738              
+week        -0.719  0.530       
+prtyRpblcn:  0.525 -0.719 -0.730
 
 > lmm5 <- lmer(abs ~ party * week + (1+week|handle), data = df, REML = FALSE)
 
@@ -316,31 +318,31 @@ Formula: abs ~ party * week + (1 + week | handle)
    Data: df
 
      AIC      BIC   logLik deviance df.resid 
- 46215.6  46264.3 -23099.8  46199.6     3248 
+ 27822.2  27870.9 -13903.1  27806.2     3248 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--10.954  -0.074  -0.034   0.006  49.128 
+-4.3297 -0.3284 -0.1239  0.1431 14.7699 
 
 Random effects:
  Groups   Name        Variance Std.Dev. Corr 
- handle   (Intercept) 55989    236.62        
-          week         1055     32.48   -1.00
- Residual             76234    276.11        
+ handle   (Intercept) 257.407  16.044        
+          week          2.005   1.416   -1.00
+ Residual             250.453  15.826        
 Number of obs: 3256, groups:  handle, 436
 
 Fixed effects:
                      Estimate Std. Error t value
-(Intercept)           153.665     23.051   6.666
-partyRepublican      -141.160     31.176  -4.528
-week                  -17.997      3.639  -4.945
-partyRepublican:week   18.475      4.943   3.737
+(Intercept)           30.8998     1.4586  21.185
+partyRepublican      -26.5480     1.9696 -13.479
+week                  -2.2554     0.1891 -11.926
+partyRepublican:week   2.4325     0.2572   9.456
 
 Correlation of Fixed Effects:
             (Intr) prtyRp week  
-partyRpblcn -0.739              
-week        -0.933  0.690       
-prtyRpblcn:  0.687 -0.931 -0.736
+partyRpblcn -0.741              
+week        -0.881  0.652       
+prtyRpblcn:  0.648 -0.879 -0.735
 
 > lmm5.null <- lmer(abs ~ party + week + (1+week|handle), data = df, REML = FALSE)
 
@@ -350,29 +352,29 @@ Formula: abs ~ party + week + (1 + week | handle)
    Data: df
 
      AIC      BIC   logLik deviance df.resid 
- 46227.4  46270.0 -23106.7  46213.4     3249 
+ 27903.1  27945.7 -13944.5  27889.1     3249 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--11.046  -0.103  -0.041   0.010  49.012 
+-4.4225 -0.3423 -0.1232  0.1370 14.5696 
 
 Random effects:
  Groups   Name        Variance Std.Dev. Corr 
- handle   (Intercept) 58499    241.86        
-          week         1116     33.41   -1.00
- Residual             76346    276.31        
+ handle   (Intercept) 322.926  17.970        
+          week          3.047   1.746   -1.00
+ Residual             254.109  15.941        
 Number of obs: 3256, groups:  handle, 436
 
 Fixed effects:
                 Estimate Std. Error t value
-(Intercept)       94.359     16.941   5.570
-partyRepublican  -32.466     11.376  -2.854
-week              -7.973      2.493  -3.198
+(Intercept)      21.6886     1.1770  18.426
+partyRepublican  -9.7507     0.9226 -10.569
+week             -0.9299     0.1381  -6.736
 
 Correlation of Fixed Effects:
             (Intr) prtyRp
-partyRpblcn -0.373       
-week        -0.871  0.017
+partyRpblcn -0.437       
+week        -0.819  0.020
 
 > lmm5.res <- resid(lmm5)
 
@@ -385,8 +387,8 @@ Models:
 lmm.null: abs ~ 1 + (1 | handle)
 lmm1a: abs ~ week + (1 | handle)
          Df   AIC   BIC logLik deviance  Chisq Chi Df Pr(>Chisq)    
-lmm.null  3 46448 46466 -23221    46442                             
-lmm1a     4 46434 46459 -23213    46426 15.805      1  7.024e-05 ***
+lmm.null  3 28292 28310 -14143    28286                             
+lmm1a     4 28220 28245 -14106    28212 73.472      1  < 2.2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -397,8 +399,8 @@ Models:
 lmm1a: abs ~ week + (1 | handle)
 lmm1b: abs ~ party + (1 | handle)
       Df   AIC   BIC logLik deviance  Chisq Chi Df Pr(>Chisq)    
-lmm1a  4 46434 46459 -23213    46426                             
-lmm1b  4 46428 46453 -23210    46420 6.1576      0  < 2.2e-16 ***
+lmm1a  4 28220 28245 -14106    28212                             
+lmm1b  4 28131 28156 -14062    28123 88.779      0  < 2.2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -409,8 +411,8 @@ Models:
 lmm1a: abs ~ week + (1 | handle)
 lmm3: abs ~ party + week + (1 | handle)
       Df   AIC   BIC logLik deviance  Chisq Chi Df Pr(>Chisq)    
-lmm1a  4 46434 46459 -23213    46426                             
-lmm3   5 46414 46444 -23202    46404 22.353      1  2.269e-06 ***
+lmm1a  4 28220 28245 -14106    28212                             
+lmm3   5 28059 28089 -14024    28049 163.62      1  < 2.2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -420,9 +422,9 @@ Data: df
 Models:
 lmm3: abs ~ party + week + (1 | handle)
 lmm4: abs ~ party * week + (1 | handle)
-     Df   AIC   BIC logLik deviance  Chisq Chi Df Pr(>Chisq)    
-lmm3  5 46414 46444 -23202    46404                             
-lmm4  6 46395 46432 -23192    46383 20.617      1  5.609e-06 ***
+     Df   AIC   BIC logLik deviance Chisq Chi Df Pr(>Chisq)    
+lmm3  5 28059 28089 -14024    28049                            
+lmm4  6 27942 27979 -13965    27930 118.3      1  < 2.2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -433,8 +435,8 @@ Models:
 lmm5.null: abs ~ party + week + (1 + week | handle)
 lmm5: abs ~ party * week + (1 + week | handle)
           Df   AIC   BIC logLik deviance  Chisq Chi Df Pr(>Chisq)    
-lmm5.null  7 46227 46270 -23107    46213                             
-lmm5       8 46216 46264 -23100    46200 13.791      1  0.0002043 ***
+lmm5.null  7 27903 27946 -13944    27889                             
+lmm5       8 27822 27871 -13903    27806 82.894      1  < 2.2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -442,18 +444,18 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
      Power for longitudinal linear model with random slope (Edland, 2009) 
 
-                 n = 208.7218
-             delta = -14.11599
-            sig2.s = 1055.031
-            sig2.e = 76234.38
+                 n = 15.03104
+             delta = -2.654796
+            sig2.s = 2.005304
+            sig2.e = 250.4529
          sig.level = 0.05
                  t = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
              power = 0.9
        alternative = two.sided
-          delta.CI = -20.22638, -8.00560
-   partyRepublican = -141.1599
-partyRepublican CI = -202.2638, -80.0560
-              n.CI = 101.6610, 648.9373
+          delta.CI = -3.040834, -2.268758
+   partyRepublican = -26.54796
+partyRepublican CI = -30.40834, -22.68758
+              n.CI = 11.45686, 20.58140
 
  NOTE: n is number in *each* group 
 
@@ -486,16 +488,16 @@ Linear mixed model fit by maximum likelihood  ['lmerMod']
 Formula: abs ~ party * week + (1 + week | handle)
    Data: df
       AIC       BIC    logLik  deviance  df.resid 
- 46215.63  46264.34 -23099.82  46199.63      3248 
+ 27822.17  27870.87 -13903.08  27806.17      3248 
 Random effects:
  Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 236.62        
-          week         32.48   -1.00
- Residual             276.11        
+ handle   (Intercept) 16.044        
+          week         1.416   -1.00
+ Residual             15.826        
 Number of obs: 3256, groups:  handle, 436
 Fixed Effects:
          (Intercept)       partyRepublican                  week  partyRepublican:week  
-              153.66               -141.16                -18.00                 18.47  
+              30.900               -26.548                -2.255                 2.432  
 
 > lmm.exclude1 <- exclude.influence(lmm5,
 +                                   "handle", "RepThompson")
@@ -505,16 +507,16 @@ Linear mixed model fit by maximum likelihood  ['lmerMod']
 Formula: abs ~ party * week + (1 + week | handle)
    Data: data.update
       AIC       BIC    logLik  deviance  df.resid 
- 39227.40  39276.09 -19605.70  39211.40      3239 
+ 27728.52  27777.20 -13856.26  27712.52      3239 
 Random effects:
  Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 90.30         
-          week        11.07    -1.00
- Residual             94.79         
+ handle   (Intercept) 16.040        
+          week         1.412   -1.00
+ Residual             15.778        
 Number of obs: 3247, groups:  handle, 435
 Fixed Effects:
          (Intercept)       partyRepublican                  week  partyRepublican:week  
-              122.05               -109.68                -13.64                 14.12  
+              30.754               -26.402                -2.234                 2.411  
 
 > lmm.exclude2 <- exclude.influence(lmm5,
 +                                   "handle", "RepDennyHeck")
@@ -524,16 +526,16 @@ Linear mixed model fit by maximum likelihood  ['lmerMod']
 Formula: abs ~ party * week + (1 + week | handle)
    Data: data.update
       AIC       BIC    logLik  deviance  df.resid 
- 46064.13  46112.82 -23024.06  46048.13      3241 
+ 27515.16  27563.85 -13749.58  27499.16      3241 
 Random effects:
  Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 232.42        
-          week         31.92   -1.00
- Residual             274.11        
+ handle   (Intercept) 15.244        
+          week         1.299   -1.00
+ Residual             15.227        
 Number of obs: 3249, groups:  handle, 435
 Fixed Effects:
          (Intercept)       partyRepublican                  week  partyRepublican:week  
-              147.92               -135.41                -17.22                 17.70  
+              30.280               -25.926                -2.187                 2.363  
 
 > lmm.exclude3 <- exclude.influence(lmm5,
 +                                   "handle", "RepLawrence")
@@ -543,16 +545,16 @@ Linear mixed model fit by maximum likelihood  ['lmerMod']
 Formula: abs ~ party * week + (1 + week | handle)
    Data: data.update
       AIC       BIC    logLik  deviance  df.resid 
- 46086.66  46135.35 -23035.33  46070.66      3241 
+ 27489.51  27538.20 -13736.76  27473.51      3241 
 Random effects:
  Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 235.84        
-          week         32.37   -1.00
- Residual             274.83        
+ handle   (Intercept) 15.561        
+          week         1.325   -1.00
+ Residual             15.127        
 Number of obs: 3249, groups:  handle, 435
 Fixed Effects:
          (Intercept)       partyRepublican                  week  partyRepublican:week  
-              150.25               -137.75                -17.52                 18.00  
+              30.341               -25.990                -2.186                 2.362  
 
 > lmm.exclude4 <- exclude.influence(lmm5,
 +                                   "handle", "RepPaulTonko")
@@ -562,16 +564,16 @@ Linear mixed model fit by maximum likelihood  ['lmerMod']
 Formula: abs ~ party * week + (1 + week | handle)
    Data: data.update
       AIC       BIC    logLik  deviance  df.resid 
- 46078.97  46127.66 -23031.49  46062.97      3239 
+ 27724.04  27772.72 -13854.02  27708.04      3239 
 Random effects:
  Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 236.1         
-          week         32.4    -1.00
- Residual             275.7         
+ handle   (Intercept) 15.962        
+          week         1.395   -1.00
+ Residual             15.768        
 Number of obs: 3247, groups:  handle, 435
 Fixed Effects:
          (Intercept)       partyRepublican                  week  partyRepublican:week  
-              150.98               -138.47                -17.61                 18.09  
+              30.639               -26.287                -2.210                 2.387  
 
 > lmm.exclude5 <- exclude.influence(lmm5,
 +                                   "handle", "repdonbeyer")
@@ -581,16 +583,16 @@ Linear mixed model fit by maximum likelihood  ['lmerMod']
 Formula: abs ~ party * week + (1 + week | handle)
    Data: data.update
       AIC       BIC    logLik  deviance  df.resid 
- 46076.15  46124.83 -23030.07  46060.15      3239 
+ 27745.76  27794.45 -13864.88  27729.76      3239 
 Random effects:
  Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 235.98        
-          week         32.41   -1.00
- Residual             275.62        
+ handle   (Intercept) 16.072        
+          week         1.419   -1.00
+ Residual             15.824        
 Number of obs: 3247, groups:  handle, 435
 Fixed Effects:
          (Intercept)       partyRepublican                  week  partyRepublican:week  
-              150.84               -138.33                -17.63                 18.11  
+              30.886               -26.534                -2.259                 2.436  
 
 > lmm.exclude6 <- exclude.influence(lmm5,
 +                                   "handle", "DonaldNorcross")
@@ -600,16 +602,16 @@ Linear mixed model fit by maximum likelihood  ['lmerMod']
 Formula: abs ~ party * week + (1 + week | handle)
    Data: data.update
       AIC       BIC    logLik  deviance  df.resid 
- 46082.49  46131.17 -23033.24  46066.49      3239 
+ 27738.41  27787.10 -13861.21  27722.41      3239 
 Random effects:
  Groups   Name        Std.Dev. Corr 
- handle   (Intercept) 235.74        
-          week         32.39   -1.00
- Residual             275.94        
+ handle   (Intercept) 15.865        
+          week         1.401   -1.00
+ Residual             15.826        
 Number of obs: 3247, groups:  handle, 435
 Fixed Effects:
          (Intercept)       partyRepublican                  week  partyRepublican:week  
-              150.79               -138.28                -17.64                 18.12  
+              30.632               -26.278                -2.232                 2.409  
 
 > # separate for Dems and Reps to get at interaction term
 > lmm_dem <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Democrat"), REML .... [TRUNCATED] 
@@ -620,27 +622,27 @@ Formula: abs ~ week + (1 + week | handle)
    Data: subset(df, party == "Democrat")
 
      AIC      BIC   logLik deviance df.resid 
- 22614.5  22646.4 -11301.2  22602.5     1507 
+ 13990.2  14022.2  -6989.1  13978.2     1507 
 
 Scaled residuals: 
-   Min     1Q Median     3Q    Max 
--7.734 -0.114 -0.057  0.009 33.654 
+    Min      1Q  Median      3Q     Max 
+-3.1775 -0.4520 -0.2242  0.2665 10.3541 
 
 Random effects:
  Groups   Name        Variance Std.Dev. Corr 
- handle   (Intercept) 126538   355.72        
-          week          2415    49.14   -1.00
- Residual             160959   401.20        
+ handle   (Intercept) 590.987  24.310        
+          week          4.977   2.231   -1.00
+ Residual             500.897  22.381        
 Number of obs: 1513, groups:  handle, 195
 
 Fixed effects:
             Estimate Std. Error t value
-(Intercept)  153.615     34.149   4.498
-week         -17.984      5.382  -3.342
+(Intercept)  30.8766     2.1579  14.309
+week         -2.2508     0.2768  -8.131
 
 Correlation of Fixed Effects:
      (Intr)
-week -0.935
+week -0.891
 
 > lmm_rep <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Republican"), REML = FALSE)
 
@@ -650,27 +652,27 @@ Formula: abs ~ week + (1 + week | handle)
    Data: subset(df, party == "Republican")
 
      AIC      BIC   logLik deviance df.resid 
- 17770.5  17803.3  -8879.3  17758.5     1737 
+ 10979.2  11012.0  -5483.6  10967.2     1737 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--4.0080 -0.2115 -0.1009  0.0486 29.3309 
+-2.3477 -0.5286 -0.2546  0.2543  9.5367 
 
 Random effects:
  Groups   Name        Variance Std.Dev. Corr
- handle   (Intercept)  212.466 14.576       
-          week           7.971  2.823   1.00
- Residual             1228.191 35.046       
+ handle   (Intercept)  0.9072  0.9524       
+          week         0.1069  0.3269   1.00
+ Residual             27.5031  5.2443       
 Number of obs: 1743, groups:  handle, 241
 
 Fixed effects:
             Estimate Std. Error t value
-(Intercept)  13.0557     2.0261   6.444
-week          0.1995     0.3840   0.520
+(Intercept)  4.51642    0.27481  16.435
+week         0.14165    0.05436   2.606
 
 Correlation of Fixed Effects:
      (Intr)
-week -0.449
+week -0.693
 
 > # make pretty tables
 > # mod_stargazer("Linear Mixed Models", "mixed_models.html", 

@@ -4,6 +4,7 @@ library(stargazer)
 library(influence.ME)
 library(tidyr)
 library(car)
+library(plyr)
 
 sink("data-files/2016_election_results.txt")
 
@@ -31,7 +32,10 @@ summary(df.handlemeans)
 by_party <- table(df$week,df$party)
 by_party
 
-by_party_week <- aggregate(df$abs, list(df$week, df$party), FUN = function(x) c(mn = mean(x), md = median(x), sd = sd(x) ) )
+by_party_week <- ddply(df, .(week, party), summarize, 
+                       mean = round(mean(abs, na.rm=TRUE), 4),
+                       sd = round(sd(abs, na.rm=TRUE), 2), 
+                       median = round(median(abs, na.rm=TRUE), 2))
 by_party_week
 
 # linear mixed-effects models
