@@ -147,11 +147,16 @@ lmm.exclude6 <- exclude.influence(lmm5,
 print(lmm.exclude6, cor=FALSE)
 
 # separate for Dems and Reps to get at interaction term
+lmm_dem.null <- lmer(abs ~ (1+week|handle), data = subset(df, party == "Democrat"), REML = FALSE)
+summary(lmm_dem.null)
 lmm_dem <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Democrat"), REML = FALSE)
 summary(lmm_dem)
+anova(lmm_dem.null, lmm_dem)
+lmm_rep.null <- lmer(abs ~ (1+week|handle), data = subset(df, party == "Republican"), REML = FALSE)
+summary(lmm_rep.null)
 lmm_rep <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Republican"), REML = FALSE)
 summary(lmm_rep)
-
+anova(lmm_rep.null, lmm_rep)
 # make pretty tables
 # mod_stargazer("Linear Mixed Models", "mixed_models.html", 
 #               lmm.null, lmm1a, lmm1b, lmm3, lmm4, lmm5,

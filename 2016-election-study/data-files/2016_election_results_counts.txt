@@ -695,7 +695,32 @@ Fixed Effects:
               150.79               -138.28                -17.64                 18.12  
 
 > # separate for Dems and Reps to get at interaction term
-> lmm_dem <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Democrat"), REML .... [TRUNCATED] 
+> lmm_dem.null <- lmer(abs ~ (1+week|handle), data = subset(df, party == "Democrat"), REML = .... [TRUNCATED] 
+
+> summary(lmm_dem.null)
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: abs ~ (1 + week | handle)
+   Data: subset(df, party == "Democrat")
+
+     AIC      BIC   logLik deviance df.resid 
+ 22623.4  22650.0 -11306.7  22613.4     1508 
+
+Scaled residuals: 
+   Min     1Q Median     3Q    Max 
+-7.853 -0.110 -0.070 -0.009 33.519 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ handle   (Intercept) 136877   369.97        
+          week          2665    51.63   -1.00
+ Residual             161294   401.61        
+Number of obs: 1513, groups:  handle, 195
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)    46.55      12.10   3.848
+
+> lmm_dem <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Democrat"), REML = FALSE)
 
 > summary(lmm_dem)
 Linear mixed model fit by maximum likelihood  ['lmerMod']
@@ -724,6 +749,42 @@ week         -17.984      5.382  -3.342
 Correlation of Fixed Effects:
      (Intr)
 week -0.935
+
+> anova(lmm_dem.null, lmm_dem)
+Data: subset(df, party == "Democrat")
+Models:
+lmm_dem.null: abs ~ (1 + week | handle)
+lmm_dem: abs ~ week + (1 + week | handle)
+             Df   AIC   BIC logLik deviance  Chisq Chi Df Pr(>Chisq)    
+lmm_dem.null  5 22623 22650 -11307    22613                             
+lmm_dem       6 22614 22646 -11301    22602 10.903      1  0.0009603 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+> lmm_rep.null <- lmer(abs ~ (1+week|handle), data = subset(df, party == "Republican"), REML = FALSE)
+
+> summary(lmm_rep.null)
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: abs ~ (1 + week | handle)
+   Data: subset(df, party == "Republican")
+
+     AIC      BIC   logLik deviance df.resid 
+ 17768.8  17796.1  -8879.4  17758.8     1738 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.0071 -0.2154 -0.1004  0.0495 29.3307 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr
+ handle   (Intercept)  211.749 14.552       
+          week           8.018  2.832   1.00
+ Residual             1228.207 35.046       
+Number of obs: 1743, groups:  handle, 241
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)   13.527      1.811   7.472
 
 > lmm_rep <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Republican"), REML = FALSE)
 
@@ -754,6 +815,15 @@ week          0.1995     0.3840   0.520
 Correlation of Fixed Effects:
      (Intr)
 week -0.449
+
+> anova(lmm_rep.null, lmm_rep)
+Data: subset(df, party == "Republican")
+Models:
+lmm_rep.null: abs ~ (1 + week | handle)
+lmm_rep: abs ~ week + (1 + week | handle)
+             Df   AIC   BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+lmm_rep.null  5 17769 17796 -8879.4    17759                         
+lmm_rep       6 17770 17803 -8879.3    17758 0.2693      1     0.6038
 
 > # make pretty tables
 > # mod_stargazer("Linear Mixed Models", "mixed_models.html", 
