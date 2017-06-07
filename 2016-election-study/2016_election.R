@@ -4,6 +4,7 @@ library(stargazer)
 library(influence.ME)
 library(tidyr)
 library(car)
+library(plyr)
 
 sink("data-files/2016_election_results.txt")
 
@@ -31,7 +32,10 @@ summary(df.handlemeans)
 by_party <- table(df$week,df$party)
 by_party
 
-by_party_week <- aggregate(df$abs, list(df$week, df$party), FUN = function(x) c(mn = mean(x), md = median(x), sd = sd(x) ) )
+by_party_week <- ddply(df, .(week, party), summarize, 
+                       mean = round(mean(abs, na.rm=TRUE), 4),
+                       sd = round(sd(abs, na.rm=TRUE), 2), 
+                       median = round(median(abs, na.rm=TRUE), 2))
 by_party_week
 
 # linear mixed-effects models
@@ -57,6 +61,13 @@ lmm5.null <- lmer(abs ~ party + week + (1+week|handle), data = df, REML = FALSE)
 summary(lmm5.null)
 lmm5.res <- resid(lmm5)
 
+# run again with just weeks 3-9
+df.last_6_weeks <- df[ which(df$week > 2), ]
+lmm5.last_6_weeks <- lmer(abs ~ party * week + (1+week|handle), data = df.last_6_weeks, REML = FALSE)
+summary(lmm5.last_6_weeks)
+lmm5.null.last_6_weeks <- lmer(abs ~ party + week + (1+week|handle), data = df.last_6_weeks, REML = FALSE)
+summary(lmm5.null.last_6_weeks)
+
 # NOTE: LH 5/11 - no reason to run these?
 # lmm4 <- lmer(abs ~ party * week + (week | handle), data = df)
 # summary(lmm3)
@@ -79,6 +90,9 @@ anova(lmm3, lmm4, refit=FALSE)
 
 # random slopes
 anova(lmm5.null, lmm5, refit=FALSE)
+
+# random slopes but just the last 6 weeks
+anova(lmm5.null.last_6_weeks, lmm5.last_6_weeks)
 
 lmmpower(lmm5, pct.change = 0.10, t = seq(0,9,1), power = 0.90)
 
@@ -133,11 +147,16 @@ lmm.exclude6 <- exclude.influence(lmm5,
 print(lmm.exclude6, cor=FALSE)
 
 # separate for Dems and Reps to get at interaction term
+lmm_dem.null <- lmer(abs ~ (1+week|handle), data = subset(df, party == "Democrat"), REML = FALSE)
+summary(lmm_dem.null)
 lmm_dem <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Democrat"), REML = FALSE)
 summary(lmm_dem)
+anova(lmm_dem.null, lmm_dem)
+lmm_rep.null <- lmer(abs ~ (1+week|handle), data = subset(df, party == "Republican"), REML = FALSE)
+summary(lmm_rep.null)
 lmm_rep <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Republican"), REML = FALSE)
 summary(lmm_rep)
-
+anova(lmm_rep.null, lmm_rep)
 # make pretty tables
 # mod_stargazer("Linear Mixed Models", "mixed_models.html", 
 #               lmm.null, lmm1a, lmm1b, lmm3, lmm4, lmm5,
