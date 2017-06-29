@@ -6,7 +6,7 @@ library(tidyr)
 library(car)
 library(plyr)
 
-sink("data-files/2016_election_results.txt")
+sink("data-files/2016_election_results_counts.txt")
 
 # for pretty regression tables
 # http://stackoverflow.com/questions/30195718/stargazer-save-to-file-dont-show-in-console
@@ -19,7 +19,7 @@ mod_stargazer <- function(title, output.file, append, ...) {
   cat(paste(output, collapse = "\n"), "\n", file=output.file, append=TRUE)
 }
 
-df <- read.csv('data-files/weekly_averages_long.csv', header = TRUE, sep = ",", quote = "\"",
+df <- read.csv('data-files/weekly_averages_long_counts.csv', header = TRUE, sep = ",", quote = "\"",
                dec = ".", fill = TRUE, comment.char = "")
 
 summary(df)

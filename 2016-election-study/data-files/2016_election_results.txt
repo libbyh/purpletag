@@ -831,3 +831,19 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 > # mod_stargazer("Linear Mixed Models", "mixed_models.html", 
 > #               lmm.null, lmm1a, lmm1b, lmm3, lmm4, lmm5,
 > #  .... [TRUNCATED] 
+
+> library(lme4)
+
+> library(longpower)
+
+> library(stargazer)
+
+> library(influence.ME)
+
+> library(tidyr)
+
+> library(car)
+
+> library(plyr)
+
+> sink("data-files/2016_election_results_counts.txt")
