@@ -1,12 +1,4 @@
-library(lme4)
-library(longpower)
-library(stargazer)
-library(influence.ME)
-library(tidyr)
-library(car)
-library(plyr)
-
-sink("data-files/2016_election_results_counts.txt")
+####### HELPER FUNCTIONS #######
 
 # for pretty regression tables
 # http://stackoverflow.com/questions/30195718/stargazer-save-to-file-dont-show-in-console
@@ -19,25 +11,64 @@ mod_stargazer <- function(title, output.file, append, ...) {
   cat(paste(output, collapse = "\n"), "\n", file=output.file, append=TRUE)
 }
 
-df <- read.csv('data-files/weekly_averages_long_counts.csv', header = TRUE, sep = ",", quote = "\"",
+# for automatically installing missing packages
+# http://www.salemmarafi.com/code/install-r-package-automatically/
+usePackage <- function(p) 
+{
+  if (!is.element(p, installed.packages()[,1]))
+    install.packages(p, dep = TRUE)
+  require(p, character.only = TRUE)
+}
+
+
+####### SETUP #######
+# packages
+usePackage('lme4')
+usePackage('longpower')
+usePackage('stargazer')
+usePackage('influence.ME')
+usePackage('tidyr')
+usePackage('car')
+usePackage('plyr')
+usePackage('printr')
+
+# which polar-scores? default or count-based
+## default
+sink("data-files/2016_election_results.txt")
+
+# get data
+df <- read.csv('data-files/weekly_averages_long.csv', header = TRUE, sep = ",", quote = "\"",
                dec = ".", fill = TRUE, comment.char = "")
 
+## count-based
+# sink("data-files/2016_election_results_counts.txt", append = FALSE, split = TRUE)
+# 
+# # get data
+# df <- read.csv('data-files/weekly_averages_long_counts.csv', header = TRUE, sep = ",", quote = "\"",
+#                dec = ".", fill = TRUE, comment.char = "")
+
+
+####### DESCRIPTIVE STATS #######
+# show summary stats
 summary(df)
 
-# summary by handle
+# summarize by handle
 df.handlemeans <- spread(df, key = week, value = abs)
 summary(df.handlemeans)
 
-# summary by party
+# summarize by party
 by_party <- table(df$week,df$party)
 by_party
 
+# summarize by party and week
 by_party_week <- ddply(df, .(week, party), summarize, 
                        mean = round(mean(abs, na.rm=TRUE), 4),
                        sd = round(sd(abs, na.rm=TRUE), 2), 
                        median = round(median(abs, na.rm=TRUE), 2))
 by_party_week
 
+
+####### REGRESSION MODELS #######
 # linear mixed-effects models
 # REML vs ML 
 # https://stats.stackexchange.com/questions/48671/what-is-restricted-maximum-likelihood-and-when-should-it-be-used
@@ -157,6 +188,7 @@ summary(lmm_rep.null)
 lmm_rep <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Republican"), REML = FALSE)
 summary(lmm_rep)
 anova(lmm_rep.null, lmm_rep)
+
 # make pretty tables
 # mod_stargazer("Linear Mixed Models", "mixed_models.html", 
 #               lmm.null, lmm1a, lmm1b, lmm3, lmm4, lmm5,

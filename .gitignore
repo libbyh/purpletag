@@ -63,3 +63,5 @@ docs/_build/
 # Emacs
 *~
 
+# Mac
+.DS_Store

@@ -1,67 +1,58 @@
 
-> # for pretty regression tables
-> # http://stackoverflow.com/questions/30195718/stargazer-save-to-file-dont-show-in-console
-> mod_stargazer <- functi .... [TRUNCATED] 
-
+> # get data
 > df <- read.csv('data-files/weekly_averages_long_counts.csv', header = TRUE, sep = ",", quote = "\"",
-+                dec = ".", fill = TRUE, commen ..." ... [TRUNCATED] 
++                dec = ".", fill = ..." ... [TRUNCATED] 
 
+> ####### DESCRIPTIVE STATS #######
+> # show summary stats
 > summary(df)
-       X           id.govtrack                 handle                 name      gender  
- Min.   :   0.0   Min.   :300002   AustinScottGA08:   9   Adam B. Schiff:   9   F: 792  
- 1st Qu.: 998.8   1st Qu.:400326   BennieGThompson:   9   Adam Kinzinger:   9   M:3204  
- Median :1997.5   Median :412292   BettyMcCollum04:   9   Adam Smith    :   9           
- Mean   :1997.5   Mean   :401868   BillPascrell   :   9   Adrian Smith  :   9           
- 3rd Qu.:2996.2   3rd Qu.:412533   BobLatta       :   9   Al Franken    :   9           
- Max.   :3995.0   Max.   :412674   BradSherman    :   9   Al Green      :   9           
-                                   (Other)        :3942   (Other)       :3942           
-        party      chamber         week     avg_score               abs           
- Democrat  :1764   rep:3636   Min.   :1   Min.   :-16142.399   Min.   :    0.001  
- Republican:2232   sen: 360   1st Qu.:3   1st Qu.:   -13.651   1st Qu.:    2.320  
-                              Median :5   Median :     0.800   Median :    8.170  
-                              Mean   :5   Mean   :   -22.728   Mean   :   38.693  
-                              3rd Qu.:7   3rd Qu.:     5.811   3rd Qu.:   26.984  
-                              Max.   :9   Max.   :  1146.555   Max.   :16142.399  
-                                          NA's   :740          NA's   :740        
+       X           id.govtrack                 handle                 name      gender          party     
+ Min.   :   0.0   Min.   :300002   AustinScottGA08:   9   Adam B. Schiff:   9   F: 792   Democrat  :1764  
+ 1st Qu.: 998.8   1st Qu.:400326   BennieGThompson:   9   Adam Kinzinger:   9   M:3204   Republican:2232  
+ Median :1997.5   Median :412292   BettyMcCollum04:   9   Adam Smith    :   9                             
+ Mean   :1997.5   Mean   :401868   BillPascrell   :   9   Adrian Smith  :   9                             
+ 3rd Qu.:2996.2   3rd Qu.:412533   BobLatta       :   9   Al Franken    :   9                             
+ Max.   :3995.0   Max.   :412674   BradSherman    :   9   Al Green      :   9                             
+                                   (Other)        :3942   (Other)       :3942                             
+ chamber         week     avg_score               abs           
+ rep:3636   Min.   :1   Min.   :-16142.399   Min.   :    0.001  
+ sen: 360   1st Qu.:3   1st Qu.:   -13.651   1st Qu.:    2.320  
+            Median :5   Median :     0.800   Median :    8.170  
+            Mean   :5   Mean   :   -22.728   Mean   :   38.693  
+            3rd Qu.:7   3rd Qu.:     5.811   3rd Qu.:   26.984  
+            Max.   :9   Max.   :  1146.555   Max.   :16142.399  
+                        NA's   :740          NA's   :740        
 
-> # summary by handle
+> # summarize by handle
 > df.handlemeans <- spread(df, key = week, value = abs)
 
 > summary(df.handlemeans)
-       X           id.govtrack                 handle                 name      gender  
- Min.   :   0.0   Min.   :300002   AustinScottGA08:   9   Adam B. Schiff:   9   F: 792  
- 1st Qu.: 998.8   1st Qu.:400326   BennieGThompson:   9   Adam Kinzinger:   9   M:3204  
- Median :1997.5   Median :412292   BettyMcCollum04:   9   Adam Smith    :   9           
- Mean   :1997.5   Mean   :401868   BillPascrell   :   9   Adrian Smith  :   9           
- 3rd Qu.:2996.2   3rd Qu.:412533   BobLatta       :   9   Al Franken    :   9           
- Max.   :3995.0   Max.   :412674   BradSherman    :   9   Al Green      :   9           
-                                   (Other)        :3942   (Other)       :3942           
-        party      chamber      avg_score                1                 2            
- Democrat  :1764   rep:3636   Min.   :-16142.399   Min.   :  0.012   Min.   :    0.001  
- Republican:2232   sen: 360   1st Qu.:   -13.651   1st Qu.:  2.309   1st Qu.:    4.932  
-                              Median :     0.800   Median :  7.482   Median :   15.045  
-                              Mean   :   -22.728   Mean   : 32.349   Mean   :  158.009  
-                              3rd Qu.:     5.811   3rd Qu.: 39.271   3rd Qu.:   99.948  
-                              Max.   :  1146.555   Max.   :480.299   Max.   :16142.399  
-                              NA's   :740          NA's   :3607      NA's   :3603       
-       3                 4                 5                  6          
- Min.   :  0.002   Min.   :  0.025   Min.   :   0.014   Min.   :  0.171  
- 1st Qu.:  2.897   1st Qu.:  3.089   1st Qu.:   1.651   1st Qu.:  2.188  
- Median :  8.502   Median : 10.386   Median :   4.588   Median :  6.186  
- Mean   : 28.345   Mean   : 23.257   Mean   :  14.577   Mean   : 15.915  
- 3rd Qu.: 27.084   3rd Qu.: 28.249   3rd Qu.:  14.239   3rd Qu.: 20.212  
- Max.   :496.911   Max.   :380.479   Max.   :1146.555   Max.   :272.947  
- NA's   :3622      NA's   :3612      NA's   :3637       NA's   :3650     
-       7                 8                 9          
- Min.   :  0.001   Min.   :  0.010   Min.   :  0.011  
- 1st Qu.:  1.746   1st Qu.:  2.292   1st Qu.:  2.063  
- Median :  5.107   Median :  7.580   Median :  9.078  
- Mean   : 16.250   Mean   : 18.727   Mean   : 27.616  
- 3rd Qu.: 17.127   3rd Qu.: 25.832   3rd Qu.: 33.239  
- Max.   :313.630   Max.   :672.678   Max.   :873.640  
- NA's   :3662      NA's   :3648      NA's   :3667     
+       X           id.govtrack                 handle                 name      gender          party     
+ Min.   :   0.0   Min.   :300002   AustinScottGA08:   9   Adam B. Schiff:   9   F: 792   Democrat  :1764  
+ 1st Qu.: 998.8   1st Qu.:400326   BennieGThompson:   9   Adam Kinzinger:   9   M:3204   Republican:2232  
+ Median :1997.5   Median :412292   BettyMcCollum04:   9   Adam Smith    :   9                             
+ Mean   :1997.5   Mean   :401868   BillPascrell   :   9   Adrian Smith  :   9                             
+ 3rd Qu.:2996.2   3rd Qu.:412533   BobLatta       :   9   Al Franken    :   9                             
+ Max.   :3995.0   Max.   :412674   BradSherman    :   9   Al Green      :   9                             
+                                   (Other)        :3942   (Other)       :3942                             
+ chamber      avg_score                1                 2                   3                 4          
+ rep:3636   Min.   :-16142.399   Min.   :  0.012   Min.   :    0.001   Min.   :  0.002   Min.   :  0.025  
+ sen: 360   1st Qu.:   -13.651   1st Qu.:  2.309   1st Qu.:    4.932   1st Qu.:  2.897   1st Qu.:  3.089  
+            Median :     0.800   Median :  7.482   Median :   15.045   Median :  8.502   Median : 10.386  
+            Mean   :   -22.728   Mean   : 32.349   Mean   :  158.009   Mean   : 28.345   Mean   : 23.257  
+            3rd Qu.:     5.811   3rd Qu.: 39.271   3rd Qu.:   99.948   3rd Qu.: 27.084   3rd Qu.: 28.249  
+            Max.   :  1146.555   Max.   :480.299   Max.   :16142.399   Max.   :496.911   Max.   :380.479  
+            NA's   :740          NA's   :3607      NA's   :3603        NA's   :3622      NA's   :3612     
+       5                  6                 7                 8                 9          
+ Min.   :   0.014   Min.   :  0.171   Min.   :  0.001   Min.   :  0.010   Min.   :  0.011  
+ 1st Qu.:   1.651   1st Qu.:  2.188   1st Qu.:  1.746   1st Qu.:  2.292   1st Qu.:  2.063  
+ Median :   4.588   Median :  6.186   Median :  5.107   Median :  7.580   Median :  9.078  
+ Mean   :  14.577   Mean   : 15.915   Mean   : 16.250   Mean   : 18.727   Mean   : 27.616  
+ 3rd Qu.:  14.239   3rd Qu.: 20.212   3rd Qu.: 17.127   3rd Qu.: 25.832   3rd Qu.: 33.239  
+ Max.   :1146.555   Max.   :272.947   Max.   :313.630   Max.   :672.678   Max.   :873.640  
+ NA's   :3637       NA's   :3650      NA's   :3662      NA's   :3648      NA's   :3667     
 
-> # summary by party
+> # summarize by party
 > by_party <- table(df$week,df$party)
 
 > by_party
@@ -77,9 +68,9 @@
   8      196        248
   9      196        248
 
+> # summarize by party and week
 > by_party_week <- ddply(df, .(week, party), summarize, 
-+                        mean = round(mean(abs, na.rm=TRUE), 4),
-+                        sd  .... [TRUNCATED] 
++                        mean = round(mean(abs, na.rm=TRUE),  .... [TRUNCATED] 
 
 > by_party_week
    week      party     mean      sd median
@@ -102,9 +93,10 @@
 17    9   Democrat  37.1102   73.48  18.70
 18    9 Republican  18.5182   68.92   5.59
 
+> ####### REGRESSION MODELS #######
 > # linear mixed-effects models
 > # REML vs ML 
-> # https://stats.stackexchange.com/questions/48671/what-is-restricted-maximum-likelihood-and-when-sho .... [TRUNCATED] 
+> # https://stats.stackexchange.com/questions/48671/what-is-restri .... [TRUNCATED] 
 
 > summary(lmm.null)
 Linear mixed model fit by maximum likelihood  ['lmerMod']
@@ -829,3 +821,35 @@ lmm_rep       6 17770 17803 -8879.3    17758 0.2693      1     0.6038
 > # mod_stargazer("Linear Mixed Models", "mixed_models.html", 
 > #               lmm.null, lmm1a, lmm1b, lmm3, lmm4, lmm5,
 > #  .... [TRUNCATED] 
+
+> ####### HELPER FUNCTIONS #######
+> 
+> # for pretty regression tables
+> # http://stackoverflow.com/questions/30195718/stargazer-save-to-file-dont-sho .... [TRUNCATED] 
+
+> # for automatically installing missing packages
+> # http://www.salemmarafi.com/code/install-r-package-automatically/
+> usePackage <- function(p) 
++  .... [TRUNCATED] 
+
+> ####### SETUP #######
+> # packages
+> usePackage('lme4')
+
+> usePackage('longpower')
+
+> usePackage('stargazer')
+
+> usePackage('influence.ME')
+
+> usePackage('tidyr')
+
+> usePackage('car')
+
+> usePackage('plyr')
+
+> usePackage('printr')
+
+> # which polar-scores? default or count-based
+> ## default
+> sink("data-files/2016_election_results.txt")
