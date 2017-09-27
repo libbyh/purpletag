@@ -7,7 +7,7 @@ mod_stargazer <- function(title, output.file, append, ...) {
     file.remove(output.file)
   }
   cat("<h1>", title, "</h1>\n", file=output.file, append=TRUE)
-  output <- capture.output(stargazer(...))
+  output <- capture.output(stargazer(ci = TRUE, ...))
   cat(paste(output, collapse = "\n"), "\n", file=output.file, append=TRUE)
 }
 
@@ -31,6 +31,8 @@ usePackage('tidyr')
 usePackage('car')
 usePackage('plyr')
 usePackage('printr')
+usePackage('ggplot2')
+usePackage('sjPlot') # table functions
 
 # which polar-scores? default or count-based
 ## default
@@ -46,6 +48,9 @@ df <- read.csv('data-files/weekly_averages_long.csv', header = TRUE, sep = ",", 
 # # get data
 # df <- read.csv('data-files/weekly_averages_long_counts.csv', header = TRUE, sep = ",", quote = "\"",
 #                dec = ".", fill = TRUE, comment.char = "")
+
+df.dems <- subset(df, party == "Democrat")
+df.reps <- subset(df, party == "Republican")
 
 
 ####### DESCRIPTIVE STATS #######
@@ -67,6 +72,12 @@ by_party_week <- ddply(df, .(week, party), summarize,
                        median = round(median(abs, na.rm=TRUE), 2))
 by_party_week
 
+# spaghetti plots
+p.dems <- ggplot(data = df.dems, aes(x = week, y = abs, group = handle))
+p.dems + geom_line()
+
+p.reps <- ggplot(data = df.reps, aes(x = week, y = abs, group = handle))
+p.reps + geom_line()
 
 ####### REGRESSION MODELS #######
 # linear mixed-effects models
@@ -111,7 +122,7 @@ summary(lmm5.null.last_6_weeks)
 anova(lmm.null, lmm1a, refit=FALSE)
 
 # week vs RE for week
-anova(lmm1a, lmm1b, refit=FALSE)
+anova(lmm1a, lmm2a, refit=FALSE)
 
 # week vs week & party
 anova(lmm1a, lmm3, refit=FALSE)
@@ -131,51 +142,52 @@ lmmpower(lmm5, pct.change = 0.10, t = seq(0,9,1), power = 0.90)
 # plot(df$handle, lmm5.res, ylab="Residuals", xlab="Week", main="Partisanship")
 # abline(0,0)
 
+plot(residuals(lmm5))
 hist(residuals(lmm5))
 qqnorm(residuals(lmm5))
 
-# Q-Q plot looked skewed, so do some checking on outliers
-estex.lmm5 <- influence(lmm5, "handle")
-
-# dfbetas(estex.lmm5, parameters=c(2,3))
-
-# plot(estex.lmm5,
-#      which="dfbetas",
-#      parameters=c(2,3),
-#      xlab="DFbetaS",
-#      ylab="handle")
-
-df.cooks <- cooks.distance(estex.lmm5, parameter = 3, sort = TRUE)
-
-# plot(estex.lmm5, which="cook",
-#      cutoff=.009, sort=TRUE,
-#      xlab="Cook´s Distance",
-#      ylab="handle")
-
-# which(df.cooks > 4/444)
-
-# df.cooks
-
-# leave out outliers
-print(lmm5, cor=FALSE)
-lmm.exclude1 <- exclude.influence(lmm5,
-                                  "handle", "RepThompson")
-print(lmm.exclude1, cor=FALSE)
-lmm.exclude2 <- exclude.influence(lmm5,
-                                  "handle", "RepDennyHeck")
-print(lmm.exclude2, cor=FALSE)
-lmm.exclude3 <- exclude.influence(lmm5,
-                                  "handle", "RepLawrence")
-print(lmm.exclude3, cor=FALSE)
-lmm.exclude4 <- exclude.influence(lmm5,
-                                  "handle", "RepPaulTonko")
-print(lmm.exclude4, cor=FALSE)
-lmm.exclude5 <- exclude.influence(lmm5,
-                                  "handle", "repdonbeyer")
-print(lmm.exclude5, cor=FALSE)
-lmm.exclude6 <- exclude.influence(lmm5,
-                                  "handle", "DonaldNorcross")
-print(lmm.exclude6, cor=FALSE)
+# # Q-Q plot looked skewed, so do some checking on outliers
+# estex.lmm5 <- influence(lmm5, "handle")
+# 
+# # dfbetas(estex.lmm5, parameters=c(2,3))
+# 
+# # plot(estex.lmm5,
+# #      which="dfbetas",
+# #      parameters=c(2,3),
+# #      xlab="DFbetaS",
+# #      ylab="handle")
+# 
+# df.cooks <- cooks.distance(estex.lmm5, parameter = 3, sort = TRUE)
+# 
+# # plot(estex.lmm5, which="cook",
+# #      cutoff=.009, sort=TRUE,
+# #      xlab="Cook´s Distance",
+# #      ylab="handle")
+# 
+# # which(df.cooks > 4/444)
+# 
+# # df.cooks
+# 
+# # leave out outliers
+# print(lmm5, cor=FALSE)
+# lmm.exclude1 <- exclude.influence(lmm5,
+#                                   "handle", "RepThompson")
+# print(lmm.exclude1, cor=FALSE)
+# lmm.exclude2 <- exclude.influence(lmm5,
+#                                   "handle", "RepDennyHeck")
+# print(lmm.exclude2, cor=FALSE)
+# lmm.exclude3 <- exclude.influence(lmm5,
+#                                   "handle", "RepLawrence")
+# print(lmm.exclude3, cor=FALSE)
+# lmm.exclude4 <- exclude.influence(lmm5,
+#                                   "handle", "RepPaulTonko")
+# print(lmm.exclude4, cor=FALSE)
+# lmm.exclude5 <- exclude.influence(lmm5,
+#                                   "handle", "repdonbeyer")
+# print(lmm.exclude5, cor=FALSE)
+# lmm.exclude6 <- exclude.influence(lmm5,
+#                                   "handle", "DonaldNorcross")
+# print(lmm.exclude6, cor=FALSE)
 
 # separate for Dems and Reps to get at interaction term
 lmm_dem.null <- lmer(abs ~ (1+week|handle), data = subset(df, party == "Democrat"), REML = FALSE)
@@ -190,7 +202,8 @@ summary(lmm_rep)
 anova(lmm_rep.null, lmm_rep)
 
 # make pretty tables
-# mod_stargazer("Linear Mixed Models", "mixed_models.html", 
-#               lmm.null, lmm1a, lmm1b, lmm3, lmm4, lmm5,
-#               type = "html", 
+# mod_stargazer("Linear Mixed Models", "mixed_models.html",
+#               lmm5, lmm_dem, lmm_rep,
+#               type = "html",
 #               append = FALSE)
+sjt.lmer(lmm5, lmm_dem, lmm_rep)
