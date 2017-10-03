@@ -1,0 +1,35 @@
+,Name,PartyState,bioguide,LastName,FirstName,Party,State_x,State_Abbrev,inc_name,inc_party,inc_ran,inc_won,had_challenger,winner_votes,runnerup_votes,winner_party,runnerup_party,State_y,_merge
+0,"Ayotte, Kelly",Republican - New Hampshire,A000368,Ayotte, Kelly,Republican,New Hampshire,NH,Ayotte,R,1,0,1,"354,649","353,632",D,R,NH,both
+1,"Bennet, Michael F.",Democratic - Colorado,B001267,Bennet, Michael F.,Democratic,Colorado,CO,Bennet,D,1,1,1,"1,370,710","1,215,318",D,R,CO,both
+2,"Blumenthal, Richard",Democratic - Connecticut,B001277,Blumenthal, Richard,Democratic,Connecticut,CT,Blumenthal,D,1,1,1,"1,008,714","552,621",D,R,CT,both
+3,"Blunt, Roy",Republican - Missouri,B000575,Blunt, Roy,Republican,Missouri,MO,Blunt,R,1,1,1,"1,378,458","1,300,200",R,D,MO,both
+4,"Boozman, John",Republican - Arkansas,B001236,Boozman, John,Republican,Arkansas,AR,Boozman,R,1,1,1,"661,984","400,602",R,D,AR,both
+5,"Boxer, Barbara",Democratic - California,B000711,Boxer, Barbara,Democratic,California,CA,Boxer,D,0,0,0,"7,542,753","4,701,417",D,D,CA,both
+6,"Burr, Richard",Republican - North Carolina,B001135,Burr, Richard,Republican,North Carolina,NC,Burr,R,1,1,1,"2,395,376","2,128,165",R,D,NC,both
+7,"Crapo, Mike",Republican - Idaho,C000880,Crapo, Mike,Republican,Idaho,ID,Crapo,R,1,1,1,"449,017","188,249",R,D,ID,both
+8,"Grassley, Chuck",Republican - Iowa,G000386,Grassley, Chuck,Republican,Iowa,IA,Grassley,R,1,1,1,"926,007","549,460",R,D,IA,both
+9,"Hoeven, John",Republican - North Dakota,H001061,Hoeven, John,Republican,North Dakota,ND,Hoeven,R,1,1,1,"268,788","58,116",R,D,ND,both
+10,"Isakson, Johnny",Republican - Georgia,I000055,Isakson, Johnny,Republican,Georgia,GA,Isakson,R,1,1,1,"2,135,806","1,599,726",R,D,GA,both
+11,"Kirk, Mark Steven",Republican - Illinois,K000360,Kirk, Mark Steven,Republican,Illinois,IL,Kirk,R,1,0,1,"3,012,940","2,184,692",D,R,IL,both
+12,"Lankford, James",Republican - Oklahoma,L000575,Lankford, James,Republican,Oklahoma,OK,Lankford,R,1,1,1,"980,892","355,911",R,D,OK,both
+13,"Leahy, Patrick J.",Democratic - Vermont,L000174,Leahy, Patrick J.,Democratic,Vermont,VT,Leahy,D,1,1,1,"192,243","103,637",D,R,VT,both
+14,"Lee, Mike",Republican - Utah,L000577,Lee, Mike,Republican,Utah,UT,Lee,R,1,1,1,"760,241","301,860",R,D,UT,both
+15,"McCain, John",Republican - Arizona,M000303,McCain, John,Republican,Arizona,AZ,McCain,R,1,1,1,"1,359,267","1,031,245",R,D,AZ,both
+16,"Mikulski, Barbara A.",Democratic - Maryland,M000702,Mikulski, Barbara A.,Democratic,Maryland,MD,Mikulski,D,0,0,0,"1,659,907","972,557",D,R,MD,both
+17,"Moran, Jerry",Republican - Kansas,M000934,Moran, Jerry,Republican,Kansas,KS,Moran,R,1,1,1,"732,376","379,740",R,D,KS,both
+18,"Murkowski, Frank H.",Republican - Alaska,M001085,Murkowski, Frank H.,Republican,Alaska,AK,Murkowski,R,1,1,1,138149,36200,R,D,AK,both
+19,"Murkowski, Lisa",Republican - Alaska,M001153,Murkowski, Lisa,Republican,Alaska,AK,Murkowski,R,1,1,1,138149,36200,R,D,AK,both
+20,"Murray, Patty",Democratic - Washington,M001111,Murray, Patty,Democratic,Washington,WA,Murray,D,1,1,1,"1,913,979","1,329,338",D,R,WA,both
+21,"Paul, Rand",Republican - Kentucky,P000603,Paul, Rand,Republican,Kentucky,KY,Paul,R,1,1,1,"1,090,177","813,246",R,D,KY,both
+22,"Pence, Mike",Republican - Indiana,P000587,Pence, Mike,Republican,Indiana,IN,Pence,R,0,0,0,"1,423,991","1,158,947",R,D,IN,both
+23,"Portman, Rob",Republican - Ohio,P000449,Portman, Rob,Republican,Ohio,OH,Portman,R,1,1,1,"3,118,567","1,996,908",R,D,OH,both
+24,"Reid, Harry",Democratic - Nevada,R000146,Reid, Harry,Democratic,Nevada,NV,Reid,D,0,0,0,"521,994","495,079",D,R,NV,both
+25,"Rubio, Marco",Republican - Florida,R000595,Rubio, Marco,Republican,Florida,FL,Rubio,R,1,1,1,"4,835,191","4,122,088",R,D,FL,both
+26,"Schatz, Brian",Democratic - Hawaii,S001194,Schatz, Brian,Democratic,Hawaii,HI,Schatz,D,1,1,1,"306,604","92,653",D,R,HI,both
+27,"Schumer, Charles E.",Democratic - New York,S000148,Schumer, Charles E.,Democratic,New York,NY,Schumer,D,1,1,1,"5,221,949","2,009,353",D,R,NY,both
+28,"Scott, Tim",Republican - South Carolina,S001184,Scott, Tim,Republican,South Carolina,SC,Scott,R,1,1,1,"1,241,609","757,022",R,D,SC,both
+29,"Shelby, Richard C.",Democratic - Alabama,S000320,Shelby, Richard C.,Democratic,Alabama,AL,Shelby,R,1,1,1,"1,335,104","748,709",R,D,AL,both
+30,"Thune, John",Republican - South Dakota,T000250,Thune, John,Republican,South Dakota,SD,Thune,R,1,1,1,"265,516","104,140",R,D,SD,both
+31,"Toomey, Pat",Republican - Pennsylvania,T000461,Toomey, Pat,Republican,Pennsylvania,PA,Toomey,R,1,1,1,"2,951,702","2,865,012",R,D,PA,both
+32,"Vitter, David",Republican - Louisiana,V000127,Vitter, David,Republican,Louisiana,LA,Vitter,R,0,0,0,"482,591","337,833",R,D,LA,both
+33,"Wyden, Ron",Democratic - Oregon,W000779,Wyden, Ron,Democratic,Oregon,OR,Wyden,D,1,1,1,"1,105,119","651,106",D,R,OR,both
