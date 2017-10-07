@@ -39,7 +39,7 @@ usePackage('sjPlot') # table functions
 sink("data-files/2016_election_results.txt")
 
 # get data
-df <- read.csv('data-files/weekly_averages_long.csv', header = TRUE, sep = ",", quote = "\"",
+df <- read.csv('data-files/merged_long.csv', header = TRUE, sep = ",", quote = "\"",
                dec = ".", fill = TRUE, comment.char = "")
 
 ## count-based
@@ -66,17 +66,21 @@ by_party <- table(df$week,df$party)
 by_party
 
 # summarize by party and week
-by_party_week <- ddply(df, .(week, party), summarize, 
+by_party_week <- ddply(df, .(week, party), summarize,
                        mean = round(mean(abs, na.rm=TRUE), 4),
-                       sd = round(sd(abs, na.rm=TRUE), 2), 
+                       sd = round(sd(abs, na.rm=TRUE), 2),
                        median = round(median(abs, na.rm=TRUE), 2))
 by_party_week
 
 # spaghetti plots
-p.dems <- ggplot(data = df.dems, aes(x = week, y = abs, group = handle))
+take_dems <- sample(unique(df.dems$handle), 15)
+df.dem_sample = df.dems[df.dems$handle %in% take_dems, ]
+p.dems <- ggplot(data = df.dem_sample, aes(x = week, y = abs, group = handle, colour = handle))
 p.dems + geom_line()
 
-p.reps <- ggplot(data = df.reps, aes(x = week, y = abs, group = handle))
+take_reps <- sample(unique(df.reps$handle), 15)
+df.rep_sample = df.reps[df.reps$handle %in% take_reps, ]
+p.reps <- ggplot(data = df.rep_sample, aes(x = week, y = abs, group = handle, colour = handle))
 p.reps + geom_line()
 
 ####### REGRESSION MODELS #######
@@ -103,13 +107,6 @@ lmm5.null <- lmer(abs ~ party + week + (1+week|handle), data = df, REML = FALSE)
 summary(lmm5.null)
 lmm5.res <- resid(lmm5)
 
-# run again with just weeks 3-9
-df.last_6_weeks <- df[ which(df$week > 2), ]
-lmm5.last_6_weeks <- lmer(abs ~ party * week + (1+week|handle), data = df.last_6_weeks, REML = FALSE)
-summary(lmm5.last_6_weeks)
-lmm5.null.last_6_weeks <- lmer(abs ~ party + week + (1+week|handle), data = df.last_6_weeks, REML = FALSE)
-summary(lmm5.null.last_6_weeks)
-
 # NOTE: LH 5/11 - no reason to run these?
 # lmm4 <- lmer(abs ~ party * week + (week | handle), data = df)
 # summary(lmm3)
@@ -132,9 +129,6 @@ anova(lmm3, lmm4, refit=FALSE)
 
 # random slopes
 anova(lmm5.null, lmm5, refit=FALSE)
-
-# random slopes but just the last 6 weeks
-anova(lmm5.null.last_6_weeks, lmm5.last_6_weeks)
 
 lmmpower(lmm5, pct.change = 0.10, t = seq(0,9,1), power = 0.90)
 
@@ -206,4 +200,30 @@ anova(lmm_rep.null, lmm_rep)
 #               lmm5, lmm_dem, lmm_rep,
 #               type = "html",
 #               append = FALSE)
-sjt.lmer(lmm5, lmm_dem, lmm_rep)
+sjt.lmer(lmm5)
+sjt.lmer(lmm_dem, lmm_rep)
+
+# run again with just weeks 3-9
+# week 2 had a gun control debate that throws off all Dems
+df.last_7_weeks <- df[ which(df$week > 2), ]
+lmm5.last_7_weeks <- lmer(abs ~ party * week + (1+week|handle), data = df.last_7_weeks, REML = FALSE)
+summary(lmm5.last_7_weeks)
+lmm5.null.last_7_weeks <- lmer(abs ~ party + week + (1+week|handle), data = df.last_7_weeks, REML = FALSE)
+summary(lmm5.null.last_7_weeks)
+
+anova(lmm5.null.last_7_weeks, lmm5.last_7_weeks)
+
+# separate for Dems and Reps to get at interaction term (last 6 weeks)
+lmm_dem.last_7_weeks.null <- lmer(abs ~ (1+week|handle), data = subset(df.last_7_weeks, party == "Democrat"), REML = FALSE)
+summary(lmm_dem.last_7_weeks.null)
+lmm_dem.last_7_weeks <- lmer(abs ~ week + (1+week|handle), data = subset(df.last_7_weeks, party == "Democrat"), REML = FALSE)
+summary(lmm_dem.last_7_weeks)
+anova(lmm_dem.last_7_weeks.null, lmm_dem.last_7_weeks)
+lmm_rep.last_7_weeks.null <- lmer(abs ~ (1+week|handle), data = subset(df.last_7_weeks, party == "Republican"), REML = FALSE)
+summary(lmm_rep.last_7_weeks.null)
+lmm_rep.last_7_weeks <- lmer(abs ~ week + (1+week|handle), data = subset(df.last_7_weeks, party == "Republican"), REML = FALSE)
+summary(lmm_rep.last_7_weeks)
+anova(lmm_rep.last_7_weeks.null, lmm_rep.last_7_weeks)
+
+sjt.lmer(lmm5.last_7_weeks)
+sjt.lmer(lmm_dem.last_7_weeks, lmm_rep.last_7_weeks)
