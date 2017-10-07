@@ -1,0 +1,469 @@
+,id.bioguide,handle,state,district,type,party,name.last,inc_name,inc_party,inc_ran,inc_won,had_challenger,winner_votes,runnerup_votes,winner_party,runnerup_party,closeness
+0,A000055,robert_aderholt,AL,4.0,rep,Republican,Aderholt,"Aderholt, Rob",R,1,1,0,235925.0,3519.0,R,write in,0.970606905999
+1,A000367,,MI,3.0,rep,Republican,Amash,"Amash, Justin",R,1,1,1,203545.0,128400.0,R,D,0.226377863803
+2,B001269,reploubarletta,PA,11.0,rep,Republican,Barletta,"Barletta, Lou",R,1,1,1,199421.0,113800.0,R,D,0.273356511856
+3,B000213,repjoebarton,TX,6.0,rep,Republican,Barton,"Barton, Joe",R,1,1,1,159444.0,106667.0,R,D,0.198327013915
+4,B001270,repkarenbass,CA,37.0,rep,Democrat,Bass,"Bass, Karen",D,1,1,1,192490.0,44782.0,D,D,0.622526046057
+5,B000287,repbecerra,CA,34.0,rep,Democrat,Becerra,"Becerra, Xavier",D,1,1,1,122842.0,36314.0,D,D,0.543667847898
+6,B001271,congressmandan,MI,1.0,rep,Republican,Benishek,"Bergman, Jack",R,0,0,0,197777.0,144334.0,R,D,0.156215380388
+7,B001257,repgusbilirakis,FL,12.0,rep,Republican,Bilirakis,"Bilirakis, Gus",R,1,1,1,253559.0,116110.0,R,D,0.371816408733
+8,B001250,reprobbishop,UT,1.0,rep,Republican,Bishop,"Bishop, Rob",R,1,1,1,182925.0,73380.0,R,D,0.427400948089
+9,B000490,sanfordbishop,GA,2.0,rep,Democrat,Bishop,"Bishop, Sanford",D,1,1,1,148543.0,94056.0,D,R,0.22459696866
+10,B001273,repdianeblack,TN,6.0,rep,Republican,Black,"Black, Diane",R,1,1,1,202234.0,61995.0,R,D,0.530747949695
+11,B001243,marshablackburn,TN,7.0,rep,Republican,Blackburn,"Blackburn, Marsha",R,1,1,1,200407.0,65226.0,R,D,0.50890137897
+12,B000574,blumenauermedia,OR,3.0,rep,Democrat,Blumenauer,"Blumenauer, Earl",D,1,1,1,274687.0,78154.0,D,I,0.55700159562
+13,B001255,repboustany,LA,3.0,rep,Republican,Boustany,"Higgins, Clay",R,0,0,0,91532.0,84912.0,R,R,0.0375189861939
+14,B000755,repkevinbrady,TX,8.0,rep,Republican,Brady,"Brady, Kevin",R,1,1,1,236379.0,0.0,R,NONE,1.0
+15,B001227,repbrady,PA,1.0,rep,Democrat,Brady,"Brady, Bob",D,1,1,1,245791.0,53219.0,D,R,0.644031972175
+16,B001274,repmobrooks,AL,5.0,rep,Republican,Brooks,"Brooks, Mo",R,1,1,1,205647.0,102234.0,R,D,0.335886267746
+17,B000911,repcorrinebrown,FL,5.0,rep,Democrat,Brown,"Lawson, Al",D,1,1,1,194549.0,108325.0,D,R,0.28468604106
+18,B001260,vernbuchanan,FL,16.0,rep,Republican,Buchanan,"Buchanan, Vern",R,1,1,1,230654.0,155262.0,R,D,0.195358575441
+19,B001275,replarrybucshon,IN,8.0,rep,Republican,Bucshon,"Bucshon, Larry",R,1,1,1,187702.0,93356.0,R,D,0.335681603085
+20,B001248,michaelcburgess,TX,26.0,rep,Republican,Burgess,"Burgess, Michael",R,1,1,1,211730.0,94507.0,R,D,0.382785228434
+21,B001251,gkbutterfield,NC,1.0,rep,Democrat,Butterfield,"Butterfield, G.K.",D,1,1,1,240661.0,101567.0,D,R,0.406436644576
+22,C000059,kencalvert,CA,42.0,rep,Republican,Calvert,"Calvert, Ken",R,1,1,1,149547.0,104689.0,R,D,0.176442360641
+23,C001036,reploiscapps,CA,24.0,rep,Democrat,Capps,"Carbajal, Salud",D,0,0,0,166034.0,144780.0,D,D,0.0683817331266
+24,C001037,repmikecapuano,MA,7.0,rep,Democrat,Capuano,"Capuano, Mike",D,1,1,1,253354.0,3557.0,D,Write in,0.972309476823
+25,C001083,johncarneyde,DE,0.0,rep,Democrat,Carney,"Blunt Rochester, Lisa",D,1,1,1,233554.0,172301.0,D,R,0.150923359328
+26,C001072,repandrecarson,IN,7.0,rep,Democrat,Carson,"Carson, Andre",D,1,1,1,158739.0,94456.0,D,R,0.25388732005
+27,C001051,judgecarter,TX,31.0,rep,Republican,Carter,"Carter, John",R,1,1,1,166060.0,103852.0,R,D,0.230475117816
+28,C001066,usrepkcastor,FL,14.0,rep,Democrat,Castor,"Castor, Kathy",D,1,1,1,195789.0,121088.0,D,R,0.235741312875
+29,C000266,repstevechabot,OH,1.0,rep,Republican,Chabot,"Chabot, Steve",R,1,1,1,210014.0,144644.0,R,D,0.184318413796
+30,C001076,jasoninthehouse,UT,3.0,rep,Republican,Chaffetz,"Chaffetz, Jason",R,1,1,1,209589.0,75716.0,R,D,0.469227668635
+31,C001080,repjudychu,CA,27.0,rep,Democrat,Chu,"Chu, Judy",D,1,1,1,168977.0,81655.0,D,R,0.348407226531
+32,C001084,repcicilline,RI,1.0,rep,Democrat,Cicilline,"Cicilline, David",D,1,1,1,130534.0,71023.0,D,R,0.295256428703
+33,C001067,yvetteclarke,NY,9.0,rep,Democrat,Clarke,"Clarke, Yvette",D,1,1,1,214189.0,17576.0,D,C,0.848329126486
+34,C001049,,MO,1.0,rep,Democrat,Clay,"Clay, Lacy",D,1,1,1,236993.0,62714.0,D,R,0.581497929645
+35,C001061,repcleaver,MO,5.0,rep,Democrat,Cleaver,"Cleaver, Emanuel",D,1,1,1,190766.0,123771.0,D,R,0.21299560942
+36,C000537,clyburn,SC,6.0,rep,Democrat,Clyburn,"Clyburn, Jim",D,1,1,1,177947.0,70099.0,D,R,0.43479032115
+37,C001077,repmikecoffman,CO,6.0,rep,Republican,Coffman,"Coffman, Mike",R,1,1,1,191626.0,160372.0,R,D,0.0887902772175
+38,C001068,repcohen,TN,9.0,rep,Democrat,Cohen,"Cohen, Steve",D,1,1,1,171631.0,41123.0,D,R,0.613422074321
+39,C001053,tomcoleok04,OK,4.0,rep,Republican,Cole,"Cole, Tom",R,1,1,1,204143.0,76472.0,R,D,0.454968551218
+40,C001062,conawaytx11,TX,11.0,rep,Republican,Conaway,"Conaway, Michael",R,1,1,1,201871.0,23677.0,R,L,0.790049124798
+41,C001078,gerryconnolly,VA,11.0,rep,Democrat,Connolly,"Connolly, Gerry",D,1,1,0,247818.0,34185.0,D,Write in,0.757555770683
+42,C000714,repjohnconyers,MI,13.0,rep,Democrat,Conyers,"Conyers, John",D,1,1,1,198771.0,40541.0,D,R,0.6611870696
+43,C000754,repjimcooper,TN,5.0,rep,Democrat,Cooper,"Cooper, Jim",D,1,1,1,171111.0,102433.0,D,R,0.25106746995
+44,C001059,repjimcosta,CA,16.0,rep,Democrat,Costa,"Costa, Jim",D,1,1,1,97473.0,70483.0,D,R,0.160696849175
+45,C001069,repjoecourtney,CT,2.0,rep,Democrat,Courtney,"Courtney, Joe",D,1,1,1,208818.0,111149.0,D,R,0.305247103608
+46,C001087,reprickcrawford,AR,1.0,rep,Republican,Crawford,"Crawford, Rick",R,1,1,1,183866.0,57181.0,R,L,0.525561405037
+47,C001045,andercrenshaw,FL,4.0,rep,Republican,Crenshaw,"Rutherford, John",R,1,1,1,287509.0,113088.0,R,D,0.435402661528
+48,C001038,repjoecrowley,NY,14.0,rep,Democrat,Crowley,"Crowley, Joe",D,1,1,1,147587.0,30545.0,D,R,0.657052073743
+49,C001063,repcuellar,TX,28.0,rep,Democrat,Cuellar,"Cuellar, Henry",D,1,1,1,122086.0,57740.0,D,R,0.357823673996
+50,C001048,congculberson,TX,7.0,rep,Republican,Culberson,"Culberson, John",R,1,1,1,143542.0,111991.0,R,D,0.12347133247
+51,C000984,repcummings,MD,7.0,rep,Democrat,Cummings,"Cummings, Elijah",D,1,1,1,238838.0,69556.0,D,R,0.548914700027
+52,D000096,repdannydavis,IL,7.0,rep,Democrat,Davis,"Davis, Danny",D,1,1,1,250584.0,46882.0,D,R,0.684790866855
+53,D000598,repsusandavis,CA,53.0,rep,Democrat,Davis,"Davis, Susan",D,1,1,1,198988.0,97968.0,D,R,0.340185077924
+54,D000191,reppeterdefazio,OR,4.0,rep,Democrat,DeFazio,"DeFazio, Peter",D,1,1,1,220628.0,157743.0,D,R,0.166199312315
+55,D000197,repdianadegette,CO,1.0,rep,Democrat,DeGette,"DeGette, Diana",D,1,1,1,257254.0,105030.0,D,R,0.420178644378
+56,D000216,rosadelauro,CT,3.0,rep,Democrat,DeLauro,"DeLauro, Rosa",D,1,1,1,213572.0,95786.0,D,R,0.380743345897
+57,D000612,repjeffdenham,CA,10.0,rep,Republican,Denham,"Denham, Jeff",R,1,1,1,124671.0,116470.0,R,D,0.0340091481747
+58,D000604,,PA,15.0,rep,Republican,Dent,"Dent, Charlie",R,1,1,1,190618.0,124129.0,R,D,0.211245857784
+59,D000616,desjarlaistn04,TN,4.0,rep,Republican,DesJarlais,"DesJarlais, Scott",R,1,1,1,165796.0,89141.0,R,D,0.30068212931
+60,D000610,repteddeutch,FL,21.0,rep,Democrat,Deutch,"Frankel, Lois",D,1,1,1,210606.0,118038.0,D,R,0.281666484098
+61,D000600,mariodb,FL,25.0,rep,Republican,Diaz-Balart,"Diaz-Balart, Mario",R,1,1,1,157921.0,95319.0,R,D,0.247204233139
+62,D000399,replloyddoggett,TX,35.0,rep,Democrat,Doggett,"Doggett, Lloyd",D,1,1,1,124612.0,62384.0,D,R,0.332777171704
+63,D000482,usrepmikedoyle,PA,14.0,rep,Democrat,Doyle,"Doyle, Michael",D,1,1,1,255293.0,87999.0,D,R,0.487322745651
+64,D000614,repseanduffy,WI,7.0,rep,Republican,Duffy,"Duffy, Sean",R,1,1,1,223418.0,138643.0,R,D,0.234145627394
+65,D000615,repjeffduncan,SC,3.0,rep,Republican,Duncan,"Duncan, Jeff",R,1,1,1,196325.0,72933.0,R,D,0.458266792444
+66,D000533,repjohnduncanjr,TN,2.0,rep,Republican,Duncan,"Duncan, John",R,1,1,1,212455.0,68401.0,R,D,0.512910530663
+67,E000290,repdonnaedwards,MD,4.0,rep,Democrat,Edwards,"Brown, Anthony",D,0,0,0,237501.0,68670.0,D,R,0.551427143655
+68,E000288,keithellison,MN,5.0,rep,Democrat,Ellison,"Ellison, Keith",D,1,1,1,249964.0,80660.0,D,R,0.512074138599
+69,E000291,repreneeellmers,NC,2.0,rep,Republican,Ellmers,"Holding, George",R,1,1,1,221485.0,169082.0,R,D,0.134171601799
+70,E000179,repeliotengel,NY,16.0,rep,Democrat,Engel,"Engel, Eliot",D,1,1,1,209857.0,11825.0,D,PC,0.893315650346
+71,E000215,repannaeshoo,CA,18.0,rep,Democrat,Eshoo,"Eshoo, Anna",D,1,1,1,230460.0,93470.0,D,R,0.422900009261
+72,F000460,farenthold,TX,27.0,rep,Republican,Farenthold,"Farenthold, Blake",R,1,1,1,142251.0,88329.0,R,D,0.233853760083
+73,F000030,repsamfarr,CA,20.0,rep,Democrat,Farr,"Panetta, Jimmy",D,0,0,0,180980.0,74811.0,D,R,0.415061515065
+74,F000458,repfinchertn08,TN,8.0,rep,Republican,Fincher,"Kustoff, David",R,0,0,0,194386.0,70925.0,R,D,0.465344444821
+75,F000451,repfitzpatrick,PA,8.0,rep,Republican,Fitzpatrick,"Fitzpatrick, Brian",R,1,1,1,207263.0,173555.0,R,D,0.0885147235687
+76,F000459,repchuck,TN,3.0,rep,Republican,Fleischmann,"Fleischmann, Chuck",R,1,1,1,176613.0,76727.0,R,D,0.394276466409
+77,F000456,repfleming,LA,4.0,rep,Republican,Fleming,"Johnson, Mike",R,0,0,0,80593.0,70580.0,D,R,0.0662353727187
+78,F000461,repbillflores,TX,17.0,rep,Republican,Flores,"Flores, Bill",R,1,1,1,149417.0,86603.0,R,D,0.266138462842
+79,F000445,randy_forbes,VA,4.0,rep,Republican,Forbes,"McEachin, Donald",R,0,0,0,200136.0,145731.0,D,R,0.157300349556
+80,F000449,jefffortenberry,NE,1.0,rep,Republican,Fortenberry,"Fortenberry, Jeff",R,1,1,1,189771.0,83467.0,R,D,0.389052767185
+81,F000450,virginiafoxx,NC,5.0,rep,Republican,Foxx,"Foxx, Virginia",R,1,1,1,207625.0,147887.0,R,D,0.168033709129
+82,F000448,reptrentfranks,AZ,8.0,rep,Republican,Franks,"Franks, Trent",R,1,1,1,204942.0,93954.0,R,G,0.371326481452
+83,F000372,usreprodney,NJ,11.0,rep,Republican,Frelinghuysen,"Frelinghuysen, Rodney",D,1,1,1,194299.0,130162.0,D,R,0.197672447536
+84,F000455,repmarciafudge,OH,11.0,rep,Democrat,Fudge,"Fudge, Marcia",D,1,1,1,242917.0,59769.0,D,R,0.605075887223
+85,G000559,repgaramendi,CA,3.0,rep,Democrat,Garamendi,"Garamendi, John",D,1,1,1,152513.0,104453.0,D,R,0.187028634138
+86,G000548,repgarrett,NJ,5.0,rep,Republican,Garrett,"Gottheimer, Josh",D,1,1,1,172587.0,157690.0,D,R,0.045104563745
+87,G000563,repbobgibbs,OH,7.0,rep,Republican,Gibbs,"Gibbs, Bob",R,1,1,1,198221.0,89638.0,R,D,0.377208980786
+88,G000564,repchrisgibson,NY,19.0,rep,Republican,Gibson,"Faso, John",R,0,0,0,166171.0,141224.0,R,D,0.0811561671465
+89,G000552,replouiegohmert,TX,1.0,rep,Republican,Gohmert,"Gohmert, Louie",R,1,1,1,192434.0,62847.0,R,D,0.507624930958
+90,G000289,repgoodlatte,VA,6.0,rep,Republican,Goodlatte,"Goodlatte, Bob",R,1,1,1,225471.0,112170.0,R,D,0.335566474451
+91,G000565,repgosar,AZ,4.0,rep,Republican,Gosar,"Gosar, Paul",R,1,1,1,203487.0,81296.0,R,D,0.42906704403
+92,G000566,tgowdysc,SC,4.0,rep,Republican,Gowdy,"Gowdy, Trey",R,1,1,1,198648.0,91676.0,R,D,0.368457309764
+93,G000377,repkaygranger,TX,12.0,rep,Republican,Granger,"Granger, Kay",R,1,1,1,196482.0,76029.0,R,D,0.442011515131
+94,G000546,repsamgraves,MO,6.0,rep,Republican,Graves,"Graves, Sam",R,1,1,1,238388.0,99692.0,R,D,0.410246095599
+95,G000560,reptomgraves,GA,14.0,rep,Republican,Graves,"Graves, Tom",R,1,1,1,216743.0,0.0,R,NONE,1.0
+96,G000553,repalgreen,TX,9.0,rep,Democrat,Green,"Green, Al",D,1,1,1,152032.0,36491.0,D,R,0.61287482164
+97,G000410,repgenegreen,TX,29.0,rep,Democrat,Green,"Green, Gene",D,1,1,1,95649.0,31646.0,D,R,0.502792725559
+98,G000568,repmgriffith,VA,9.0,rep,Republican,Griffith,"Griffith, Morgan",R,1,1,1,212838.0,87877.0,R,D,0.415546281363
+99,G000551,repraulgrijalva,AZ,3.0,rep,Democrat,Grijalva,"Grijalva, Raul",D,1,1,0,148973.0,2062.0,D,write in,0.972695070679
+100,G000558,repguthrie,KY,2.0,rep,Republican,Guthrie,"Guthrie, Brett",R,1,1,0,251825.0,0.0,R,NONE,1.0
+101,G000535,luisgutierrez,IL,4.0,rep,Democrat,Gutiérrez,"Gutierrez, Luis",D,1,1,0,171297.0,0.0,D,NONE,1.0
+102,H001051,reprichardhanna,NY,22.0,rep,Republican,Hanna,"Tenney, Claudia",R,0,0,0,129444.0,114266.0,R,D,0.0622789380821
+103,H001045,greggharper,MS,3.0,rep,Republican,Harper,"Harper, Gregg",R,1,1,1,209490.0,96101.0,R,D,0.371048231132
+104,H001052,repandyharrismd,MD,1.0,rep,Republican,Harris,"Harris, Andy",R,1,1,1,242574.0,103622.0,R,D,0.401368011184
+105,H001053,rephartzler,MO,4.0,rep,Republican,Hartzler,"Hartzler, Vicki",R,1,1,1,225348.0,92510.0,R,D,0.417916176406
+106,H000324,rephastingsfl,FL,20.0,rep,Democrat,Hastings,"Hastings, Alcee",D,1,1,1,222914.0,54646.0,D,R,0.606240092232
+107,H001055,repjoeheck,NV,3.0,rep,Republican,Heck,"Rosen, Jacky",D,1,1,1,146869.0,142926.0,D,R,0.0136061698787
+108,H001036,rephensarling,TX,5.0,rep,Republican,Hensarling,"Hensarling, Jeb",R,1,1,1,155469.0,37406.0,R,L,0.61212184057
+109,H001056,herrerabeutler,WA,3.0,rep,Republican,Herrera Beutler,"Herrera Beutler, Jaime",R,1,1,1,193457.0,119820.0,R,D,0.235053961829
+110,H001038,repbrianhiggins,NY,26.0,rep,Democrat,Higgins,"Higgins, Brian",D,1,1,1,215289.0,73377.0,D,R,0.491613144603
+111,H001047,jahimes,CT,4.0,rep,Democrat,Himes,"Himes, Jim",D,1,1,1,187811.0,125724.0,D,R,0.198022549317
+112,H000636,usreprhinojosa,TX,15.0,rep,Democrat,Hinojosa,"Gonzalez, Vicente",D,1,1,1,101712.0,66877.0,D,R,0.206626766871
+113,H001034,repmikehonda,CA,17.0,rep,Democrat,Honda,"Khanna, Ro",D,1,0,1,142268.0,90924.0,D,D,0.2201790799
+114,H000874,whiphoyer,MD,5.0,rep,Democrat,Hoyer,"Hoyer, Steny",D,1,1,1,242989.0,105931.0,D,R,0.392806373954
+115,H001057,conghuelskamp,KS,1.0,rep,Republican,Huelskamp,"Marshall, Roger",R,0,0,0,169992.0,67739.0,R,I,0.430120598492
+116,H001058,rephuizenga,MI,2.0,rep,Republican,Huizenga,"Huizenga, Bill",R,1,1,1,212508.0,110391.0,R,D,0.31625059229
+117,H001059,rephultgren,IL,14.0,rep,Republican,Hultgren,"Hultgren, Randy",R,1,1,1,200508.0,137589.0,R,D,0.1860974809
+118,H001048,rep_hunter,CA,50.0,rep,Republican,Hunter,"Hunter, Duncan",R,1,1,1,179937.0,103646.0,R,D,0.269025294182
+119,H001060,reproberthurt,VA,5.0,rep,Republican,Hurt,"Garrett, Tom",R,0,0,0,207758.0,148339.0,R,D,0.166861838207
+120,I000057,repsteveisrael,NY,3.0,rep,Democrat,Israel,"Suozzi, Tom",D,1,1,1,171775.0,152304.0,D,R,0.0600810296255
+121,I000056,darrellissa,CA,49.0,rep,Republican,Issa,"Issa, Darrell",R,1,1,1,155888.0,154267.0,R,R,0.00522641904854
+122,J000032,jacksonleetx18,TX,18.0,rep,Democrat,Jackson Lee,"Jackson-Lee, Sheila",D,1,1,1,150157.0,48306.0,D,R,0.513198933806
+123,J000290,replynnjenkins,KS,2.0,rep,Republican,Jenkins,"Jenkins, Lynn",R,1,1,1,181228.0,96840.0,R,D,0.303479724384
+124,J000292,repbilljohnson,OH,6.0,rep,Republican,Johnson,"Johnson, Bill",R,1,1,1,213975.0,88780.0,R,D,0.413519182177
+125,J000126,repebj,TX,30.0,rep,Democrat,Johnson,"Johnson, E.B.",D,1,1,1,170502.0,41518.0,D,R,0.608357702104
+126,J000288,rephankjohnson,GA,4.0,rep,Democrat,Johnson,"Johnson, Hank",D,1,1,1,220146.0,70593.0,D,R,0.514389194432
+127,J000174,samspressshop,TX,3.0,rep,Republican,Johnson,"Johnson, Sam",R,1,1,1,193684.0,109420.0,R,D,0.278003589527
+128,J000255,repwalterjones,NC,3.0,rep,Republican,Jones,"Jones, Walter",R,1,1,1,217531.0,106170.0,R,D,0.34402426931
+129,J000289,jim_jordan,OH,4.0,rep,Republican,Jordan,"Jordan, Jim",R,1,1,1,210227.0,98981.0,R,D,0.359777237329
+130,K000009,repmarcykaptur,OH,9.0,rep,Democrat,Kaptur,"Kaptur, Marcy",D,1,1,1,193966.0,88427.0,D,R,0.373730935257
+131,K000375,usrepkeating,MA,9.0,rep,Democrat,Keating,"Keating, Bill",D,1,1,1,211790.0,127803.0,D,R,0.247316640802
+132,K000376,mikekellypa,PA,3.0,rep,Republican,Kelly,"Kelly, Mike",R,1,1,0,271098.0,244893.0,R,NONE,0.0507857695192
+133,K000188,repronkind,WI,3.0,rep,Democrat,Kind,"Kind, Ron",D,1,1,0,257401.0,169.0,D,Write in,0.998687735373
+134,K000210,reppeteking,NY,2.0,rep,Republican,King,"King, Peter",R,1,1,1,181506.0,110938.0,R,D,0.241304318092
+135,K000362,stevekingia,IA,4.0,rep,Republican,King,"King, Steve",R,1,1,1,226719.0,142993.0,R,D,0.226462760203
+136,K000378,repkinzinger,IL,16.0,rep,Republican,Kinzinger,"Kinzinger, Adam",R,1,1,0,259722.0,131.0,R,write in,0.998991737636
+137,K000363,repjohnkline,MN,2.0,rep,Republican,Kline,"Lewis, Jason",R,0,0,0,173970.0,167315.0,R,D,0.0194998315191
+138,L000573,raul_labrador,ID,1.0,rep,Republican,Labrador,"Labrador, Raul",R,1,1,1,242252.0,113052.0,R,D,0.363632269831
+139,L000564,repdlamborn,CO,5.0,rep,Republican,Lamborn,"Lamborn, Doug",R,1,1,1,225445.0,111676.0,R,D,0.33747230223
+140,L000567,replancenj7,NJ,7.0,rep,Republican,Lance,"Lance, Leonard",R,1,1,1,185850.0,148188.0,R,D,0.112747651465
+141,L000559,jimlangevin,RI,2.0,rep,Democrat,Langevin,"Langevin, Jim",D,1,1,1,133108.0,70301.0,D,R,0.308771981574
+142,L000560,repricklarsen,WA,2.0,rep,Democrat,Larsen,"Larsen, Rick",D,1,1,1,208314.0,117094.0,D,R,0.280325007375
+143,L000557,repjohnlarson,CT,1.0,rep,Democrat,Larson,"Larson, John",D,1,1,1,200686.0,105674.0,D,R,0.310131871001
+144,L000566,boblatta,OH,5.0,rep,Republican,Latta,"Latta, Bob",R,1,1,1,244599.0,100392.0,R,D,0.418002208753
+145,L000551,repbarbaralee,CA,13.0,rep,Democrat,Lee,"Lee, Barbara",D,1,1,1,293117.0,29754.0,D,R,0.815691096444
+146,L000263,repsandylevin,MI,9.0,rep,Democrat,Levin,"Levin, Sander",D,1,1,1,199661.0,128937.0,D,R,0.215229551002
+147,L000287,repjohnlewis,GA,5.0,rep,Democrat,Lewis,"Lewis, John",D,1,1,1,253781.0,46768.0,D,R,0.688782860698
+148,L000563,replipinski,IL,3.0,rep,Democrat,Lipinski,"Lipinski, Dan",D,1,1,0,225320.0,91.0,D,write in,0.999192585987
+149,L000554,replobiondo,NJ,2.0,rep,Republican,LoBiondo,"LoBiondo, Frank",R,1,1,1,176338.0,110838.0,R,D,0.228083126724
+150,L000565,daveloebsack,IA,2.0,rep,Democrat,Loebsack,"Loebsack, David",D,1,1,1,198571.0,170933.0,D,R,0.0747975664675
+151,L000397,repzoelofgren,CA,19.0,rep,Democrat,Lofgren,"Lofgren, Zoe",D,1,1,1,181802.0,64061.0,D,R,0.47888864937
+152,L000576,usreplong,MO,7.0,rep,Republican,Long,"Long, Billy",R,1,1,1,228692.0,92756.0,R,D,0.422886438864
+153,L000480,nitalowey,NY,17.0,rep,Democrat,Lowey,"Lowey, Nita",D,1,1,0,214530.0,0.0,D,NONE,1.0
+154,L000491,repfranklucas,OK,3.0,rep,Republican,Lucas,"Lucas, Frank",R,1,1,1,227525.0,63090.0,R,D,0.565817318445
+155,L000569,repblainepress,MO,3.0,rep,Republican,Luetkemeyer,"Luetkemeyer, Blaine",R,1,1,1,249865.0,102891.0,R,D,0.416644933042
+156,L000570,repbenraylujan,NM,3.0,rep,Democrat,Luján,"Lujan, Ben",D,1,1,1,170612.0,102730.0,D,R,0.248340906264
+157,L000571,cynthialummis,WY,0.0,rep,Republican,Lummis,"Cheney, Liz",R,1,1,1,156176.0,75466.0,R,D,0.34842558776
+158,L000562,repstephenlynch,MA,8.0,rep,Democrat,Lynch,"Lynch, Stephen",D,1,1,1,271019.0,102744.0,D,R,0.45021845394
+159,M000087,repmaloney,NY,12.0,rep,Democrat,Maloney,"Maloney, Carolyn",D,1,1,1,244358.0,49398.0,D,R,0.663680061003
+160,M001158,repkenmarchant,TX,24.0,rep,Republican,Marchant,"Marchant, Kenny",R,1,1,1,154845.0,108389.0,R,D,0.176481761475
+161,M001179,reptommarino,PA,10.0,rep,Republican,Marino,"Marino, Tom",R,1,1,1,211282.0,89823.0,R,D,0.403377559323
+162,M001163,dorismatsui,CA,6.0,rep,Democrat,Matsui,"Matsui, Doris",D,1,1,1,177565.0,57848.0,D,R,0.508540310008
+163,M001165,gopleader,CA,23.0,rep,Republican,McCarthy,"McCarthy, Kevin",R,1,1,1,167116.0,74468.0,R,D,0.38350221869
+164,M001157,repmccaul,TX,10.0,rep,Republican,McCaul,"McCaul, Michael",R,1,1,1,179221.0,120170.0,R,D,0.197237057894
+165,M001177,repmcclintock,CA,4.0,rep,Republican,McClintock,"McClintock, Tom",R,1,1,1,220133.0,130845.0,R,D,0.254397711537
+166,M001143,bettymccollum04,MN,4.0,rep,Democrat,McCollum,"McCollum, Betty",D,1,1,1,203299.0,121032.0,D,R,0.253651362343
+167,M000404,repjimmcdermott,WA,7.0,rep,Democrat,McDermott,"Jayapal, Pramila",D,1,1,1,212010.0,166744.0,D,D,0.119512929236
+168,M000312,repmcgovern,MA,2.0,rep,Democrat,McGovern,"McGovern, Jim",D,1,1,1,275487.0,4924.0,D,write in,0.964880122392
+169,M001156,patrickmchenry,NC,10.0,rep,Republican,McHenry,"McHenry, Patrick",R,1,1,1,220825.0,128919.0,R,D,0.262780776797
+170,M001180,repmckinley,WV,1.0,rep,Republican,McKinley,"McKinley, David",R,1,1,1,163469.0,73534.0,R,D,0.37946777045
+171,M001159,cathymcmorris,WA,5.0,rep,Republican,McMorris Rodgers,"McMorris Rodgers, Cathy",R,1,1,1,192959.0,130575.0,R,D,0.192820538181
+172,M001166,repmcnerney,CA,9.0,rep,Democrat,McNerney,"McNerney, Jerry",D,1,1,1,133163.0,98992.0,D,R,0.147190454653
+173,M001181,repmeehan,PA,7.0,rep,Republican,Meehan,"Meehan, Pat",R,1,1,1,225678.0,153824.0,R,D,0.189337605599
+174,M001137,gregorymeeks,NY,5.0,rep,Democrat,Meeks,"Meeks, Gregory",D,1,1,1,199815.0,30312.0,D,R,0.736562854424
+175,M000689,,FL,7.0,rep,Republican,Mica,"Murphy, Stephanie",D,1,1,1,182039.0,171583.0,D,R,0.0295682960902
+176,M001150,candicemiller,MI,10.0,rep,Republican,Miller,"Mitchell, Paul",R,0,0,0,215132.0,110112.0,R,D,0.322896041126
+177,M001144,,FL,1.0,rep,Republican,Miller,"Gaetz, Matt",R,0,0,0,255107.0,114079.0,D,R,0.381997150488
+178,M001160,repgwenmoore,WI,4.0,rep,Democrat,Moore,"Moore, Gwen",D,1,1,1,220181.0,33494.0,D,I,0.735929831477
+179,M001182,repmickmulvaney,SC,5.0,rep,Republican,Mulvaney,"Mulvaney, Mick",R,1,1,1,161669.0,105772.0,R,D,0.20900684637
+180,M001151,reptimmurphy,PA,18.0,rep,Republican,Murphy,"Murphy, Tim",R,1,1,1,293684.0,0.0,R,NONE,1.0
+181,N000002,repjerrynadler,NY,10.0,rep,Democrat,Nadler,"Nadler, Jerrold",D,1,1,1,192371.0,53857.0,D,R,0.562543658723
+182,N000179,gracenapolitano,CA,32.0,rep,Democrat,Napolitano,"Napolitano, Grace",D,1,1,1,114926.0,71720.0,D,D,0.231486343131
+183,N000015,reprichardneal,MA,1.0,rep,Democrat,Neal,"Neal, Richard",D,1,1,1,235803.0,57504.0,D,I,0.607892072129
+184,N000182,randyneugebauer,TX,19.0,rep,Republican,Neugebauer,"Arrington, Jodey",R,1,1,1,176314.0,17376.0,R,L,0.820579276163
+185,N000184,repkristinoem,SD,0.0,rep,Republican,Noem,"Noem, Kristi",R,1,1,1,237163.0,132810.0,R,D,0.282055717579
+186,N000185,reprichnugent,FL,11.0,rep,Republican,Nugent,"Webster, Dan",R,1,1,1,258016.0,124713.0,R,D,0.348296052821
+187,N000181,rep_devinnunes,CA,22.0,rep,Republican,Nunes,"Nunes, Devin",R,1,1,1,158755.0,76211.0,R,D,0.351301890486
+188,O000168,reppeteolson,TX,22.0,rep,Republican,Olson,"Olson, Pete",R,1,1,1,181864.0,123679.0,R,D,0.190431461366
+189,P000601,congpalazzo,MS,4.0,rep,Republican,Palazzo,"Palazzo, Steven",R,1,1,1,181323.0,77505.0,R,D,0.40110807177
+190,P000034,frankpallone,NJ,6.0,rep,Democrat,Pallone,"Pallone, Frank",D,1,1,1,167895.0,91908.0,D,R,0.292479301625
+191,P000096,billpascrell,NJ,9.0,rep,Democrat,Pascrell,"Pascrell, Bill",D,1,1,1,162642.0,65376.0,D,R,0.426571586454
+192,P000594,reperikpaulsen,MN,3.0,rep,Republican,Paulsen,"Paulsen, Erik",R,1,1,1,223077.0,169243.0,R,D,0.137219616639
+193,P000588,repstevepearce,NM,2.0,rep,Republican,Pearce,"Pearce, Steve",R,1,1,1,143514.0,85232.0,R,D,0.254789154783
+194,P000197,nancypelosi,CA,12.0,rep,Democrat,Pelosi,"Pelosi, Nancy",D,1,1,1,274035.0,64810.0,D,I,0.617465212708
+195,P000593,repperlmutter,CO,7.0,rep,Democrat,Perlmutter,"Perlmutter, Ed",D,1,1,1,199758.0,144066.0,D,R,0.161978221416
+196,P000597,chelliepingree,ME,1.0,rep,Democrat,Pingree,"Pingree, Chellie",D,1,1,1,227546.0,164569.0,D,R,0.160608494957
+197,P000373,repjoepitts,PA,16.0,rep,Republican,Pitts,"Smucker, Lloyd",R,1,1,1,168669.0,134586.0,R,D,0.112390562398
+198,P000592,judgetedpoe,TX,2.0,rep,Republican,Poe,"Poe, Ted",R,1,1,1,168692.0,100231.0,R,D,0.254574729569
+199,P000598,jaredpolis,CO,2.0,rep,Democrat,Polis,"Polis, Jared",D,1,1,1,260175.0,170001.0,D,R,0.209621178308
+200,P000602,repmikepompeo,KS,4.0,rep,Republican,Pompeo,"Pompeo, Mike",R,1,1,1,166998.0,81495.0,R,D,0.34408615132
+201,P000599,congbillposey,FL,8.0,rep,Republican,Posey,"Posey, Bill",R,1,1,1,246483.0,127127.0,R,D,0.319466823693
+202,P000523,repdavideprice,NC,4.0,rep,Democrat,Price,"Price, David",D,1,1,1,279380.0,130161.0,D,R,0.364356682237
+203,P000591,reptomprice,GA,6.0,rep,Republican,Price,"Price, Tom",R,1,1,1,201088.0,124917.0,R,D,0.233649790647
+204,Q000023,repmikequigley,IL,5.0,rep,Democrat,Quigley,"Quigley, Mike",D,1,1,1,212842.0,86222.0,D,R,0.423387636091
+205,R000053,cbrangel,NY,13.0,rep,Democrat,Rangel,"Espaillat, Adriano",D,1,1,1,207194.0,16089.0,D,R,0.855886923769
+206,R000585,reptomreed,NY,23.0,rep,Republican,Reed,"Reed, Tom",R,1,1,1,161050.0,118584.0,R,D,0.151862792078
+207,R000578,davereichert,WA,8.0,rep,Republican,Reichert,"Reichert, David",R,1,1,1,193145.0,127720.0,R,D,0.203901952535
+208,R000586,repjimrenacci,OH,16.0,rep,Republican,Renacci,"Renacci, Jim",R,1,1,1,225794.0,119830.0,R,D,0.306587505497
+209,R000587,repribble,WI,8.0,rep,Republican,Ribble,"Gallagher, Mike",R,1,1,1,227892.0,135682.0,R,D,0.253620996001
+210,R000588,reprichmond,LA,2.0,rep,Democrat,Richmond,"Richmond, Cedric",D,1,1,1,198289.0,57125.0,D,D,0.552687010109
+211,R000589,repscottrigell,VA,2.0,rep,Republican,Rigell,"Taylor, Scott",R,1,1,1,190475.0,119440.0,R,D,0.229208008648
+212,R000591,repmartharoby,AL,2.0,rep,Republican,Roby,"Roby, Martha",R,1,1,1,134886.0,112089.0,R,D,0.0923048891588
+213,R000582,drphilroe,TN,1.0,rep,Republican,Roe,"Roe, Phil",R,1,1,1,198293.0,39024.0,R,D,0.671123434057
+214,R000395,rephalrogers,KY,5.0,rep,Republican,Rogers,"Rogers, Hal",R,1,1,0,221242.0,0.0,R,NONE,1.0
+215,R000575,repmikerogersal,AL,3.0,rep,Republican,Rogers,"Rogers, Mike",R,1,1,1,192164.0,94549.0,R,D,0.340462413633
+216,R000409,,CA,48.0,rep,Republican,Rohrabacher,"Rohrabacher, Dana",R,1,1,1,178701.0,127715.0,R,D,0.166394705237
+217,R000592,toddrokita,IN,4.0,rep,Republican,Rokita,"Rokita, Todd",R,1,1,1,193412.0,91256.0,R,D,0.358860145854
+218,R000583,tomrooney,FL,17.0,rep,Republican,Rooney,"Rooney, Tom",R,1,1,1,209348.0,115974.0,R,D,0.287020244558
+219,R000435,roslehtinen,FL,27.0,rep,Republican,Ros-Lehtinen,"Ros-Lehtinen, Ileana",R,1,1,1,157917.0,129760.0,R,D,0.0978771330346
+220,R000580,peterroskam,IL,6.0,rep,Republican,Roskam,"Roskam, Peter",R,1,1,1,208555.0,143591.0,R,D,0.184480300784
+221,R000593,repdennisross,FL,15.0,rep,Republican,Ross,"Ross, Dennis",R,1,1,1,182999.0,135475.0,R,D,0.149224112486
+222,R000486,reproybalallard,CA,40.0,rep,Democrat,Roybal-Allard,"Roybal-Allard, Lucille",D,1,1,1,106554.0,24743.0,D,I,0.623098776057
+223,R000487,repedroyce,CA,39.0,rep,Republican,Royce,"Royce, Ed",R,1,1,1,150777.0,112679.0,R,D,0.144608587392
+224,R000576,call_me_dutch,MD,2.0,rep,Democrat,Ruppersberger,"Ruppersberger, Dutch",D,1,1,1,192183.0,102577.0,D,R,0.303996471706
+225,R000515,repbobbyrush,IL,1.0,rep,Democrat,Rush,"Rush, Bobby",D,1,1,1,234037.0,81817.0,D,R,0.481931525325
+226,R000570,speakerryan,WI,1.0,rep,Republican,Ryan,"Ryan, Paul",R,1,1,1,230072.0,107003.0,R,D,0.365108655344
+227,R000577,reptimryan,OH,13.0,rep,Democrat,Ryan,"Ryan, Tim",D,1,1,1,208610.0,99377.0,D,R,0.354667567138
+228,S000030,lorettasanchez,CA,46.0,rep,Democrat,Sanchez,"Correa, Lou",D,0,0,0,115248.0,49345.0,D,D,0.400399773988
+229,S001168,repsarbanes,MD,3.0,rep,Democrat,Sarbanes,"Sarbanes, John",D,1,1,1,214640.0,115048.0,D,R,0.30207954187
+230,S001176,stevescalise,LA,1.0,rep,Republican,Scalise,"Scalise, Steve",R,1,1,1,243645.0,41840.0,R,D,0.706884775032
+231,S001145,janschakowsky,IL,9.0,rep,Democrat,Schakowsky,"Schakowsky, Jan",D,1,1,1,217306.0,109550.0,D,R,0.32967422963
+232,S001150,repadamschiff,CA,28.0,rep,Democrat,Schiff,"Schiff, Adam",D,1,1,1,210883.0,59526.0,D,R,0.559733588749
+233,S001180,repschrader,OR,5.0,rep,Democrat,Schrader,"Schrader, Kurt",D,1,1,1,199505.0,160443.0,D,R,0.108521230844
+234,S001183,repdavid,AZ,6.0,rep,Republican,Schweikert,"Schweikert, David",R,1,1,1,201578.0,122866.0,R,D,0.242605811789
+235,S001189,austinscottga08,GA,8.0,rep,Republican,Scott,"Scott, Austin",R,1,1,1,173983.0,83225.0,R,D,0.352858386986
+236,S001157,repdavidscott,GA,13.0,rep,Democrat,Scott,"Scott, David",D,1,1,1,252833.0,0.0,D,NONE,1.0
+237,S000185,repbobbyscott,VA,3.0,rep,Democrat,Scott,"Scott, Bobby",D,1,1,1,208337.0,103289.0,D,R,0.337096391187
+238,S000244,jimpressoffice,WI,5.0,rep,Republican,Sensenbrenner,"Sensenbrenner, Jim",R,1,1,1,260706.0,114477.0,R,D,0.389753800146
+239,S000248,repjoseserrano,NY,15.0,rep,Democrat,Serrano,"Serrano, Jose",D,1,1,1,165688.0,6129.0,D,R,0.928656652136
+240,S000250,petesessions,TX,32.0,rep,Republican,Sessions,"Sessions, Pete",R,1,1,1,162868.0,43490.0,R,L,0.578499500867
+241,S001185,repterrisewell,AL,7.0,rep,Democrat,Sewell,"Sewell, Terri",D,1,1,0,229330.0,3698.0,D,write in,0.968261324819
+242,S000344,bradsherman,CA,30.0,rep,Democrat,Sherman,"Sherman, Brad",D,1,1,1,205279.0,77325.0,D,R,0.452767830604
+243,S000364,repshimkus,IL,15.0,rep,Republican,Shimkus,"Shimkus, John",R,1,1,0,274554.0,0.0,R,NONE,1.0
+244,S001154,repbillshuster,PA,9.0,rep,Republican,Shuster,"Schuster, Bill",R,1,1,1,186580.0,107985.0,R,D,0.266817171083
+245,S001148,congmikesimpson,ID,2.0,rep,Republican,Simpson,"Simpson, Mike",R,1,1,1,205292.0,95940.0,R,D,0.363015881447
+246,S001165,repsires,NJ,8.0,rep,Democrat,Sires,"Sires, Albio",D,1,1,1,134733.0,32337.0,D,R,0.612892799425
+247,S000480,louiseslaughter,NY,25.0,rep,Democrat,Slaughter,"Slaughter, Louise",D,1,1,1,182950.0,142650.0,D,R,0.123771498771
+248,S000510,repadamsmith,WA,9.0,rep,Democrat,Smith,"Smith, Adam",D,1,1,1,205165.0,76317.0,D,R,0.457748630463
+249,S001172,repadriansmith,NE,3.0,rep,Republican,Smith,"Smith, Adrian",R,1,1,1,226720.0,0.0,R,NONE,1.0
+250,S000522,repchrissmith,NJ,4.0,rep,Republican,Smith,"Smith, Chris",R,1,1,1,211992.0,111532.0,R,D,0.310517921391
+251,S000583,lamarsmithtx21,TX,21.0,rep,Republican,Smith,"Smith, Lamar",R,1,1,1,202967.0,129765.0,R,D,0.220002885205
+252,S001175,repspeier,CA,14.0,rep,Democrat,Speier,"Speier, Jackie",D,1,1,1,231630.0,54817.0,D,R,0.617262530241
+253,S001187,repstevestivers,OH,15.0,rep,Republican,Stivers,"Stivers, Steve",R,1,1,1,222847.0,113960.0,R,D,0.323291974335
+254,S001188,repstutzman,IN,3.0,rep,Republican,Stutzman,"Banks, Jim",R,0,0,0,201396.0,66023.0,R,D,0.506220575202
+255,S001156,replindasanchez,CA,38.0,rep,Democrat,Sánchez,"Sanchez, Linda",D,1,1,1,163590.0,68524.0,D,R,0.409565989126
+256,T000193,benniegthompson,MS,2.0,rep,Democrat,Thompson,"Thompson, Bennie",D,1,1,1,192343.0,83542.0,D,R,0.394370842924
+257,T000460,repthompson,CA,5.0,rep,Democrat,Thompson,"Thompson, Mike",D,1,1,1,224526.0,67565.0,D,R,0.537370203122
+258,T000467,congressmangt,PA,5.0,rep,Republican,Thompson,"Thompson, Glenn",R,1,1,1,206761.0,101082.0,R,D,0.343288624396
+259,T000238,mactxpress,TX,13.0,rep,Republican,Thornberry,"Thornberry, Mac",R,1,1,1,199050.0,14725.0,R,L,0.862238334698
+260,T000462,tiberipress,OH,12.0,rep,Republican,Tiberi,"Tiberi, Patrick",R,1,1,1,251266.0,112638.0,R,D,0.380946623285
+261,T000470,reptipton,CO,3.0,rep,Republican,Tipton,"Tipton, Scott",R,1,1,1,204220.0,150914.0,R,D,0.150101088603
+262,T000469,reppaultonko,NY,20.0,rep,Democrat,Tonko,"Tonko, Paul",D,1,1,1,213021.0,100738.0,D,R,0.357863838169
+263,T000465,nikiinthehouse,MA,3.0,rep,Democrat,Tsongas,"Tsongas, Niki",D,1,1,1,236713.0,107519.0,D,R,0.375310836877
+264,T000463,repmiketurner,OH,10.0,rep,Republican,Turner,"Turner, Michael",R,1,1,1,215724.0,109981.0,R,D,0.324658817028
+265,U000031,repfredupton,MI,6.0,rep,Republican,Upton,"Upton, Fred",R,1,1,1,193259.0,119980.0,R,D,0.233939579682
+266,V000128,chrisvanhollen,MD,8.0,rep,Democrat,Van Hollen,"Raskin, Jamie",D,0,0,0,220657.0,124651.0,D,R,0.278030048536
+267,V000081,nydiavelazquez,NY,7.0,rep,Democrat,Velázquez,"Velazquez, Nydia",D,1,1,1,172146.0,17478.0,D,R,0.815656246045
+268,V000108,repvisclosky,IN,1.0,rep,Democrat,Visclosky,"Visclosky, Pete",D,1,1,1,207515.0,47051.0,D,L,0.630343407996
+269,W000798,repwalberg,MI,7.0,rep,Republican,Walberg,"Walberg, Tim",R,1,1,1,184321.0,134010.0,R,D,0.158046184632
+270,W000791,repgregwalden,OR,2.0,rep,Republican,Walden,"Walden, Greg",R,1,1,1,272952.0,106640.0,R,D,0.438133574996
+271,W000799,reptimwalz,MN,1.0,rep,Democrat,Walz,"Walz, Tim",D,1,1,1,169074.0,166526.0,D,R,0.00759237187128
+272,W000797,repdwstweets,FL,23.0,rep,Democrat,Wasserman Schultz,"Wasserman Schultz, Debbie",D,1,1,1,183225.0,130818.0,D,R,0.166878421108
+273,W000187,maxinewaters,CA,43.0,rep,Democrat,Waters,"Waters, Maxine",D,1,1,1,167017.0,52499.0,D,R,0.521684068587
+274,W000806,repwebster,FL,10.0,rep,Republican,Webster,"Demings, Val",R,0,0,0,198491.0,107498.0,D,R,0.297373434993
+275,W000800,peterwelch,VT,0.0,rep,Democrat,Welch,"Welch, Peter",D,1,1,1,264414.0,29410.0,D,LU,0.799812132433
+276,W000796,repwestmoreland,GA,3.0,rep,Republican,Westmoreland,"Ferguson, Drew",R,1,1,1,207218.0,95969.0,R,D,0.366931959484
+277,W000795,repjoewilson,SC,2.0,rep,Republican,Wilson,"Wilson, Joe",R,1,1,1,183746.0,109452.0,R,D,0.253391905811
+278,W000808,repwilson,FL,24.0,rep,Democrat,Wilson,"Wilson, Frederica",D,1,1,0,,,D,,
+279,W000804,robwittman,VA,1.0,rep,Republican,Wittman,"Wittman, Rob",R,1,1,1,230213.0,140785.0,R,D,0.241047121548
+280,W000809,rep_stevewomack,AR,3.0,rep,Republican,Womack,"Womack, Steve",R,1,1,1,217192.0,63715.0,R,L,0.546362319202
+281,W000810,reprobwoodall,GA,7.0,rep,Republican,Woodall,"Woodall, Rob",R,1,1,1,174081.0,114220.0,R,D,0.207633688402
+282,Y000062,repjohnyarmuth,KY,3.0,rep,Democrat,Yarmuth,"Yarmuth, John",D,1,1,1,212401.0,122093.0,D,R,0.269983916004
+283,Y000063,repkevinyoder,KS,3.0,rep,Republican,Yoder,"Yoder, Kevin",R,1,1,1,176022.0,139300.0,R,D,0.116458731075
+284,Y000033,repdonyoung,AK,0.0,rep,Republican,Young,"Young, Don",R,1,1,1,155088.0,111019.0,R,D,0.165606316256
+285,Y000064,reptoddyoung,IN,9.0,rep,Republican,Young,"Hollingsworth, Trey",R,1,1,1,174791.0,130627.0,R,D,0.144601824385
+286,H001063,rep_janicehahn,CA,44.0,rep,Democrat,Hahn,"Barragan, Nanette",D,1,1,1,93124.0,85289.0,D,D,0.0439149613537
+287,A000369,markamodeinv2,NV,2.0,rep,Republican,Amodei,"Amodei, Mark",R,1,1,1,182676.0,115722.0,R,D,0.224378179478
+288,B001278,repbonamici,OR,1.0,rep,Democrat,Bonamici,"Bonamici, Suzanne",D,1,1,1,225391.0,139756.0,D,R,0.234521987035
+289,D000617,repdelbene,WA,1.0,rep,Democrat,DelBene,"DelBene, Suzan",D,1,1,1,193619.0,155779.0,D,R,0.108300562682
+290,M001184,repthomasmassie,KY,4.0,rep,Republican,Massie,"Massie, Thomas",R,1,1,1,233922.0,94065.0,R,D,0.426410193087
+291,P000604,repdonaldpayne,NJ,10.0,rep,Democrat,Payne,"Payne, Donald",D,1,1,1,190856.0,26450.0,D,R,0.7565644759
+292,S000018,repmattsalmon,AZ,5.0,rep,Republican,Salmon,"Biggs, Andy",R,0,0,0,205184.0,114940.0,R,D,0.281903262486
+293,F000454,repbillfoster,IL,11.0,rep,Democrat,Foster,"Foster, Bill",D,1,1,1,166578.0,108995.0,D,R,0.208957336169
+294,G000556,,FL,9.0,rep,Democrat,Grayson,"Soto, Darren",D,0,0,0,195311.0,144450.0,D,R,0.149696404237
+295,K000368,repkirkpatrick,AZ,1.0,rep,Democrat,Kirkpatrick,"O'Halleran, Tom",D,0,0,0,142219.0,121745.0,D,R,0.0775636071586
+296,T000468,repdinatitus,NV,1.0,rep,Democrat,Titus,"Titus, Dina",D,1,1,1,116537.0,54174.0,D,R,0.365313307285
+297,S001191,repsinema,AZ,9.0,rep,Democrat,Sinema,"Sinema, Kyrsten",D,1,1,1,169055.0,108350.0,D,R,0.218831672104
+298,L000578,replamalfa,CA,1.0,rep,Republican,LaMalfa,"LaMalfa, Doug",R,1,1,1,185448.0,128588.0,R,D,0.181062043842
+299,H001068,rephuffman,CA,2.0,rep,Democrat,Huffman,"Huffman, Jared",D,1,1,1,254194.0,76572.0,D,R,0.537001989322
+300,B001287,repbera,CA,7.0,rep,Democrat,Bera,"Bera, Ami",D,1,1,1,152133.0,145168.0,D,R,0.0234274354947
+301,C001094,reppaulcook,CA,8.0,rep,Republican,Cook,"Cook, Paul",R,1,1,1,136972.0,83035.0,R,D,0.245160381261
+302,S001193,repswalwell,CA,15.0,rep,Democrat,Swalwell,"Swalwell, Eric",D,1,1,1,198578.0,70619.0,D,R,0.475335906418
+303,V000129,repdavidvaladao,CA,21.0,rep,Republican,Valadao,"Valadao, David",R,1,1,1,75126.0,57282.0,R,D,0.134765270981
+304,B001285,juliabrownley26,CA,26.0,rep,Democrat,Brownley,"Brownley, Julia",D,1,1,1,169248.0,111059.0,D,R,0.207590249262
+305,C001097,repcardenas,CA,29.0,rep,Democrat,Cárdenas,"Cardenas, Tony",D,1,1,1,128407.0,43417.0,D,D,0.494634044138
+306,R000599,congressmanruiz,CA,36.0,rep,Democrat,Ruiz,"Ruiz, Raul",D,1,1,1,144348.0,88269.0,D,R,0.241078682985
+307,T000472,repmarktakano,CA,41.0,rep,Democrat,Takano,"Takano, Mark",D,1,1,1,128164.0,69159.0,D,R,0.299027482858
+308,L000579,replowenthal,CA,47.0,rep,Democrat,Lowenthal,"Lowenthal, Alan",D,1,1,1,154759.0,88109.0,D,R,0.274428907884
+309,V000130,repjuanvargas,CA,51.0,rep,Democrat,Vargas,"Vargas, Juan",D,1,1,1,145162.0,54362.0,D,R,0.455083097773
+310,P000608,repscottpeters,CA,52.0,rep,Democrat,Peters,"Peters, Scott",D,1,1,1,181253.0,139403.0,D,R,0.130513696921
+311,E000293,repesty,CT,5.0,rep,Democrat,Esty,"Esty, Elizabeth",D,1,1,1,179252.0,129801.0,D,R,0.160008153941
+312,Y000065,reptedyoho,FL,3.0,rep,Republican,Yoho,"Yoho, Ted",R,1,1,1,193843.0,136338.0,R,D,0.174162050512
+313,D000621,repdesantis,FL,6.0,rep,Republican,DeSantis,"DeSantis, Ron",R,1,1,1,213519.0,151051.0,R,D,0.171347066407
+314,M001191,repmurphyfl,FL,18.0,rep,Democrat,Murphy,"Mast, Brian",R,1,1,1,201488.0,161918.0,R,D,0.108886479585
+315,F000462,reploisfrankel,FL,22.0,rep,Democrat,Frankel,"Deutch, Ted",D,1,1,1,199113.0,138737.0,D,R,0.178706526565
+316,C001093,repdougcollins,GA,9.0,rep,Republican,Collins,"Collins, Doug",R,1,1,0,256535.0,0.0,R,NONE,1.0
+317,G000571,tulsipress,HI,2.0,rep,Democrat,Gabbard,"Gabbard, Tulsi",D,1,1,1,170848.0,39668.0,D,R,0.623135533641
+318,D000622,repduckworth,IL,8.0,rep,Democrat,Duckworth,"Krishnamoorthi, Raja",D,1,1,1,144954.0,144954.0,D,R,0.0
+319,D000619,rodneydavis,IL,13.0,rep,Republican,Davis,"Davis, Rodney",R,1,1,1,187583.0,126811.0,R,D,0.193298854304
+320,B001286,repcheri,IL,17.0,rep,Democrat,Bustos,"Bustos, Cheri",D,1,1,1,173125.0,113943.0,D,R,0.206160212911
+321,W000813,repwalorski,IN,2.0,rep,Republican,Walorski,"Walorski, Jackie",R,1,1,1,164355.0,102401.0,R,D,0.232249696352
+322,B001284,susanwbrooks,IN,5.0,rep,Republican,Brooks,"Brooks, Susan",R,1,1,1,221957.0,123849.0,R,D,0.283708206335
+323,M001189,replukemesser,IN,6.0,rep,Republican,Messer,"Messer, Luke",R,1,1,1,204920.0,79135.0,R,D,0.442819172343
+324,B001282,repandybarr,KY,6.0,rep,Republican,Barr,"Barr, Andy",R,1,1,1,202099.0,128728.0,R,D,0.221780568091
+325,K000379,repjoekennedy,MA,4.0,rep,Democrat,Kennedy,"Kennedy, Joe",D,1,1,1,265823.0,113055.0,D,R,0.403211587899
+326,D000620,repjohndelaney,MD,6.0,rep,Democrat,Delaney,"Delaney, John",D,1,1,1,185770.0,133081.0,D,R,0.165246463082
+327,K000380,repdankildee,MI,5.0,rep,Democrat,Kildee,"Kildee, Dan",D,1,1,1,195279.0,112102.0,D,R,0.270599028567
+328,N000127,usrepricknolan,MN,8.0,rep,Democrat,Nolan,"Nolan, Rick",D,1,1,1,179098.0,177089.0,D,R,0.00564029568738
+329,W000812,repannwagner,MO,2.0,rep,Republican,Wagner,"Wagner, Ann",R,1,1,1,241954.0,155689.0,R,D,0.216940823804
+330,H001067,reprichhudson,NC,8.0,rep,Republican,Hudson,"Hudson, Richard",R,1,1,1,189863.0,133182.0,R,D,0.17545852745
+331,P000606,reppittenger,NC,9.0,rep,Republican,Pittenger,"Pittenger, Robert",R,1,1,1,193452.0,139041.0,R,D,0.163645550433
+332,M001187,repmarkmeadows,NC,11.0,rep,Republican,Meadows,"Meadows, Mark",R,1,1,1,230405.0,129103.0,R,D,0.281779543153
+333,H001065,repholding,NC,13.0,rep,Republican,Holding,"Budd, Ted",R,1,1,1,199443.0,156049.0,R,D,0.122067444556
+334,C001096,repkevincramer,ND,0.0,rep,Republican,Cramer,"Cramer, Kevin",R,1,1,1,233980.0,80377.0,R,D,0.488625988923
+335,K000382,repanniekuster,NH,2.0,rep,Democrat,Kuster,"Kuster, Annie",D,1,1,1,174371.0,158825.0,D,,0.0466572227758
+336,L000580,replujangrisham,NM,1.0,rep,Democrat,Lujan Grisham,"Lujan Grisham, Michelle",D,1,1,1,181088.0,96879.0,D,R,0.302946033162
+337,M001188,repgracemeng,NY,6.0,rep,Democrat,Meng,"Meng, Grace",D,1,1,1,136506.0,50617.0,D,R,0.458997557756
+338,J000294,repjeffries,NY,8.0,rep,Democrat,Jeffries,"Jeffries, Hakeem",D,1,1,1,214595.0,15401.0,D,C,0.866075931755
+339,M001185,repseanmaloney,NY,18.0,rep,Democrat,Maloney,"Maloney, Sean",D,1,1,1,162060.0,129369.0,D,R,0.112174835037
+340,C001092,repchriscollins,NY,27.0,rep,Republican,Collins,"Collins, Chris",R,1,1,1,220885.0,107832.0,R,D,0.343921975438
+341,W000815,repbradwenstrup,OH,2.0,rep,Republican,Wenstrup,"Wenstrup, Brad",R,1,1,1,221193.0,111694.0,R,D,0.328937447242
+342,B001281,repbeatty,OH,3.0,rep,Democrat,Beatty,"Beatty, Joyce",D,1,1,1,199791.0,91560.0,D,R,0.371479761525
+343,J000295,repdavejoyce,OH,14.0,rep,Republican,Joyce,"Joyce, David",R,1,1,1,219191.0,130907.0,R,D,0.25216939257
+344,B001283,repjbridenstine,OK,1.0,rep,Republican,Bridenstine,"Bridenstine, Jim",R,1,1,1,,,R,,
+345,M001190,repmullin,OK,2.0,rep,Republican,Mullin,"Mullin, Markwayne",R,1,1,1,189839.0,62387.0,R,D,0.505308731059
+346,P000605,repscottperry,PA,4.0,rep,Republican,Perry,"Perry, Scott",R,1,1,1,220628.0,113372.0,R,D,0.321125748503
+347,R000598,keithrothfus,PA,12.0,rep,Republican,Rothfus,"Rothfus, Keith",R,1,1,1,221851.0,137353.0,R,D,0.235236801372
+348,C001090,repcartwright,PA,17.0,rep,Democrat,Cartwright,"Cartwright, Matt",D,1,1,1,157734.0,135430.0,D,R,0.0760802827087
+349,R000597,reptomrice,SC,7.0,rep,Republican,Rice,"Rice, Tom",R,1,1,1,176468.0,112744.0,R,D,0.220336638867
+350,W000814,txrandy14,TX,14.0,rep,Republican,Weber,"Weber, Randy",R,1,1,1,160631.0,99054.0,R,D,0.237121897684
+351,O000170,repbetoorourke,TX,16.0,rep,Democrat,O'Rourke,"O'Rourke, Beto",D,1,1,1,150228.0,17491.0,D,L,0.79142494291
+352,C001091,joaquincastrotx,TX,20.0,rep,Democrat,Castro,"Castro, Joaquin",D,1,1,1,149640.0,29055.0,D,L,0.67480903215
+353,W000816,reprwilliams,TX,25.0,rep,Republican,Williams,"Williams, Roger",R,1,1,1,180988.0,117073.0,R,D,0.21443597116
+354,V000131,repveasey,TX,33.0,rep,Democrat,Veasey,"Veasey, Marc",D,1,1,1,93147.0,33222.0,D,R,0.474206490516
+355,V000132,repfilemonvela,TX,34.0,rep,Democrat,Vela,"Vela, Filemon",D,1,1,1,104638.0,62323.0,D,R,0.253442420685
+356,S001192,repchrisstewart,UT,2.0,rep,Republican,Stewart,"Stewart, Chris",R,1,1,1,170524.0,93778.0,R,D,0.290372377054
+357,K000381,repderekkilmer,WA,6.0,rep,Democrat,Kilmer,"Kilmer, Derek",D,1,1,1,201718.0,126116.0,D,R,0.230610613908
+358,H001064,repdennyheck,WA,10.0,rep,Democrat,Heck,"Heck, Denny",D,1,1,1,170460.0,120104.0,D,R,0.173304332264
+359,P000607,repmarkpocan,WI,2.0,rep,Democrat,Pocan,"Pocan, Mark",D,1,1,1,273537.0,124044.0,D,R,0.376006398696
+360,K000385,reprobinkelly,IL,2.0,rep,Democrat,Kelly,"Kelly, Robin",D,1,1,1,235051.0,59471.0,D,R,0.596152409667
+361,S000051,repsanfordsc,SC,1.0,rep,Republican,Sanford,"Sanford, Mark",R,1,1,1,190410.0,119799.0,R,D,0.227623956752
+362,S001195,repjasonsmith,MO,8.0,rep,Republican,Smith,"Smith, Jason",R,1,1,1,229792.0,70009.0,R,D,0.532963532477
+363,C001101,repkclark,MA,5.0,rep,Democrat,Clark,"Clark, Katherine",D,1,1,1,285606.0,4201.0,D,Write in,0.971008291725
+364,B001289,repbyrne,AL,1.0,rep,Republican,Byrne,"Byrne, Bradley",R,1,1,0,208083.0,7810.0,R,write in,0.927649344814
+365,J000296,usrepdavidjolly,FL,13.0,rep,Republican,Jolly,"Crist, Charlie",R,1,0,1,184693.0,171149.0,D,R,0.038061836433
+366,C001102,repcurtclawson,FL,19.0,rep,Republican,Clawson,"Rooney, Francis",R,0,0,0,239225.0,123812.0,R,D,0.317909744737
+367,B001290,repdavebrat,VA,7.0,rep,Republican,Brat,"Brat, Dave",R,1,1,1,218057.0,160159.0,R,D,0.153081836834
+368,N000188,donaldnorcross,NJ,1.0,rep,Democrat,Norcross,"Norcross, Donald",D,1,1,1,183231.0,112388.0,D,R,0.239642918757
+369,A000370,repadams,NC,12.0,rep,Democrat,Adams,"Adams, Alma",D,1,1,1,234115.0,115185.0,D,R,0.340480961924
+370,D000613,repdold,IL,10.0,rep,Republican,Dold,"Schneider, Brad",R,1,0,1,150435.0,135535.0,D,R,0.0521033674861
+371,G000570,repfrankguinta,NH,1.0,rep,Republican,Guinta,"Shea-Porter, Carol",R,0,0,0,162080.0,157176.0,D,R,0.0153607136593
+372,P000609,usrepgarypalmer,AL,6.0,rep,Republican,Palmer,"Palmer, Gary",R,1,1,1,245313.0,83709.0,R,D,0.491164724547
+373,H001072,repfrenchhill,AR,2.0,rep,Republican,Hill,"Hill, French",R,1,1,1,176472.0,111347.0,R,D,0.226270677057
+374,W000821,repwesterman,AR,4.0,rep,Republican,Westerman,"Westerman, Bruce",R,1,1,1,182885.0,61274.0,R,L,0.498081168419
+375,M001197,repmcsally,AZ,2.0,rep,Republican,McSally,"McSally, Martha",R,1,1,1,179806.0,135873.0,R,D,0.13916985292
+376,G000574,reprubengallego,AZ,7.0,rep,Democrat,Gallego,"Gallego, Ruben",D,1,1,1,119465.0,39286.0,D,R,0.50506138544
+377,D000623,repdesaulnier,CA,11.0,rep,Democrat,DeSaulnier,"DeSaulnier, Mark",D,1,1,1,214868.0,83341.0,D,R,0.441056440282
+378,K000387,steveknight25,CA,25.0,rep,Republican,Knight,"Knight, Steve",R,1,1,1,138755.0,122406.0,R,D,0.0626012306585
+379,A000371,reppeteaguilar,CA,31.0,rep,Democrat,Aguilar,"Aguilar, Pete",D,1,1,1,121070.0,94866.0,D,R,0.121350770599
+380,L000582,reptedlieu,CA,33.0,rep,Democrat,Lieu,"Lieu, Ted",D,1,1,1,219397.0,110822.0,D,R,0.328796949903
+381,T000474,normajtorres,CA,35.0,rep,Democrat,Torres,"Torres, Norma",D,1,1,1,124044.0,47309.0,D,R,0.447818246544
+382,W000820,repmimiwalters,CA,45.0,rep,Republican,Walters,"Walters, Mimi",R,1,1,1,182618.0,129231.0,R,D,0.171195033494
+383,B001297,repkenbuck,CO,4.0,rep,Republican,Buck,"Buck, Ken",R,1,1,1,248230.0,123642.0,R,D,0.335029257379
+384,G000575,repgwengraham,FL,2.0,rep,Democrat,Graham,"Dunn, Neal",D,0,0,0,231163.0,102801.0,R,D,0.384358793163
+385,C001107,repcurbelo,FL,26.0,rep,Republican,Curbelo,"Curbelo, Carlos",R,1,1,1,148547.0,115493.0,R,D,0.125185577943
+386,C001103,repbuddycarter,GA,1.0,rep,Republican,Carter,"Carter, Buddy",R,1,1,1,210243.0,0.0,R,NONE,1.0
+387,H001071,congressmanhice,GA,10.0,rep,Republican,Hice,"Hice, Jodi",R,1,1,0,243725.0,0.0,R,NONE,1.0
+388,L000583,reploudermilk,GA,11.0,rep,Republican,Loudermilk,"Loudermilk, Barry",R,1,1,1,217935.0,105383.0,R,D,0.348115477641
+389,A000372,reprickallen,GA,12.0,rep,Republican,Allen,"Allen, Rick",R,1,1,1,159492.0,99420.0,R,D,0.232017055988
+390,B001294,reprodblum,IA,1.0,rep,Republican,Blum,"Blum, Rod",R,1,1,1,206903.0,177403.0,R,D,0.0767617471494
+391,Y000066,repdavidyoung,IA,3.0,rep,Republican,Young,"Young, David",R,1,1,1,208598.0,155002.0,R,D,0.147403740374
+392,B001295,repbost,IL,12.0,rep,Republican,Bost,"Bost, Mike",R,1,1,1,169976.0,124246.0,R,D,0.155426854552
+393,A000374,repabraham,LA,5.0,rep,Republican,Abraham,"Abraham, Ralph",R,1,1,1,208545.0,47117.0,R,R,0.631411785874
+394,G000577,repgarretgraves,LA,6.0,rep,Republican,Graves,"Graves, Garret",R,1,1,1,207483.0,49380.0,R,D,0.615514885367
+395,M001196,teammoulton,MA,6.0,rep,Democrat,Moulton,"Moulton, Seth",D,1,1,1,308923.0,5132.0,D,Write in,0.967317826495
+396,P000611,reppoliquin,ME,2.0,rep,Republican,Poliquin,"Poliquin, Bruce",R,1,1,1,192878.0,159081.0,R,D,0.0960253893209
+397,M001194,repmoolenaar,MI,4.0,rep,Republican,Moolenaar,"Moolenaar, John",R,1,1,1,194572.0,101277.0,R,D,0.315346680232
+398,B001293,repmikebishop,MI,8.0,rep,Republican,Bishop,"Bishop, Mike",R,1,1,1,205629.0,143791.0,R,D,0.17697326999
+399,T000475,repdavetrott,MI,11.0,rep,Republican,Trott,"Trott, Dave",R,1,1,1,200872.0,152461.0,R,D,0.137012393408
+400,D000624,repdebdingell,MI,12.0,rep,Democrat,Dingell,"Dingell, Debbie",D,1,1,1,211378.0,96104.0,D,R,0.374896741923
+401,L000581,replawrence,MI,14.0,rep,Democrat,Lawrence,"Lawrence, Brenda",D,1,1,1,244135.0,58103.0,D,R,0.615514925324
+402,E000294,reptomemmer,MN,6.0,rep,Republican,Emmer,"Emmer, Tom",R,1,1,1,235380.0,123008.0,R,D,0.313548444702
+403,Z000018,repryanzinke,MT,0.0,rep,Republican,Zinke,"Zinke, Ryan",R,1,1,1,285358.0,205919.0,R,D,0.161699000767
+404,R000603,repdavidrouzer,NC,7.0,rep,Republican,Rouzer,"Rouzer, David",R,1,1,1,211801.0,135905.0,R,D,0.218276359913
+405,A000373,repbradashford,NE,2.0,rep,Democrat,Ashford,"Bacon, Don",R,1,1,1,141066.0,137602.0,R,D,0.0124305625332
+406,M001193,reptommacarthur,NJ,3.0,rep,Republican,MacArthur,"MacArthur, Tom",R,1,1,1,194596.0,127526.0,R,D,0.208213037296
+407,W000822,repbonnie,NJ,12.0,rep,Democrat,Watson Coleman,"Watson Coleman, Bonnie",D,1,1,1,181430.0,92407.0,D,R,0.325094855699
+408,H001070,rephardy,NV,4.0,rep,Republican,Hardy,"Kihuen, Ruben",D,1,1,1,128985.0,118328.0,D,R,0.0430911436115
+409,Z000017,repleezeldin,NY,1.0,rep,Republican,Zeldin,"Zeldin, Lee",R,1,1,1,188499.0,135278.0,R,D,0.164375480655
+410,R000602,repkathleenrice,NY,4.0,rep,Democrat,Rice,"Rice, Kathleen",D,1,1,1,186423.0,126438.0,D,R,0.191730512911
+411,S001196,repstefanik,NY,21.0,rep,Republican,Stefanik,"Stefanik, Elise",R,1,1,1,177886.0,82161.0,R,D,0.368106534588
+412,K000386,repjohnkatko,NY,24.0,rep,Republican,Katko,"Katko, John",R,1,1,1,182761.0,119040.0,R,D,0.211135814659
+413,R000604,reprussell,OK,5.0,rep,Republican,Russell,"Russell, Steve",R,1,1,1,160184.0,103273.0,R,D,0.216016275901
+414,C001106,repryancostello,PA,6.0,rep,Republican,Costello,"Costello, Ryan",R,1,1,1,207469.0,155000.0,R,D,0.144754447967
+415,B001296,repbrendanboyle,PA,13.0,rep,Democrat,Boyle,"Boyle, Brendan",D,1,1,0,239316.0,0.0,D,NONE,1.0
+416,R000601,repratcliffe,TX,4.0,rep,Republican,Ratcliffe,"Ratcliffe, John",R,1,1,1,216643.0,29577.0,R,L,0.7597514418
+417,H001073,hurdonthehill,TX,23.0,rep,Republican,Hurd,"Hurd, Will",R,1,1,1,110577.0,107526.0,R,D,0.0139888034552
+418,B001291,repbrianbabin,TX,36.0,rep,Republican,Babin,"Babin, Brian",R,1,1,1,193675.0,24890.0,R,G,0.772241667239
+419,L000584,repmialove,UT,4.0,rep,Republican,Love,"Love, Mia",R,1,1,1,147597.0,113413.0,R,D,0.130968162139
+420,B001292,repdonbeyer,VA,8.0,rep,Democrat,Beyer,"Beyer, Don",D,1,1,1,246653.0,98387.0,D,R,0.429706700672
+421,C001105,repcomstock,VA,10.0,rep,Republican,Comstock,"Comstock, Barbara",R,1,1,1,210791.0,187712.0,R,D,0.0579142440584
+422,N000189,repnewhouse,WA,4.0,rep,Republican,Newhouse,"Newhouse, Dan",R,1,1,1,132517.0,97402.0,R,R,0.152727699755
+423,G000576,repgrothman,WI,6.0,rep,Republican,Grothman,"Grothman, Glenn",R,1,1,1,204147.0,133072.0,R,D,0.210768076532
+424,M001195,repalexmooney,WV,2.0,rep,Republican,Mooney,"Mooney, Alex",R,1,1,1,140807.0,101207.0,R,D,0.163626897617
+425,J000297,repevanjenkins,WV,3.0,rep,Republican,Jenkins,"Jenkins, Evan",R,1,1,1,140741.0,49708.0,R,D,0.477991483284
+426,W000819,repmarkwalker,NC,6.0,rep,Republican,Walker,"Walker, Mark",R,1,1,1,207983.0,143167.0,R,D,0.184582087427
+427,D000625,repdandonovan,NY,11.0,rep,Republican,Donovan,"Donovan, Dan",R,1,1,1,142934.0,85257.0,R,D,0.252757558361
+428,K000388,reptrentkelly,MS,1.0,rep,Republican,Kelly,"Kelly, Trent",R,1,1,1,206455.0,83947.0,R,D,0.421856598784
+429,L000585,replahood,IL,18.0,rep,Republican,LaHood,"LaHood, Darin",R,1,1,1,250506.0,96770.0,R,D,0.442691116
+430,,,HI,1.0,,,,"Hanabusa, Colleen",D,0,0,0,145417.0,45958.0,D,R,0.519707380797
+431,,,KY,1.0,,,,"Comer, James",R,1,1,1,216959.0,81710.0,R,D,0.452839096123
+432,,,MN,7.0,,,,"Peterson, Collin",D,1,1,1,173589.0,156952.0,D,R,0.0503326364959
+433,,,OH,8.0,,,,"Davidson, Warren",R,1,1,1,223833.0,87794.0,R,D,0.436544330241
+434,,,PA,2.0,,,,"Evans, Dwight",D,0,0,0,322514.0,35131.0,D,R,0.803542619078
+0,A000368,kellyayotte,NH,None,sen,Republican,Ayotte,Ayotte,R,1,0,1,354649.0,353632.0,D,R,0.00143587079139
+1,B001267,senbennetco,CO,None,sen,Democrat,Bennet,Bennet,D,1,1,1,1370710.0,1215318.0,D,R,0.0600890632275
+2,B001277,senblumenthal,CT,None,sen,Democrat,Blumenthal,Blumenthal,D,1,1,1,1008714.0,552621.0,D,R,0.292117322676
+3,B000575,royblunt,MO,None,sen,Republican,Blunt,Blunt,R,1,1,1,1378458.0,1300200.0,R,D,0.0292153757591
+4,B001236,johnboozman,AR,None,sen,Republican,Boozman,Boozman,R,1,1,1,661984.0,400602.0,R,D,0.245986677784
+5,B000711,senatorboxer,CA,None,sen,Democrat,Boxer,Boxer,D,0,0,0,7542753.0,4701417.0,D,D,0.232056235743
+6,B001135,senatorburr,NC,None,sen,Republican,Burr,Burr,R,1,1,1,2395376.0,2128165.0,R,D,0.059071201079
+7,C000880,mikecrapo,ID,None,sen,Republican,Crapo,Crapo,R,1,1,1,449017.0,188249.0,R,D,0.409198042889
+8,G000386,chuckgrassley,IA,None,sen,Republican,Grassley,Grassley,R,1,1,1,926007.0,549460.0,R,D,0.255205301101
+9,H001061,senjohnhoeven,ND,None,sen,Republican,Hoeven,Hoeven,R,1,1,1,268788.0,58116.0,R,D,0.644446075912
+10,I000055,senatorisakson,GA,None,sen,Republican,Isakson,Isakson,R,1,1,1,2135806.0,1599726.0,R,D,0.143508340981
+11,K000360,senatorkirk,IL,None,sen,Republican,Kirk,Kirk,R,1,0,1,3012940.0,2184692.0,D,R,0.159351027545
+12,L000575,senatorlankford,OK,None,sen,Republican,Lankford,Lankford,R,1,1,1,980892.0,355911.0,R,D,0.467519148296
+13,L000174,senatorleahy,VT,None,sen,Democrat,Leahy,Leahy,D,1,1,1,192243.0,103637.0,D,R,0.29946599973
+14,L000577,senmikelee,UT,None,sen,Republican,Lee,Lee,R,1,1,1,760241.0,301860.0,R,D,0.431579482554
+15,M000303,senjohnmccain,AZ,None,sen,Republican,McCain,McCain,R,1,1,1,1359267.0,1031245.0,R,D,0.137218303025
+16,M000702,senatorbarb,MD,None,sen,Democrat,Mikulski,Mikulski,D,0,0,0,1659907.0,972557.0,D,R,0.261105185104
+17,M000934,jerrymoran,KS,None,sen,Republican,Moran,Moran,R,1,1,1,732376.0,379740.0,R,D,0.317085627758
+18,M001153,lisamurkowski,AK,None,sen,Republican,Murkowski,Murkowski,R,1,1,1,138149.0,36200.0,R,D,0.584740950622
+19,M001111,pattymurray,WA,None,sen,Democrat,Murray,Murray,D,1,1,1,1913979.0,1329338.0,D,R,0.180260208916
+20,P000603,,KY,None,sen,Republican,Paul,Paul,R,1,1,1,1090177.0,813246.0,R,D,0.145491044292
+21,P000449,senrobportman,OH,None,sen,Republican,Portman,Portman,R,1,1,1,3118567.0,1996908.0,R,D,0.21926780993
+22,R000146,senatorreid,NV,None,sen,Democrat,Reid,Reid,D,0,0,0,521994.0,495079.0,D,R,0.0264631938907
+23,R000595,senrubiopress,FL,None,sen,Republican,Rubio,Rubio,R,1,1,1,4835191.0,4122088.0,R,D,0.0796115650746
+24,S000148,senschumer,NY,None,sen,Democrat,Schumer,Schumer,D,1,1,1,5221949.0,2009353.0,D,R,0.444262457853
+25,S001184,senatortimscott,SC,None,sen,Republican,Scott,Scott,R,1,1,1,1241609.0,757022.0,R,D,0.242459463503
+26,S000320,senshelby,AL,None,sen,Republican,Shelby,Shelby,R,1,1,1,1335104.0,748709.0,R,D,0.281404809357
+27,T000250,senjohnthune,SD,None,sen,Republican,Thune,Thune,R,1,1,1,265516.0,104140.0,R,D,0.436557231588
+28,T000461,sentoomey,PA,None,sen,Republican,Toomey,Toomey,R,1,1,1,2951702.0,2865012.0,R,D,0.0149036036498
+29,V000127,,LA,None,sen,Republican,Vitter,Vitter,R,0,0,0,482591.0,337833.0,R,D,0.176442912445
+30,W000779,ronwyden,OR,None,sen,Democrat,Wyden,Wyden,D,1,1,1,1105119.0,651106.0,D,R,0.258516420163
+31,S001194,senbrianschatz,HI,None,sen,Democrat,Schatz,Schatz,D,1,1,1,306604.0,92653.0,D,R,0.535872883882
+32,,,IN,None,,,,Pence,R,0,0,0,1423991.0,1158947.0,R,D,0.102613380577
