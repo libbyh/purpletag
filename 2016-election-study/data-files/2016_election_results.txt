@@ -14,67 +14,83 @@
 > ####### DESCRIPTIVE STATS #######
 > # show summary stats
 > summary(df)
-       X         id.bioguide               handle       name.last    chamber           party         district   
- Min.   :   0   A000055:   9   andercrenshaw  :   9   Smith  :  45   rep:3807   Democrat  :1737   2.0    : 378  
- 1st Qu.:1019   A000368:   9   austinscottga08:   9   Johnson:  36   sen: 270   Republican:2340   1.0    : 351  
- Median :2038   A000369:   9   benniegthompson:   9   Scott  :  36                                3.0    : 333  
- Mean   :2038   A000370:   9   bettymccollum04:   9   Bishop :  27                                4.0    : 315  
- 3rd Qu.:3057   A000371:   9   billpascrell   :   9   Davis  :  27                                None   : 270  
- Max.   :4076   A000372:   9   blumenauermedia:   9   Graves :  27                                5.0    : 261  
-                (Other):4023   (Other)        :4023   (Other):3879                                (Other):2169  
-    inc_ran          inc_won       had_challenger   inc_party winner_party  runnerup_party runnerup_votes   
- Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   D:1755    D:1818       D       :2079   Min.   :      0  
- 1st Qu.:1.0000   1st Qu.:1.0000   1st Qu.:1.0000   R:2322    R:2259       R       :1512   1st Qu.:  69556  
- Median :1.0000   Median :1.0000   Median :1.0000                          NONE    : 135   Median : 103622  
- Mean   :0.9426   Mean   :0.9316   Mean   :0.9029                          L       : 108   Mean   : 162748  
- 3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:1.0000                          write in:  63   3rd Qu.: 129760  
- Max.   :1.0000   Max.   :1.0000   Max.   :1.0000                          I       :  54   Max.   :4701417  
-                                                                           (Other) : 126   NA's   :18       
-  winner_votes       closeness           week     avg_score              abs          
- Min.   :  75126   Min.   :0.0000   Min.   :1   Min.   :-308.0880   Min.   :  0.0001  
- 1st Qu.: 171631   1st Qu.:0.1917   1st Qu.:3   1st Qu.:  -8.9298   1st Qu.:  1.7631  
- Median : 200508   Median :0.3105   Median :5   Median :   0.7958   Median :  4.6843  
- Mean   : 293771   Mean   :0.3608   Mean   :5   Mean   :  -6.9937   Mean   : 12.7204  
- 3rd Qu.: 226719   3rd Qu.:0.4675   3rd Qu.:7   3rd Qu.:   3.6469   3rd Qu.: 14.2629  
- Max.   :7542753   Max.   :1.0000   Max.   :9   Max.   :  62.8630   Max.   :308.0880  
- NA's   :18        NA's   :18                   NA's   :913         NA's   :913       
+       X           id.bioguide               handle        name.last    chamber           party     
+ Min.   :   0.0   A000368:   9   bettymccollum04:   9   Smith   :  42   rep:2928   Democrat  :1439  
+ 1st Qu.: 941.8   A000370:   9   call_me_dutch  :   9   Johnson :  28   sen: 236   Republican:1725  
+ Median :1925.5   A000371:   9   cathymcmorris  :   9   Kelly   :  26                               
+ Mean   :1972.7   A000372:   9   cbrangel       :   9   Graves  :  20                               
+ 3rd Qu.:2993.2   A000373:   9   chelliepingree :   9   Thompson:  20                               
+ Max.   :4076.0   B000287:   9   conghuelskamp  :   9   Davis   :  19                               
+                  (Other):3110   (Other)        :3110   (Other) :3009                               
+    district       inc_ran          inc_won       had_challenger   inc_party winner_party
+ 2.0    : 310   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   D:1450    D:1494      
+ 1.0    : 258   1st Qu.:1.0000   1st Qu.:1.0000   1st Qu.:1.0000   R:1714    R:1670      
+ 3.0    : 241   Median :1.0000   Median :1.0000   Median :1.0000                         
+ None   : 236   Mean   :0.9586   Mean   :0.9447   Mean   :0.9194                         
+ 4.0    : 231   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:1.0000                         
+ 6.0    : 199   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000                         
+ (Other):1689                                                                            
+  runnerup_party runnerup_votes     winner_votes         margin            week      
+ D       :1549   Min.   :      0   Min.   :  75126   Min.   :0.0000   Min.   :1.000  
+ R       :1246   1st Qu.:  69556   1st Qu.: 171631   1st Qu.:0.1917   1st Qu.:3.000  
+ NONE    : 103   Median : 103622   Median : 201088   Median :0.3088   Median :5.000  
+ L       :  77   Mean   : 168621   Mean   : 302362   Mean   :0.3595   Mean   :4.834  
+ write in:  56   3rd Qu.: 130161   3rd Qu.: 226719   3rd Qu.:0.4692   3rd Qu.:7.000  
+ I       :  41   Max.   :4701417   Max.   :7542753   Max.   :1.0000   Max.   :9.000  
+ (Other) :  92   NA's   :12        NA's   :12        NA's   :12                      
+   avg_score              abs           
+ Min.   :-308.0880   Min.   :  0.00006  
+ 1st Qu.:  -8.9298   1st Qu.:  1.76306  
+ Median :   0.7958   Median :  4.68427  
+ Mean   :  -6.9937   Mean   : 12.72043  
+ 3rd Qu.:   3.6469   3rd Qu.: 14.26290  
+ Max.   :  62.8630   Max.   :308.08800  
+                                        
 
 > # summarize by handle
 > df.handlemeans <- spread(df, key = week, value = abs)
 
 > summary(df.handlemeans)
-       X         id.bioguide               handle       name.last    chamber           party         district   
- Min.   :   0   A000055:   9   andercrenshaw  :   9   Smith  :  45   rep:3807   Democrat  :1737   2.0    : 378  
- 1st Qu.:1019   A000368:   9   austinscottga08:   9   Johnson:  36   sen: 270   Republican:2340   1.0    : 351  
- Median :2038   A000369:   9   benniegthompson:   9   Scott  :  36                                3.0    : 333  
- Mean   :2038   A000370:   9   bettymccollum04:   9   Bishop :  27                                4.0    : 315  
- 3rd Qu.:3057   A000371:   9   billpascrell   :   9   Davis  :  27                                None   : 270  
- Max.   :4076   A000372:   9   blumenauermedia:   9   Graves :  27                                5.0    : 261  
-                (Other):4023   (Other)        :4023   (Other):3879                                (Other):2169  
-    inc_ran          inc_won       had_challenger   inc_party winner_party  runnerup_party runnerup_votes   
- Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   D:1755    D:1818       D       :2079   Min.   :      0  
- 1st Qu.:1.0000   1st Qu.:1.0000   1st Qu.:1.0000   R:2322    R:2259       R       :1512   1st Qu.:  69556  
- Median :1.0000   Median :1.0000   Median :1.0000                          NONE    : 135   Median : 103622  
- Mean   :0.9426   Mean   :0.9316   Mean   :0.9029                          L       : 108   Mean   : 162748  
- 3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:1.0000                          write in:  63   3rd Qu.: 129760  
- Max.   :1.0000   Max.   :1.0000   Max.   :1.0000                          I       :  54   Max.   :4701417  
-                                                                           (Other) : 126   NA's   :18       
-  winner_votes       closeness        avg_score               1                2                 3         
- Min.   :  75126   Min.   :0.0000   Min.   :-308.0880   Min.   : 0.004   Min.   :  0.001   Min.   : 0.000  
- 1st Qu.: 171631   1st Qu.:0.1917   1st Qu.:  -8.9298   1st Qu.: 1.380   1st Qu.:  3.149   1st Qu.: 2.067  
- Median : 200508   Median :0.3105   Median :   0.7958   Median : 3.443   Median :  7.719   Median : 4.786  
- Mean   : 293771   Mean   :0.3608   Mean   :  -6.9937   Mean   :12.268   Mean   : 26.974   Mean   :11.720  
- 3rd Qu.: 226719   3rd Qu.:0.4675   3rd Qu.:   3.6469   3rd Qu.:12.941   3rd Qu.: 35.427   3rd Qu.:12.175  
- Max.   :7542753   Max.   :1.0000   Max.   :  62.8630   Max.   :75.524   Max.   :308.088   Max.   :92.247  
- NA's   :18        NA's   :18       NA's   :913         NA's   :3697     NA's   :3692      NA's   :3710    
-       4                5                6                7                8                9          
- Min.   : 0.001   Min.   : 0.001   Min.   : 0.002   Min.   : 0.000   Min.   : 0.004   Min.   :  0.005  
- 1st Qu.: 2.287   1st Qu.: 1.281   1st Qu.: 1.886   1st Qu.: 1.376   1st Qu.: 1.723   1st Qu.:  1.863  
- Median : 6.347   Median : 2.873   Median : 4.714   Median : 2.716   Median : 4.377   Median :  5.817  
- Mean   :12.223   Mean   : 6.467   Mean   :10.951   Mean   : 7.925   Mean   :10.269   Mean   : 13.925  
- 3rd Qu.:16.458   3rd Qu.: 8.476   3rd Qu.:11.756   3rd Qu.: 8.961   3rd Qu.:15.736   3rd Qu.: 19.167  
- Max.   :74.549   Max.   :37.968   Max.   :72.668   Max.   :59.532   Max.   :62.863   Max.   :107.640  
- NA's   :3704     NA's   :3732     NA's   :3740     NA's   :3752     NA's   :3739     NA's   :3763     
+       X           id.bioguide               handle        name.last    chamber           party     
+ Min.   :   0.0   A000368:   9   bettymccollum04:   9   Smith   :  42   rep:2928   Democrat  :1439  
+ 1st Qu.: 941.8   A000370:   9   call_me_dutch  :   9   Johnson :  28   sen: 236   Republican:1725  
+ Median :1925.5   A000371:   9   cathymcmorris  :   9   Kelly   :  26                               
+ Mean   :1972.7   A000372:   9   cbrangel       :   9   Graves  :  20                               
+ 3rd Qu.:2993.2   A000373:   9   chelliepingree :   9   Thompson:  20                               
+ Max.   :4076.0   B000287:   9   conghuelskamp  :   9   Davis   :  19                               
+                  (Other):3110   (Other)        :3110   (Other) :3009                               
+    district       inc_ran          inc_won       had_challenger   inc_party winner_party
+ 2.0    : 310   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   D:1450    D:1494      
+ 1.0    : 258   1st Qu.:1.0000   1st Qu.:1.0000   1st Qu.:1.0000   R:1714    R:1670      
+ 3.0    : 241   Median :1.0000   Median :1.0000   Median :1.0000                         
+ None   : 236   Mean   :0.9586   Mean   :0.9447   Mean   :0.9194                         
+ 4.0    : 231   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:1.0000                         
+ 6.0    : 199   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000                         
+ (Other):1689                                                                            
+  runnerup_party runnerup_votes     winner_votes         margin         avg_score        
+ D       :1549   Min.   :      0   Min.   :  75126   Min.   :0.0000   Min.   :-308.0880  
+ R       :1246   1st Qu.:  69556   1st Qu.: 171631   1st Qu.:0.1917   1st Qu.:  -8.9298  
+ NONE    : 103   Median : 103622   Median : 201088   Median :0.3088   Median :   0.7958  
+ L       :  77   Mean   : 168621   Mean   : 302362   Mean   :0.3595   Mean   :  -6.9937  
+ write in:  56   3rd Qu.: 130161   3rd Qu.: 226719   3rd Qu.:0.4692   3rd Qu.:   3.6469  
+ I       :  41   Max.   :4701417   Max.   :7542753   Max.   :1.0000   Max.   :  62.8630  
+ (Other) :  92   NA's   :12        NA's   :12        NA's   :12                          
+       1                 2                  3                 4                 5          
+ Min.   : 0.0038   Min.   :  0.0009   Min.   : 0.0003   Min.   : 0.0012   Min.   : 0.0006  
+ 1st Qu.: 1.3800   1st Qu.:  3.1492   1st Qu.: 2.0665   1st Qu.: 2.2871   1st Qu.: 1.2813  
+ Median : 3.4426   Median :  7.7195   Median : 4.7860   Median : 6.3470   Median : 2.8730  
+ Mean   :12.2681   Mean   : 26.9735   Mean   :11.7200   Mean   :12.2227   Mean   : 6.4666  
+ 3rd Qu.:12.9413   3rd Qu.: 35.4268   3rd Qu.:12.1755   3rd Qu.:16.4585   3rd Qu.: 8.4764  
+ Max.   :75.5239   Max.   :308.0880   Max.   :92.2467   Max.   :74.5486   Max.   :37.9679  
+ NA's   :2784      NA's   :2779       NA's   :2797      NA's   :2791      NA's   :2819     
+       6                 7                 8                 9           
+ Min.   : 0.0021   Min.   : 0.0001   Min.   : 0.0042   Min.   :  0.0055  
+ 1st Qu.: 1.8859   1st Qu.: 1.3756   1st Qu.: 1.7228   1st Qu.:  1.8629  
+ Median : 4.7142   Median : 2.7163   Median : 4.3771   Median :  5.8169  
+ Mean   :10.9513   Mean   : 7.9248   Mean   :10.2692   Mean   : 13.9247  
+ 3rd Qu.:11.7561   3rd Qu.: 8.9612   3rd Qu.:15.7360   3rd Qu.: 19.1668  
+ Max.   :72.6684   Max.   :59.5321   Max.   :62.8630   Max.   :107.6400  
+ NA's   :2827      NA's   :2839      NA's   :2826      NA's   :2850      
 
 > # summarize by party
 > by_party <- table(df$week,df$party)
@@ -82,15 +98,15 @@
 > by_party
    
     Democrat Republican
-  1      193        260
-  2      193        260
-  3      193        260
-  4      193        260
-  5      193        260
-  6      193        260
-  7      193        260
-  8      193        260
-  9      193        260
+  1      167        213
+  2      172        213
+  3      169        198
+  4      167        206
+  5      157        188
+  6      156        181
+  7      150        175
+  8      148        190
+  9      153        161
 
 > # summarize by party and week
 > by_party_week <- ddply(df, .(week, party), summarize,
@@ -135,9 +151,9 @@
 > p.reps + geom_line()
 
 > ####### REGRESSION MODELS #######
-> # linear mixed-effects models
+> ### Linear mixed-effects models for all weeks ###
 > # REML vs ML 
-> # https://stats.stackexchange.com/questions/48671/what-is-restri .... [TRUNCATED] 
+> # https://stats.stackexchange.com/questions/ .... [TRUNCATED] 
 
 > summary(lmm.null)
 Linear mixed model fit by maximum likelihood  ['lmerMod']
@@ -413,12 +429,9 @@ Correlation of Fixed Effects:
 partyRpblcn -0.451       
 week        -0.814  0.027
 
-> lmm5.res <- resid(lmm5)
-
-> # NOTE: LH 5/11 - no reason to run these?
-> # lmm4 <- lmer(abs ~ party * week + (week | handle), data = df)
-> # summary(lmm3)
-> # lmm3b <- lmer(abs  .... [TRUNCATED] 
+> # ANOVAS to find best model
+> # null vs week
+> anova(lmm.null, lmm1a, refit=FALSE)
 Data: df
 Models:
 lmm.null: abs ~ 1 + (1 | handle)
@@ -497,9 +510,6 @@ partyRepublican CI = -32.17251, -24.29489
  NOTE: n is number in *each* group 
 
 > # check assumptions
-> # plot(df$handle, lmm5.res, ylab="Residuals", xlab="Week", main="Partisanship")
-> # abline(0,0)
-> 
 > plot(residuals(lmm5))
 
 > hist(residuals(lmm5))
@@ -642,13 +652,11 @@ lmm_rep       6 10834 10866 -5410.8    10822 5.0448      1     0.0247 *
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 > # make pretty tables
-> # mod_stargazer("Linear Mixed Models", "mixed_models.html",
-> #               lmm5, lmm_dem, lmm_rep,
-> #               type  .... [TRUNCATED] 
+> sjt.lmer(lmm5)
 
 > sjt.lmer(lmm_dem, lmm_rep)
 
-> # run again with just weeks 3-9
+> ### Run again with just weeks 3-9 ###
 > # week 2 had a gun control debate that throws off all Dems
 > df.last_7_weeks <- df[ which(df$week > 2), ]
 
@@ -863,3 +871,259 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 > sjt.lmer(lmm5.last_7_weeks)
 
 > sjt.lmer(lmm_dem.last_7_weeks, lmm_rep.last_7_weeks)
+
+> ### Include closeness and minority party ###
+> # two races have no voting results so need to be excluded here
+> df.complete <- na.omit(df)
+
+> lmm.closeness <- lmer(abs ~ party * week + margin + (1+week|handle), data = df.complete, REML = FALSE)
+
+> summary(lmm.closeness)
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: abs ~ party * week + margin + (1 + week | handle)
+   Data: df.complete
+
+     AIC      BIC   logLik deviance df.resid 
+ 27086.2  27140.7 -13534.1  27068.2     3143 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.1645 -0.3370 -0.1216  0.1403 14.4074 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ handle   (Intercept) 255.385  15.981        
+          week          2.014   1.419   -1.00
+ Residual             263.868  16.244        
+Number of obs: 3152, groups:  handle, 433
+
+Fixed effects:
+                     Estimate Std. Error t value
+(Intercept)           30.7277     1.7222  17.842
+partyRepublican      -27.6544     2.0177 -13.706
+week                  -2.3215     0.1981 -11.721
+margin                 4.1557     2.0426   2.035
+partyRepublican:week   2.4853     0.2666   9.323
+
+Correlation of Fixed Effects:
+            (Intr) prtyRp week   margin
+partyRpblcn -0.698                     
+week        -0.768  0.657              
+margin      -0.485  0.093 -0.003       
+prtyRpblcn:  0.572 -0.874 -0.743  0.001
+
+> lmm5.closeness <- lmer(abs ~ party * week + (1+week|handle), data = df.complete, REML = FALSE)
+
+> summary(lmm5.closeness)
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: abs ~ party * week + (1 + week | handle)
+   Data: df.complete
+
+     AIC      BIC   logLik deviance df.resid 
+ 27088.3  27136.7 -13536.1  27072.3     3144 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.1753 -0.3332 -0.1210  0.1419 14.4114 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ handle   (Intercept) 256.2    16.007        
+          week          2.0     1.414   -1.00
+ Residual             264.0    16.248        
+Number of obs: 3152, groups:  handle, 433
+
+Fixed effects:
+                     Estimate Std. Error t value
+(Intercept)           32.4255     1.5079   21.50
+partyRepublican      -28.0365     2.0110  -13.94
+week                  -2.3206     0.1979  -11.73
+partyRepublican:week   2.4853     0.2664    9.33
+
+Correlation of Fixed Effects:
+            (Intr) prtyRp week  
+partyRpblcn -0.750              
+week        -0.880  0.660       
+prtyRpblcn:  0.654 -0.877 -0.743
+
+> anova(lmm5.closeness, lmm.closeness, refit=FALSE)
+Data: df.complete
+Models:
+lmm5.closeness: abs ~ party * week + (1 + week | handle)
+lmm.closeness: abs ~ party * week + margin + (1 + week | handle)
+               Df   AIC   BIC logLik deviance  Chisq Chi Df Pr(>Chisq)  
+lmm5.closeness  8 27088 27137 -13536    27072                           
+lmm.closeness   9 27086 27141 -13534    27068 4.1208      1    0.04236 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+> # separate Dems and Reps to get at interaction term
+> lmm_dem.null.closeness <- lmer(abs ~ (1+week|handle), data = subset(df.complete, party == "Dem ..." ... [TRUNCATED] 
+
+> summary(lmm_dem.null.closeness)
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: abs ~ (1 + week | handle)
+   Data: subset(df.complete, party == "Democrat")
+
+     AIC      BIC   logLik deviance df.resid 
+ 13382.0  13408.3  -6686.0  13372.0     1425 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.1486 -0.5238 -0.2076  0.2906  9.7817 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ handle   (Intercept) 883.332  29.721        
+          week          9.655   3.107   -1.00
+ Residual             550.957  23.472        
+Number of obs: 1430, groups:  handle, 187
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)  16.0099     0.9982   16.04
+
+> lmm_dem.closeness <- lmer(abs ~ week + margin + (1+week|handle), data = subset(df.complete, party == "Democrat"), REML = FALSE)
+
+> summary(lmm_dem.closeness)
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: abs ~ week + margin + (1 + week | handle)
+   Data: subset(df.complete, party == "Democrat")
+
+     AIC      BIC   logLik deviance df.resid 
+ 13331.2  13368.0  -6658.6  13317.2     1423 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.0254 -0.4731 -0.2356  0.2866  9.9635 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ handle   (Intercept) 608.018  24.658        
+          week          5.195   2.279   -1.00
+ Residual             541.837  23.277        
+Number of obs: 1430, groups:  handle, 187
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)   30.681      2.838  10.810
+week          -2.314      0.294  -7.873
+margin         4.177      4.190   0.997
+
+Correlation of Fixed Effects:
+       (Intr) week  
+week   -0.708       
+margin -0.604 -0.005
+
+> anova(lmm_dem.null.closeness, lmm_dem.closeness)
+Data: subset(df.complete, party == "Democrat")
+Models:
+lmm_dem.null.closeness: abs ~ (1 + week | handle)
+lmm_dem.closeness: abs ~ week + margin + (1 + week | handle)
+                       Df   AIC   BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)    
+lmm_dem.null.closeness  5 13382 13408 -6686.0    13372                             
+lmm_dem.closeness       7 13331 13368 -6658.6    13317 54.811      2  1.253e-12 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+> lmm_rep.null.closeness <- lmer(abs ~ (1+week|handle), data = subset(df.complete, party == "Republican"), REML = FALSE)
+
+> summary(lmm_rep.null.closeness)
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: abs ~ (1 + week | handle)
+   Data: subset(df.complete, party == "Republican")
+
+     AIC      BIC   logLik deviance df.resid 
+ 10820.1  10847.3  -5405.0  10810.1     1717 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.3867 -0.5465 -0.2362  0.2594  9.6329 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr
+ handle   (Intercept)  0.8907  0.9438       
+          week         0.1376  0.3710   0.83
+ Residual             26.7997  5.1768       
+Number of obs: 1722, groups:  handle, 246
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)   4.9878     0.1988   25.08
+
+> lmm_rep.closeness <- lmer(abs ~ week + margin + (1+week|handle), data = subset(df.complete, party == "Republican"), REML = FALSE)
+
+> summary(lmm_rep.closeness)
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: abs ~ week + margin + (1 + week | handle)
+   Data: subset(df.complete, party == "Republican")
+
+     AIC      BIC   logLik deviance df.resid 
+ 10812.4  10850.5  -5399.2  10798.4     1715 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.3899 -0.5360 -0.2484  0.2707  9.6171 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr
+ handle   (Intercept)  0.9665  0.9831       
+          week         0.1203  0.3468   0.79
+ Residual             26.8169  5.1785       
+Number of obs: 1722, groups:  handle, 246
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)  3.84125    0.38938   9.865
+week         0.12611    0.05482   2.300
+margin       2.28784    0.87411   2.617
+
+Correlation of Fixed Effects:
+       (Intr) week  
+week   -0.487       
+margin -0.713 -0.002
+
+> anova(lmm_rep.null.closeness, lmm_rep.closeness)
+Data: subset(df.complete, party == "Republican")
+Models:
+lmm_rep.null.closeness: abs ~ (1 + week | handle)
+lmm_rep.closeness: abs ~ week + margin + (1 + week | handle)
+                       Df   AIC   BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)   
+lmm_rep.null.closeness  5 10820 10847 -5405.0    10810                            
+lmm_rep.closeness       7 10812 10850 -5399.2    10798 11.713      2   0.002862 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+> sjt.lmer(lmm.closeness, lmm_rep.closeness, lmm_dem.closeness)
+Warning messages:
+1: In checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv,  ... :
+  unable to evaluate scaled gradient
+2: In checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv,  ... :
+  Model failed to converge: degenerate  Hessian with 1 negative eigenvalues
+3: 'sjstats::get_model_pval' is deprecated.
+Use 'p_value' instead.
+See help("Deprecated")
+4: 'sjstats::get_model_pval' is deprecated.
+Use 'p_value' instead.
+See help("Deprecated")
+5: 'sjstats::get_model_pval' is deprecated.
+Use 'p_value' instead.
+See help("Deprecated")
+6: 'sjstats::get_model_pval' is deprecated.
+Use 'p_value' instead.
+See help("Deprecated")
+7: 'sjstats::get_model_pval' is deprecated.
+Use 'p_value' instead.
+See help("Deprecated")
+8: 'sjstats::get_model_pval' is deprecated.
+Use 'p_value' instead.
+See help("Deprecated")
+9: 'sjstats::get_model_pval' is deprecated.
+Use 'p_value' instead.
+See help("Deprecated")
+10: 'sjstats::get_model_pval' is deprecated.
+Use 'p_value' instead.
+See help("Deprecated")
+11: 'sjstats::get_model_pval' is deprecated.
+Use 'p_value' instead.
+See help("Deprecated")

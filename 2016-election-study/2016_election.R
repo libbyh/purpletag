@@ -32,7 +32,7 @@ usePackage('car')
 usePackage('plyr')
 usePackage('printr')
 usePackage('ggplot2')
-usePackage('sjPlot') # table functions
+# require('sjPlot') # table functions, breaks usePackage
 
 # which polar-scores? default or count-based
 ## default
@@ -84,7 +84,7 @@ p.reps <- ggplot(data = df.rep_sample, aes(x = week, y = abs, group = handle, co
 p.reps + geom_line()
 
 ####### REGRESSION MODELS #######
-# linear mixed-effects models
+### Linear mixed-effects models for all weeks ###
 # REML vs ML 
 # https://stats.stackexchange.com/questions/48671/what-is-restricted-maximum-likelihood-and-when-should-it-be-used
 lmm.null <- lmer(abs ~ 1 + (1|handle), data = df, REML = FALSE)
@@ -105,16 +105,8 @@ lmm5 <- lmer(abs ~ party * week + (1+week|handle), data = df, REML = FALSE)
 summary(lmm5)
 lmm5.null <- lmer(abs ~ party + week + (1+week|handle), data = df, REML = FALSE)
 summary(lmm5.null)
-lmm5.res <- resid(lmm5)
 
-# NOTE: LH 5/11 - no reason to run these?
-# lmm4 <- lmer(abs ~ party * week + (week | handle), data = df)
-# summary(lmm3)
-# lmm3b <- lmer(abs ~ party * week + (1+week | handle), data = df)
-# summary(lmm3b)
-# lmm6 <- lm(abs ~ party * week, data = df)
-# summary(lmm6)
-
+# ANOVAS to find best model
 # null vs week
 anova(lmm.null, lmm1a, refit=FALSE)
 
@@ -133,9 +125,6 @@ anova(lmm5.null, lmm5, refit=FALSE)
 lmmpower(lmm5, pct.change = 0.10, t = seq(0,9,1), power = 0.90)
 
 # check assumptions
-# plot(df$handle, lmm5.res, ylab="Residuals", xlab="Week", main="Partisanship")
-# abline(0,0)
-
 plot(residuals(lmm5))
 hist(residuals(lmm5))
 qqnorm(residuals(lmm5))
@@ -183,7 +172,7 @@ qqnorm(residuals(lmm5))
 #                                   "handle", "DonaldNorcross")
 # print(lmm.exclude6, cor=FALSE)
 
-# separate for Dems and Reps to get at interaction term
+# separate Dems and Reps to get at interaction term
 lmm_dem.null <- lmer(abs ~ (1+week|handle), data = subset(df, party == "Democrat"), REML = FALSE)
 summary(lmm_dem.null)
 lmm_dem <- lmer(abs ~ week + (1+week|handle), data = subset(df, party == "Democrat"), REML = FALSE)
@@ -196,14 +185,10 @@ summary(lmm_rep)
 anova(lmm_rep.null, lmm_rep)
 
 # make pretty tables
-# mod_stargazer("Linear Mixed Models", "mixed_models.html",
-#               lmm5, lmm_dem, lmm_rep,
-#               type = "html",
-#               append = FALSE)
 sjt.lmer(lmm5)
 sjt.lmer(lmm_dem, lmm_rep)
 
-# run again with just weeks 3-9
+### Run again with just weeks 3-9 ###
 # week 2 had a gun control debate that throws off all Dems
 df.last_7_weeks <- df[ which(df$week > 2), ]
 lmm5.last_7_weeks <- lmer(abs ~ party * week + (1+week|handle), data = df.last_7_weeks, REML = FALSE)
@@ -227,3 +212,28 @@ anova(lmm_rep.last_7_weeks.null, lmm_rep.last_7_weeks)
 
 sjt.lmer(lmm5.last_7_weeks)
 sjt.lmer(lmm_dem.last_7_weeks, lmm_rep.last_7_weeks)
+
+### Include closeness and minority party ###
+# two races have no voting results so need to be excluded here
+df.complete <- na.omit(df)
+
+lmm.closeness <- lmer(abs ~ party * week + margin + (1+week|handle), data = df.complete, REML = FALSE)
+summary(lmm.closeness)
+lmm5.closeness <- lmer(abs ~ party * week + (1+week|handle), data = df.complete, REML = FALSE)
+summary(lmm5.closeness)
+
+anova(lmm5.closeness, lmm.closeness, refit=FALSE)
+
+# separate Dems and Reps to get at interaction term
+lmm_dem.null.closeness <- lmer(abs ~ (1+week|handle), data = subset(df.complete, party == "Democrat"), REML = FALSE)
+summary(lmm_dem.null.closeness)
+lmm_dem.closeness <- lmer(abs ~ week + margin + (1+week|handle), data = subset(df.complete, party == "Democrat"), REML = FALSE)
+summary(lmm_dem.closeness)
+anova(lmm_dem.null.closeness, lmm_dem.closeness)
+lmm_rep.null.closeness <- lmer(abs ~ (1+week|handle), data = subset(df.complete, party == "Republican"), REML = FALSE)
+summary(lmm_rep.null.closeness)
+lmm_rep.closeness <- lmer(abs ~ week + margin + (1+week|handle), data = subset(df.complete, party == "Republican"), REML = FALSE)
+summary(lmm_rep.closeness)
+anova(lmm_rep.null.closeness, lmm_rep.closeness)
+
+sjt.lmer(lmm.closeness, lmm_rep.closeness, lmm_dem.closeness)

@@ -1,4 +1,4 @@
-,id.bioguide,handle,state,district,type,party,name.last,inc_name,inc_party,inc_ran,inc_won,had_challenger,winner_votes,runnerup_votes,winner_party,runnerup_party,closeness,week1,week2,week3,week4,week5,week6,week7,week8,week9
+,id.bioguide,handle,state,district,type,party,name.last,inc_name,inc_party,inc_ran,inc_won,had_challenger,winner_votes,runnerup_votes,winner_party,runnerup_party,margin,week1,week2,week3,week4,week5,week6,week7,week8,week9
 0,A000055,robert_aderholt,AL,4.0,rep,Republican,Aderholt,"Aderholt, Rob",R,1,1,0,235925.0,3519.0,R,write in,0.970606905999,1.5081425,,2.45614,19.8266,,10.8463,,0.851852,
 2,B001269,reploubarletta,PA,11.0,rep,Republican,Barletta,"Barletta, Lou",R,1,1,1,199421.0,113800.0,R,D,0.273356511856,,-0.114591,3.56129,,0.182323,,,0.869231,
 3,B000213,repjoebarton,TX,6.0,rep,Republican,Barton,"Barton, Joe",R,1,1,1,159444.0,106667.0,R,D,0.198327013915,1.93365,,2.55,,,2.17391,2.1165,16.99308,21.8655

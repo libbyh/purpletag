@@ -1,4 +1,4 @@
-,id.bioguide,handle,state,district,type,party,name.last,inc_name,inc_party,inc_ran,inc_won,had_challenger,winner_votes,runnerup_votes,winner_party,runnerup_party,closeness
+,id.bioguide,handle,state,district,type,party,name.last,inc_name,inc_party,inc_ran,inc_won,had_challenger,winner_votes,runnerup_votes,winner_party,runnerup_party,margin
 0,A000055,robert_aderholt,AL,4.0,rep,Republican,Aderholt,"Aderholt, Rob",R,1,1,0,235925.0,3519.0,R,write in,0.970606905999
 1,A000367,,MI,3.0,rep,Republican,Amash,"Amash, Justin",R,1,1,1,203545.0,128400.0,R,D,0.226377863803
 2,B001269,reploubarletta,PA,11.0,rep,Republican,Barletta,"Barletta, Lou",R,1,1,1,199421.0,113800.0,R,D,0.273356511856
