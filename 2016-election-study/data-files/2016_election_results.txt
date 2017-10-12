@@ -1095,35 +1095,3 @@ lmm_rep.closeness       7 10812 10850 -5399.2    10798 11.713      2   0.002862 
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 > sjt.lmer(lmm.closeness, lmm_rep.closeness, lmm_dem.closeness)
-Warning messages:
-1: In checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv,  ... :
-  unable to evaluate scaled gradient
-2: In checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv,  ... :
-  Model failed to converge: degenerate  Hessian with 1 negative eigenvalues
-3: 'sjstats::get_model_pval' is deprecated.
-Use 'p_value' instead.
-See help("Deprecated")
-4: 'sjstats::get_model_pval' is deprecated.
-Use 'p_value' instead.
-See help("Deprecated")
-5: 'sjstats::get_model_pval' is deprecated.
-Use 'p_value' instead.
-See help("Deprecated")
-6: 'sjstats::get_model_pval' is deprecated.
-Use 'p_value' instead.
-See help("Deprecated")
-7: 'sjstats::get_model_pval' is deprecated.
-Use 'p_value' instead.
-See help("Deprecated")
-8: 'sjstats::get_model_pval' is deprecated.
-Use 'p_value' instead.
-See help("Deprecated")
-9: 'sjstats::get_model_pval' is deprecated.
-Use 'p_value' instead.
-See help("Deprecated")
-10: 'sjstats::get_model_pval' is deprecated.
-Use 'p_value' instead.
-See help("Deprecated")
-11: 'sjstats::get_model_pval' is deprecated.
-Use 'p_value' instead.
-See help("Deprecated")

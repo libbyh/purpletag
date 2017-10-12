@@ -237,3 +237,8 @@ summary(lmm_rep.closeness)
 anova(lmm_rep.null.closeness, lmm_rep.closeness)
 
 sjt.lmer(lmm.closeness, lmm_rep.closeness, lmm_dem.closeness)
+
+p <- ggplot(df, aes(factor(week), avg_score, fill=party)) + 
+  scale_fill_manual(values = c("blue", "red")) +
+  labs(x = "Week", y = "Polar Scores")
+p + geom_violin()
